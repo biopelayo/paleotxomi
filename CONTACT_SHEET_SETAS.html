@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Contact sheet · galería de setas</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #1a1a1a; color: #eee; margin: 0; padding: 20px; }
+  h1 { font-size: 18px; margin: 0 0 10px 0; }
+  .controls { background: #2a2a2a; padding: 10px 16px; margin-bottom: 16px; border-radius: 6px; position: sticky; top: 0; z-index: 100; }
+  .controls textarea { width: 100%; height: 90px; background: #111; color: #0f0; border: 1px solid #444; font-family: monospace; padding: 8px; font-size: 13px; box-sizing: border-box; }
+  .controls .row { margin-top: 8px; display: flex; gap: 8px; align-items: center; }
+  .controls button { background: #c44; color: white; border: none; padding: 8px 16px; cursor: pointer; font-weight: bold; border-radius: 4px; }
+  .controls button.copy { background: #4a4; }
+  .cat { font-size: 16px; color: #ffa; margin-top: 24px; border-bottom: 1px solid #444; padding-bottom: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 10px; }
+  .cell { background: #2a2a2a; border-radius: 4px; overflow: hidden; cursor: pointer; transition: all 0.15s; border: 3px solid transparent; position: relative; user-select: none; }
+  .cell:hover { border-color: #ff8; }
+  .cell.marked { border-color: #f44; background: #4a1010; }
+  .cell.marked::after { content: "X"; position: absolute; top: 4px; right: 6px; color: #f44; font-size: 22px; font-weight: bold; text-shadow: 0 0 4px black; pointer-events: none; }
+  .cell img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; pointer-events: none; }
+  .cell .slug { font-size: 10px; padding: 4px 6px; word-break: break-all; line-height: 1.2; color: #aaa; pointer-events: none; }
+  .cell.marked .slug { color: #faa; }
+</style></head>
+<body>
+<h1>Contact sheet &middot; galería de setas (150 fotos)</h1>
+<p>Clic en las fotos que sobran (personas, tu madre, etc.). Cuando termines, dale a Copiar y pega en el chat.</p>
+<div class="controls">
+  <textarea id="out" readonly placeholder="Slugs marcados aparecerán aquí..."></textarea>
+  <div class="row">
+    <button id="copy" class="copy">Copiar al portapapeles</button>
+    <button id="reset">Reset</button>
+    <span style="font-size:13px;color:#aaa;" id="count">0 marcadas</span>
+  </div>
+</div>
+<div class="cat">RECOLECCIONES &middot; 85 fotos</div>
+<div class="grid">
+<div class="cell" data-slug="img-0076"><img src="./public/images/micologia/img-0076_400.jpg" loading="lazy" alt=""><div class="slug">img-0076</div></div>
+<div class="cell" data-slug="img-0080"><img src="./public/images/micologia/img-0080_400.jpg" loading="lazy" alt=""><div class="slug">img-0080</div></div>
+<div class="cell" data-slug="img-0086"><img src="./public/images/micologia/img-0086_400.jpg" loading="lazy" alt=""><div class="slug">img-0086</div></div>
+<div class="cell" data-slug="img-0096"><img src="./public/images/micologia/img-0096_400.jpg" loading="lazy" alt=""><div class="slug">img-0096</div></div>
+<div class="cell" data-slug="img-0103"><img src="./public/images/micologia/img-0103_400.jpg" loading="lazy" alt=""><div class="slug">img-0103</div></div>
+<div class="cell" data-slug="img-0108"><img src="./public/images/micologia/img-0108_400.jpg" loading="lazy" alt=""><div class="slug">img-0108</div></div>
+<div class="cell" data-slug="img-0112"><img src="./public/images/micologia/img-0112_400.jpg" loading="lazy" alt=""><div class="slug">img-0112</div></div>
+<div class="cell" data-slug="img-0115"><img src="./public/images/micologia/img-0115_400.jpg" loading="lazy" alt=""><div class="slug">img-0115</div></div>
+<div class="cell" data-slug="img-0121"><img src="./public/images/micologia/img-0121_400.jpg" loading="lazy" alt=""><div class="slug">img-0121</div></div>
+<div class="cell" data-slug="img-0139"><img src="./public/images/micologia/img-0139_400.jpg" loading="lazy" alt=""><div class="slug">img-0139</div></div>
+<div class="cell" data-slug="img-20141030-180512"><img src="./public/images/micologia/img-20141030-180512_400.jpg" loading="lazy" alt=""><div class="slug">img-20141030-180512</div></div>
+<div class="cell" data-slug="img-20141030-182107"><img src="./public/images/micologia/img-20141030-182107_400.jpg" loading="lazy" alt=""><div class="slug">img-20141030-182107</div></div>
+<div class="cell" data-slug="img-20141030-182206"><img src="./public/images/micologia/img-20141030-182206_400.jpg" loading="lazy" alt=""><div class="slug">img-20141030-182206</div></div>
+<div class="cell" data-slug="img-20141030-182249"><img src="./public/images/micologia/img-20141030-182249_400.jpg" loading="lazy" alt=""><div class="slug">img-20141030-182249</div></div>
+<div class="cell" data-slug="img-20141030-182349"><img src="./public/images/micologia/img-20141030-182349_400.jpg" loading="lazy" alt=""><div class="slug">img-20141030-182349</div></div>
+<div class="cell" data-slug="img-20141031-123012"><img src="./public/images/micologia/img-20141031-123012_400.jpg" loading="lazy" alt=""><div class="slug">img-20141031-123012</div></div>
+<div class="cell" data-slug="img-20141102-174656"><img src="./public/images/micologia/img-20141102-174656_400.jpg" loading="lazy" alt=""><div class="slug">img-20141102-174656</div></div>
+<div class="cell" data-slug="img-20141102-175044"><img src="./public/images/micologia/img-20141102-175044_400.jpg" loading="lazy" alt=""><div class="slug">img-20141102-175044</div></div>
+<div class="cell" data-slug="img-20141102-175316"><img src="./public/images/micologia/img-20141102-175316_400.jpg" loading="lazy" alt=""><div class="slug">img-20141102-175316</div></div>
+<div class="cell" data-slug="img-20141104-211522"><img src="./public/images/micologia/img-20141104-211522_400.jpg" loading="lazy" alt=""><div class="slug">img-20141104-211522</div></div>
+<div class="cell" data-slug="img-20141104-232821"><img src="./public/images/micologia/img-20141104-232821_400.jpg" loading="lazy" alt=""><div class="slug">img-20141104-232821</div></div>
+<div class="cell" data-slug="img-20141105-225800"><img src="./public/images/micologia/img-20141105-225800_400.jpg" loading="lazy" alt=""><div class="slug">img-20141105-225800</div></div>
+<div class="cell" data-slug="img-20141106-173214"><img src="./public/images/micologia/img-20141106-173214_400.jpg" loading="lazy" alt=""><div class="slug">img-20141106-173214</div></div>
+<div class="cell" data-slug="img-20141107-164240"><img src="./public/images/micologia/img-20141107-164240_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-164240</div></div>
+<div class="cell" data-slug="img-20141107-164337"><img src="./public/images/micologia/img-20141107-164337_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-164337</div></div>
+<div class="cell" data-slug="img-20141107-164553"><img src="./public/images/micologia/img-20141107-164553_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-164553</div></div>
+<div class="cell" data-slug="img-20141107-165207"><img src="./public/images/micologia/img-20141107-165207_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-165207</div></div>
+<div class="cell" data-slug="img-20141107-165324"><img src="./public/images/micologia/img-20141107-165324_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-165324</div></div>
+<div class="cell" data-slug="img-20141107-170931"><img src="./public/images/micologia/img-20141107-170931_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-170931</div></div>
+<div class="cell" data-slug="img-20141107-171053"><img src="./public/images/micologia/img-20141107-171053_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-171053</div></div>
+<div class="cell" data-slug="img-20141107-173347"><img src="./public/images/micologia/img-20141107-173347_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-173347</div></div>
+<div class="cell" data-slug="img-20141107-173649"><img src="./public/images/micologia/img-20141107-173649_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-173649</div></div>
+<div class="cell" data-slug="img-20141109-172027"><img src="./public/images/micologia/img-20141109-172027_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-172027</div></div>
+<div class="cell" data-slug="img-20141109-172406"><img src="./public/images/micologia/img-20141109-172406_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-172406</div></div>
+<div class="cell" data-slug="img-20141109-172550"><img src="./public/images/micologia/img-20141109-172550_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-172550</div></div>
+<div class="cell" data-slug="img-20141109-172641"><img src="./public/images/micologia/img-20141109-172641_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-172641</div></div>
+<div class="cell" data-slug="img-20141109-172805"><img src="./public/images/micologia/img-20141109-172805_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-172805</div></div>
+<div class="cell" data-slug="img-20141109-172900"><img src="./public/images/micologia/img-20141109-172900_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-172900</div></div>
+<div class="cell" data-slug="img-20141109-173003"><img src="./public/images/micologia/img-20141109-173003_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-173003</div></div>
+<div class="cell" data-slug="img-20141109-174226"><img src="./public/images/micologia/img-20141109-174226_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-174226</div></div>
+<div class="cell" data-slug="102"><img src="./public/images/micologia/102_400.jpg" loading="lazy" alt=""><div class="slug">102</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1012"><img src="./public/images/micologia/nuevas-setas-fon-1012_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1012</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1120"><img src="./public/images/micologia/nuevas-setas-fon-1120_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1120</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1223"><img src="./public/images/micologia/nuevas-setas-fon-1223_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1223</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-133"><img src="./public/images/micologia/nuevas-setas-fon-133_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-133</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1442"><img src="./public/images/micologia/nuevas-setas-fon-1442_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1442</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1545"><img src="./public/images/micologia/nuevas-setas-fon-1545_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1545</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1662"><img src="./public/images/micologia/nuevas-setas-fon-1662_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1662</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1769"><img src="./public/images/micologia/nuevas-setas-fon-1769_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1769</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1882"><img src="./public/images/micologia/nuevas-setas-fon-1882_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1882</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-2002"><img src="./public/images/micologia/nuevas-setas-fon-2002_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-2002</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-345"><img src="./public/images/micologia/nuevas-setas-fon-345_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-345</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-470"><img src="./public/images/micologia/nuevas-setas-fon-470_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-470</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-589"><img src="./public/images/micologia/nuevas-setas-fon-589_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-589</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-715"><img src="./public/images/micologia/nuevas-setas-fon-715_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-715</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-834"><img src="./public/images/micologia/nuevas-setas-fon-834_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-834</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-944"><img src="./public/images/micologia/nuevas-setas-fon-944_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-944</div></div>
+<div class="cell" data-slug="setes-y-mas-047"><img src="./public/images/micologia/setes-y-mas-047_400.jpg" loading="lazy" alt=""><div class="slug">setes-y-mas-047</div></div>
+<div class="cell" data-slug="setes-y-mas-190"><img src="./public/images/micologia/setes-y-mas-190_400.jpg" loading="lazy" alt=""><div class="slug">setes-y-mas-190</div></div>
+<div class="cell" data-slug="setes-y-mas-296"><img src="./public/images/micologia/setes-y-mas-296_400.jpg" loading="lazy" alt=""><div class="slug">setes-y-mas-296</div></div>
+<div class="cell" data-slug="setes-y-mas-412"><img src="./public/images/micologia/setes-y-mas-412_400.jpg" loading="lazy" alt=""><div class="slug">setes-y-mas-412</div></div>
+<div class="cell" data-slug="setes-y-mas-549"><img src="./public/images/micologia/setes-y-mas-549_400.jpg" loading="lazy" alt=""><div class="slug">setes-y-mas-549</div></div>
+<div class="cell" data-slug="setes-y-mas-662"><img src="./public/images/micologia/setes-y-mas-662_400.jpg" loading="lazy" alt=""><div class="slug">setes-y-mas-662</div></div>
+<div class="cell" data-slug="setes-y-mas-769"><img src="./public/images/micologia/setes-y-mas-769_400.jpg" loading="lazy" alt=""><div class="slug">setes-y-mas-769</div></div>
+<div class="cell" data-slug="setes-y-mas-861"><img src="./public/images/micologia/setes-y-mas-861_400.jpg" loading="lazy" alt=""><div class="slug">setes-y-mas-861</div></div>
+<div class="cell" data-slug="img-0077"><img src="./public/images/micologia/img-0077_400.jpg" loading="lazy" alt=""><div class="slug">img-0077</div></div>
+<div class="cell" data-slug="img-0087"><img src="./public/images/micologia/img-0087_400.jpg" loading="lazy" alt=""><div class="slug">img-0087</div></div>
+<div class="cell" data-slug="img-0105"><img src="./public/images/micologia/img-0105_400.jpg" loading="lazy" alt=""><div class="slug">img-0105</div></div>
+<div class="cell" data-slug="img-0113"><img src="./public/images/micologia/img-0113_400.jpg" loading="lazy" alt=""><div class="slug">img-0113</div></div>
+<div class="cell" data-slug="img-0124"><img src="./public/images/micologia/img-0124_400.jpg" loading="lazy" alt=""><div class="slug">img-0124</div></div>
+<div class="cell" data-slug="img-20141030-180645"><img src="./public/images/micologia/img-20141030-180645_400.jpg" loading="lazy" alt=""><div class="slug">img-20141030-180645</div></div>
+<div class="cell" data-slug="img-20141030-182220"><img src="./public/images/micologia/img-20141030-182220_400.jpg" loading="lazy" alt=""><div class="slug">img-20141030-182220</div></div>
+<div class="cell" data-slug="img-20141031-111738"><img src="./public/images/micologia/img-20141031-111738_400.jpg" loading="lazy" alt=""><div class="slug">img-20141031-111738</div></div>
+<div class="cell" data-slug="img-20141102-174814"><img src="./public/images/micologia/img-20141102-174814_400.jpg" loading="lazy" alt=""><div class="slug">img-20141102-174814</div></div>
+<div class="cell" data-slug="img-20141102-175336"><img src="./public/images/micologia/img-20141102-175336_400.jpg" loading="lazy" alt=""><div class="slug">img-20141102-175336</div></div>
+<div class="cell" data-slug="img-20141104-232938"><img src="./public/images/micologia/img-20141104-232938_400.jpg" loading="lazy" alt=""><div class="slug">img-20141104-232938</div></div>
+<div class="cell" data-slug="img-20141106-173655-1"><img src="./public/images/micologia/img-20141106-173655-1_400.jpg" loading="lazy" alt=""><div class="slug">img-20141106-173655-1</div></div>
+<div class="cell" data-slug="img-20141107-164417"><img src="./public/images/micologia/img-20141107-164417_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-164417</div></div>
+<div class="cell" data-slug="img-20141107-165258"><img src="./public/images/micologia/img-20141107-165258_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-165258</div></div>
+<div class="cell" data-slug="img-20141107-170949"><img src="./public/images/micologia/img-20141107-170949_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-170949</div></div>
+<div class="cell" data-slug="img-20141107-173602"><img src="./public/images/micologia/img-20141107-173602_400.jpg" loading="lazy" alt=""><div class="slug">img-20141107-173602</div></div>
+<div class="cell" data-slug="img-20141109-172049"><img src="./public/images/micologia/img-20141109-172049_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-172049</div></div>
+<div class="cell" data-slug="img-20141109-172607"><img src="./public/images/micologia/img-20141109-172607_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-172607</div></div>
+<div class="cell" data-slug="img-20141109-172820"><img src="./public/images/micologia/img-20141109-172820_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-172820</div></div>
+<div class="cell" data-slug="img-20141109-173009"><img src="./public/images/micologia/img-20141109-173009_400.jpg" loading="lazy" alt=""><div class="slug">img-20141109-173009</div></div>
+</div>
+<div class="cat">CAMPO &middot; 10 fotos</div>
+<div class="grid">
+<div class="cell" data-slug="nuevas-setas-fon-098"><img src="./public/images/micologia/nuevas-setas-fon-098_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-098</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-175"><img src="./public/images/micologia/nuevas-setas-fon-175_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-175</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1972"><img src="./public/images/micologia/nuevas-setas-fon-1972_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1972</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1989"><img src="./public/images/micologia/nuevas-setas-fon-1989_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1989</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-2000"><img src="./public/images/micologia/nuevas-setas-fon-2000_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-2000</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-2008"><img src="./public/images/micologia/nuevas-setas-fon-2008_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-2008</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-2015"><img src="./public/images/micologia/nuevas-setas-fon-2015_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-2015</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-2022"><img src="./public/images/micologia/nuevas-setas-fon-2022_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-2022</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-2030"><img src="./public/images/micologia/nuevas-setas-fon-2030_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-2030</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-265"><img src="./public/images/micologia/nuevas-setas-fon-265_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-265</div></div>
+</div>
+<div class="cat">ESPECIES &middot; 16 fotos</div>
+<div class="grid">
+<div class="cell" data-slug="calocybe-gambosa0123"><img src="./public/images/micologia/calocybe-gambosa0123_400.jpg" loading="lazy" alt=""><div class="slug">calocybe-gambosa0123</div></div>
+<div class="cell" data-slug="lepista-nuda-cuatro"><img src="./public/images/micologia/lepista-nuda-cuatro_400.jpg" loading="lazy" alt=""><div class="slug">lepista-nuda-cuatro</div></div>
+<div class="cell" data-slug="lepista-nebularis-batsch-harmaja-1974-43722"><img src="./public/images/micologia/lepista-nebularis-batsch-harmaja-1974-43722_400.jpg" loading="lazy" alt=""><div class="slug">lepista-nebularis-batsch-harmaja-1974-43722</div></div>
+<div class="cell" data-slug="boletus-edulis-etghollande-041031-091"><img src="./public/images/micologia/boletus-edulis-etghollande-041031-091_400.jpg" loading="lazy" alt=""><div class="slug">boletus-edulis-etghollande-041031-091</div></div>
+<div class="cell" data-slug="img-5076"><img src="./public/images/micologia/img-5076_400.jpg" loading="lazy" alt=""><div class="slug">img-5076</div></div>
+<div class="cell" data-slug="oronja2"><img src="./public/images/micologia/oronja2_400.jpg" loading="lazy" alt=""><div class="slug">oronja2</div></div>
+<div class="cell" data-slug="seta-colmenilla-desde-zamora-18426-18426-7802-honza"><img src="./public/images/micologia/seta-colmenilla-desde-zamora-18426-18426-7802-honza_400.jpg" loading="lazy" alt=""><div class="slug">seta-colmenilla-desde-zamora-18426-18426-7802-honza</div></div>
+<div class="cell" data-slug="clavaria2"><img src="./public/images/micologia/clavaria2_400.jpg" loading="lazy" alt=""><div class="slug">clavaria2</div></div>
+<div class="cell" data-slug="nuda1"><img src="./public/images/micologia/nuda1_400.jpg" loading="lazy" alt=""><div class="slug">nuda1</div></div>
+<div class="cell" data-slug="coprinus-comatus"><img src="./public/images/micologia/coprinus-comatus_400.jpg" loading="lazy" alt=""><div class="slug">coprinus-comatus</div></div>
+<div class="cell" data-slug="marasmius-oreades-fs-04"><img src="./public/images/micologia/marasmius-oreades-fs-04_400.jpg" loading="lazy" alt=""><div class="slug">marasmius-oreades-fs-04</div></div>
+<div class="cell" data-slug="176"><img src="./public/images/micologia/176_400.jpg" loading="lazy" alt=""><div class="slug">176</div></div>
+<div class="cell" data-slug="203"><img src="./public/images/micologia/203_400.jpg" loading="lazy" alt=""><div class="slug">203</div></div>
+<div class="cell" data-slug="clavaria2-453a5c"><img src="./public/images/micologia/clavaria2-453a5c_400.jpg" loading="lazy" alt=""><div class="slug">clavaria2-453a5c</div></div>
+<div class="cell" data-slug="fotos-papa-noviembre-103"><img src="./public/images/micologia/fotos-papa-noviembre-103_400.jpg" loading="lazy" alt=""><div class="slug">fotos-papa-noviembre-103</div></div>
+<div class="cell" data-slug="fotos-papa-noviembre-309"><img src="./public/images/micologia/fotos-papa-noviembre-309_400.jpg" loading="lazy" alt=""><div class="slug">fotos-papa-noviembre-309</div></div>
+</div>
+<div class="cat">CATALOGO &middot; 39 fotos</div>
+<div class="grid">
+<div class="cell" data-slug="nuevas-setas-fon-1807"><img src="./public/images/micologia/nuevas-setas-fon-1807_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1807</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1918"><img src="./public/images/micologia/nuevas-setas-fon-1918_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1918</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1598"><img src="./public/images/micologia/nuevas-setas-fon-1598_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1598</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-488"><img src="./public/images/micologia/nuevas-setas-fon-488_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-488</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-897"><img src="./public/images/micologia/nuevas-setas-fon-897_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-897</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1746"><img src="./public/images/micologia/nuevas-setas-fon-1746_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1746</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1232"><img src="./public/images/micologia/nuevas-setas-fon-1232_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1232</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1747"><img src="./public/images/micologia/nuevas-setas-fon-1747_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1747</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-492"><img src="./public/images/micologia/nuevas-setas-fon-492_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-492</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-493"><img src="./public/images/micologia/nuevas-setas-fon-493_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-493</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1230"><img src="./public/images/micologia/nuevas-setas-fon-1230_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1230</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1725"><img src="./public/images/micologia/nuevas-setas-fon-1725_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1725</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1921"><img src="./public/images/micologia/nuevas-setas-fon-1921_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1921</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1600"><img src="./public/images/micologia/nuevas-setas-fon-1600_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1600</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-685"><img src="./public/images/micologia/nuevas-setas-fon-685_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-685</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1101"><img src="./public/images/micologia/nuevas-setas-fon-1101_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1101</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1122"><img src="./public/images/micologia/nuevas-setas-fon-1122_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1122</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-507"><img src="./public/images/micologia/nuevas-setas-fon-507_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-507</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-692"><img src="./public/images/micologia/nuevas-setas-fon-692_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-692</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1324"><img src="./public/images/micologia/nuevas-setas-fon-1324_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1324</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1774"><img src="./public/images/micologia/nuevas-setas-fon-1774_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1774</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1916"><img src="./public/images/micologia/nuevas-setas-fon-1916_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1916</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1237"><img src="./public/images/micologia/nuevas-setas-fon-1237_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1237</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-370"><img src="./public/images/micologia/nuevas-setas-fon-370_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-370</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1744"><img src="./public/images/micologia/nuevas-setas-fon-1744_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1744</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1797"><img src="./public/images/micologia/nuevas-setas-fon-1797_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1797</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-844"><img src="./public/images/micologia/nuevas-setas-fon-844_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-844</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1776"><img src="./public/images/micologia/nuevas-setas-fon-1776_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1776</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1123"><img src="./public/images/micologia/nuevas-setas-fon-1123_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1123</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1000"><img src="./public/images/micologia/nuevas-setas-fon-1000_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1000</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1154"><img src="./public/images/micologia/nuevas-setas-fon-1154_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1154</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1307"><img src="./public/images/micologia/nuevas-setas-fon-1307_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1307</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1477"><img src="./public/images/micologia/nuevas-setas-fon-1477_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1477</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1630"><img src="./public/images/micologia/nuevas-setas-fon-1630_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1630</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-1780"><img src="./public/images/micologia/nuevas-setas-fon-1780_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-1780</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-321"><img src="./public/images/micologia/nuevas-setas-fon-321_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-321</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-539"><img src="./public/images/micologia/nuevas-setas-fon-539_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-539</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-706"><img src="./public/images/micologia/nuevas-setas-fon-706_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-706</div></div>
+<div class="cell" data-slug="nuevas-setas-fon-855"><img src="./public/images/micologia/nuevas-setas-fon-855_400.jpg" loading="lazy" alt=""><div class="slug">nuevas-setas-fon-855</div></div>
+</div>
+<script>
+(function() {
+  function update() {
+    var marked = Array.prototype.slice.call(document.querySelectorAll('.cell.marked'));
+    var slugs = marked.map(function(c){ return c.getAttribute('data-slug'); });
+    document.getElementById('out').value = slugs.join('\n');
+    document.getElementById('count').textContent = slugs.length + ' marcadas';
+  }
+  // Delegación: un único listener en body
+  document.body.addEventListener('click', function(ev) {
+    var cell = ev.target.closest('.cell');
+    if (cell) {
+      cell.classList.toggle('marked');
+      update();
+    }
+  });
+  document.getElementById('reset').addEventListener('click', function() {
+    document.querySelectorAll('.cell.marked').forEach(function(c){ c.classList.remove('marked'); });
+    update();
+  });
+  document.getElementById('copy').addEventListener('click', function() {
+    var ta = document.getElementById('out');
+    ta.select();
+    document.execCommand('copy');
+    this.textContent = 'Copiado';
+    var self = this;
+    setTimeout(function(){ self.textContent = 'Copiar al portapapeles'; }, 1500);
+  });
+})();
+</script>
+</body></html>

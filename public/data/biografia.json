@@ -1,0 +1,98 @@
+{
+  "nombre": "Domingo González de Lena Díaz",
+  "nombre_completo": "Domingo González de Lena Díaz",
+  "lugar": "Oviedo, Asturias",
+  "tagline": "Guarda de campo y caza, cultivador de setas y hongos comestibles, reproductor de arte paleolítico asturiano.",
+  "fuente_tagline": "Libreto «Iniciación a la micología», Cursos_Domingo, 2013",
+  "actualizado": "2026-05-09",
+  "fuentes_leidas": [
+    "06_Documentos_Personales/Papa_Arte_Piedras/curriculum txomi.doc",
+    "06_Documentos_Personales/Papa_Arte_Piedras/Documents/PROYECTO PARA LA INSTALACION DE UNA EXPOSICION SOBRE ARTE PALEOLITICO ASTURIANO.doc",
+    "06_Documentos_Personales/Papa_Arte_Piedras/Documents/Arte Paleolítico.docx",
+    "06_Documentos_Personales/Papa_Arte_Piedras/Documents/carta de presentación fundacion oso.docx",
+    "06_Documentos_Personales/Papa_Arte_Piedras/Documents/carta colegio de san claudio.doc",
+    "02_Micologia/Cursos_Domingo/CURSO MICOLOGIA LIBRETO.docx",
+    "02_Micologia/Cursos_Domingo/CONTENIDO DEL PROGRAMA.docx",
+    "02_Micologia/Cursos_Domingo/Cartel curso setas.docx",
+    "02_Micologia/Cursos_Domingo/curso iniciacion san claudio.docx",
+    "02_Micologia/Cursos_Domingo/cartel curso 2015.docx",
+    "02_Micologia/Cursos_Domingo/INICIACION 2014.docx",
+    "06_Documentos_Personales/Filosofia_y_Trabajos/KEFRU EL HEMOSTÁTICO.docx"
+  ],
+  "fuentes_no_legibles": [
+    "06_Documentos_Personales/Papa_Arte_Piedras/Documents/curriculo.pdf [PDF dañado, xref ilegible]"
+  ],
+  "datos_publicos": {
+    "lugar_nacimiento": "Pajares, concejo de Lena, Asturias",
+    "anho_nacimiento": 1959,
+    "fecha_nacimiento_completa": "1959-06-15",
+    "lugar_residencia": "San Claudio, Oviedo (Asturias)",
+    "apodo": "Txomi / Chomi",
+    "filiacion": "Hijo de cazador conocido del valle de Valgrande (Pajares)",
+    "formacion": [
+      {"anho": 1975, "titulo": "Bachillerato Superior"},
+      {"anho": 1976, "titulo": "COU"},
+      {"anho": 1990, "titulo": "Curso de cultivo de hortalizas bajo abrigo", "horas": 200, "entidad": "Consejería de Agricultura, Principado de Asturias"},
+      {"anho": 1991, "titulo": "Curso de Agricultura ecológica", "horas": 380, "entidad": "Consejería de Agricultura, Principado de Asturias"},
+      {"anho": 1991, "titulo": "Curso de Sistemas de Riego", "horas": 150, "entidad": "Consejería de Agricultura, Principado de Asturias"},
+      {"anho": 1992, "titulo": "Curso de cultivo de hongos y setas comestibles", "horas": 500, "entidad": "Instituto del Campo, Fundación Príncipe de Asturias"},
+      {"anho": 2004, "titulo": "Técnico en Audiovisuales", "horas": 525, "entidad": "Plan de Formación Profesional de Asturias, empresa GENINFOR"},
+      {"anho": 2009, "titulo": "Guarda particular de campo (especialidad guarda marítimo-pesquero y especialidad guarda de caza)"}
+    ]
+  },
+  "cronologia": [
+    {"anho": 1959, "hito": "Nacimiento", "descripcion": "Nace en Pajares, concejo de Lena (Asturias). 15 de junio.", "fuente": "curriculum txomi.doc", "categoria": "biografia"},
+    {"anho": 1975, "hito": "Bachillerato Superior", "descripcion": "Finaliza el Bachillerato Superior.", "fuente": "curriculum txomi.doc", "categoria": "formacion"},
+    {"anho": 1976, "hito": "COU", "descripcion": "Curso de Orientación Universitaria.", "fuente": "curriculum txomi.doc", "categoria": "formacion"},
+    {"anho": 1984, "hito": "Inicio actividad agraria autónoma", "descripcion": "Comienza como agricultor autónomo de hortalizas, frutas, tabaco y setas en el marco de cultivos agrarios ecológicos. Hasta agosto de 1986.", "fuente": "curriculum txomi.doc", "categoria": "trabajo"},
+    {"anho": 1985, "hito": "Cultivo de setas para Setastur", "descripcion": "Trabaja como autónomo cultivador de setas para la empresa Setastur. Hasta septiembre de 1987.", "fuente": "curriculum txomi.doc", "categoria": "trabajo"},
+    {"anho": 1988, "hito": "Gerencia empresa Eternia", "descripcion": "Gerente de la empresa de mármoles Eternia. Hasta agosto de 1990.", "fuente": "curriculum txomi.doc", "categoria": "trabajo"},
+    {"anho": 1990, "hito": "Formación agraria", "descripcion": "Cursos de la Consejería de Agricultura del Principado: cultivo de hortalizas bajo abrigo (200 h, 1990), agricultura ecológica (380 h) y sistemas de riego (150 h, 1991).", "fuente": "curriculum txomi.doc", "categoria": "formacion"},
+    {"anho": 1992, "hito": "Formación en cultivo de hongos comestibles", "descripcion": "Curso de 500 horas en cultivo de hongos y setas comestibles (Instituto del Campo, Fundación Príncipe de Asturias).", "fuente": "curriculum txomi.doc", "categoria": "formacion"},
+    {"anho": 1996, "hito": "Empresa propia: Setas Txomi", "descripcion": "Funda y gestiona como autónomo la empresa Setas Txomi: cultivo, producción, envasado y comercialización de setas y hongos comestibles. Hasta septiembre de 1998.", "fuente": "curriculum txomi.doc", "categoria": "trabajo"},
+    {"anho": 2004, "hito": "Formación como Técnico en Audiovisuales", "descripcion": "Curso de 525 horas en GENINFOR dentro del Plan de Formación Profesional de Asturias.", "fuente": "curriculum txomi.doc", "categoria": "formacion"},
+    {"anho": 2004, "hito": "Vigilante medioambiental de costas (Tragsa)", "descripcion": "Trabajo en Tragsa como vigilante medioambiental tras el Prestige: localización de vertidos de hidrocarburo y conteo de nutrias afectadas en Ribadedeva y Llanes. Hasta enero de 2006.", "fuente": "curriculum txomi.doc", "categoria": "trabajo"},
+    {"anho": 2009, "hito": "Habilitación como Guarda particular de campo", "descripcion": "Especialidades de guarda marítimo-pesquero y guarda de caza.", "fuente": "curriculum txomi.doc", "categoria": "formacion"},
+    {"anho": 2009, "hito": "Proyecto «Exposición sobre Arte Paleolítico Asturiano»", "descripcion": "Dossier para una exposición de reproducciones en piedra de grabados rupestres de cuevas asturianas: Pindal, Tito Bustillo, Les Pedroses, Buxu, Llonín, Lluera, Covaciella y Peña de San Román de Candamo. Apoyado en estudios de Breuil, Vega del Sella, Hernández Pacheco, Obermaier, Jordá y Fortea.", "fuente": "PROYECTO PARA LA INSTALACION DE UNA EXPOSICION SOBRE ARTE PALEOLITICO ASTURIANO.doc", "categoria": "exposicion", "incierto": false},
+    {"anho": 2009, "hito": "Inauguración expositiva en el Café Bar Plaza", "descripcion": "Exposición de grabados y pinturas (réplicas de las principales cuevas asturianas) en el Café Bar Plaza (Plaza del Riego, Oviedo). Fecha exacta del año por confirmar; el documento data del entorno de febrero de 2009.", "fuente": "Arte Paleolítico.docx", "categoria": "exposicion", "incierto": true},
+    {"anho": 2013, "hito": "1.ª edición «Curso Iniciación a la Micología»", "descripcion": "Curso impartido por Domingo en el Restaurante Casa Lito (Altamirano 11, Oviedo). Material didáctico propio, dos horas y media los lunes, salida al campo y cena micológica de fin de curso. Fechas del 3 al 24 de noviembre.", "fuente": "Cartel curso setas.docx", "categoria": "docencia", "incierto": true},
+    {"anho": 2014, "hito": "2.ª edición del curso de Micología", "descripcion": "Curso impartido en La Casona de San Claudio. Horarios los jueves de 19:30 a 22:00, del 6 al 27 de noviembre.", "fuente": "curso iniciacion san claudio.docx", "categoria": "docencia", "incierto": true},
+    {"anho": 2015, "hito": "3.ª edición del curso de Micología", "descripcion": "Curso impartido en el Restaurante Casa Julio (Plaza del Sol, Oviedo) entre el 17 de noviembre y el 22 de diciembre. Horarios los jueves de 19:30 a 22:00, salida al campo y cena de fin de curso.", "fuente": "cartel curso 2015.docx", "categoria": "docencia"}
+  ],
+  "facetas": [
+    {
+      "id": "guarda",
+      "titulo": "Guarda de campo y caza",
+      "descripcion": "Profesión declarada por el propio Domingo en su libreto. Conocimiento de campo, fauna y vegetación asturiana."
+    },
+    {
+      "id": "micologia",
+      "titulo": "Micología y docencia",
+      "descripcion": "Cultivador de setas y hongos comestibles. Imparte cursos de iniciación a la micología en Oviedo (San Claudio, 2013, 2014, 2015). Libreto propio de 30+ páginas."
+    },
+    {
+      "id": "arte",
+      "titulo": "Reproducción de arte paleolítico asturiano",
+      "descripcion": "Autor de un proyecto expositivo de 25 piezas en piedra que reproducen grabados y pinturas de 8 cuevas asturianas (Pindal, Tito Bustillo, Les Pedroses, Buxu, Llonín, Lluera, Candamo, Covaciella). Apoyado en estudios de Breuil, Vega del Sella, Hernández Pacheco, Obermaier, Jordá y Fortea."
+    },
+    {
+      "id": "escritos",
+      "titulo": "Escritos",
+      "descripcion": "Ensayos breves sobre filosofía, antropología (Malinowski), espiritualidad y budismo, cine (Woody Allen), micología medicinal (KEFRU). Periodos 2014-2021."
+    },
+    {
+      "id": "musica",
+      "titulo": "Música tradicional asturiana",
+      "descripcion": "Partituras propias en MuseScore: «Cuando te vín la fonte», «No vengas a deshora galán a verme»."
+    }
+  ],
+  "contacto_artistico": {
+    "responsable": "Domingo González de Lena",
+    "telefono": "662 58 57 98",
+    "rol": "Reservas y encargos directamente con el autor"
+  },
+  "heraldica": {
+    "paterno": { "apellido": "González de Lena", "fuente_imagen": "/personal/escudos/escudo-gonzalez.png" },
+    "materno": { "apellido": "Díaz", "nota": "sin escudo en el archivo" }
+  }
+}

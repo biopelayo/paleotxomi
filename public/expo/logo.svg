@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" width="480" height="180" role="img" aria-label="Domingo González de Lena Díaz · Arte paleolítico asturiano">
+  <title>Domingo González de Lena Díaz</title>
+  <desc>Logo del autor para la exposición en La Esquina del Peso, Oviedo.</desc>
+
+  <!-- Fondo papel -->
+  <rect width="100%" height="100%" fill="#FAFAF7"/>
+
+  <!-- Símbolo: trazo paleolítico abstracto (placeholder de motivo) -->
+  <g stroke="#2D6A4F" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 30 92 Q 60 70, 100 84 T 165 90"/>
+  </g>
+  <circle cx="142" cy="86" r="2.6" fill="#D4845A"/>
+
+  <!-- Tipografía -->
+  <text x="30" y="136" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="800" font-size="36" fill="#2D6A4F" letter-spacing="-1">DOMINGO</text>
+  <text x="30" y="160" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#1B1B1B" letter-spacing="-0.3">González de Lena Díaz</text>
+
+  <text x="296" y="136" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#767676" letter-spacing="2.4">ARTE PALEOLÍTICO</text>
+  <text x="296" y="156" font-family="Inter, sans-serif" font-weight="500" font-size="11" fill="#767676" letter-spacing="2.4">ASTURIANO · PIEDRA</text>
+</svg>

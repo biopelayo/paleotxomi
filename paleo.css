@@ -1,0 +1,279 @@
+/* Estética paleolítica · Domingo González de Lena · expo La Esquina del Peso */
+
+@page {
+  size: A4;
+  margin: 25mm 22mm 25mm 22mm;
+}
+
+:root {
+  --crema: #f3e9d2;
+  --crema-claro: #fbf5e6;
+  --crema-oscuro: #e8d8b0;
+  --carbon: #2b1d10;
+  --carbon-suave: #4a3622;
+  --ocre-rojo: #8b2c1a;
+  --ocre-medio: #b85a2f;
+  --tierra: #6b3d1c;
+  --ocre-amarillo: #c0a87a;
+  --linea: #c0a87a;
+  --gris-tinta: #6b5a48;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--crema);
+  color: var(--carbon);
+  font-family: Georgia, 'Iowan Old Style', 'Cardo', 'Palatino Linotype', serif;
+  font-size: 11.5pt;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 60px 50px 80px 50px;
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(192,168,122,0.18) 0%, transparent 40%),
+    radial-gradient(ellipse at 90% 100%, rgba(139,44,26,0.07) 0%, transparent 50%),
+    var(--crema);
+  min-height: 100vh;
+}
+
+/* Cabecera con cierva trilineal decorativa */
+body::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 24px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='xMidYMid meet'><g fill='none' stroke='%238b2c1a' stroke-width='1.4' stroke-linecap='round'><path d='M50 38 Q55 30 65 28 L78 28 L82 22 L85 26 L92 26 L96 22 L100 28 L120 30 Q140 32 160 32 L185 32 L190 36 L188 44 L184 48 L182 44 L186 38 L170 40 Q150 42 130 40 L110 38 L100 44 L96 50 L92 46 L88 50 L84 46 L80 50 L76 46 L72 50 L70 44 L66 42 Z'/><path d='M120 32 L122 28' /><path d='M135 32 L137 28' /><path d='M150 32 L152 28' /></g></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.85;
+}
+
+/* Encabezados */
+h1 {
+  font-family: 'Trajan Pro', 'Cinzel', 'Optima', Georgia, serif;
+  font-size: 22pt;
+  color: var(--ocre-rojo);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: normal;
+  margin: 0 0 8px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--linea);
+  text-align: center;
+}
+
+h1 + p,
+h1 + ul {
+  text-align: center;
+  color: var(--tierra);
+  font-style: italic;
+  font-size: 11pt;
+}
+
+h2 {
+  font-family: 'Trajan Pro', 'Cinzel', 'Optima', Georgia, serif;
+  font-size: 14pt;
+  color: var(--ocre-rojo);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: normal;
+  margin: 36px 0 14px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--ocre-amarillo);
+}
+
+h3 {
+  font-family: Georgia, serif;
+  font-size: 12pt;
+  color: var(--tierra);
+  font-weight: bold;
+  margin: 24px 0 10px 0;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+h4 {
+  font-size: 11pt;
+  color: var(--carbon-suave);
+  font-weight: bold;
+  margin: 18px 0 8px 0;
+}
+
+/* Párrafos y texto */
+p {
+  margin: 0 0 12px 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+strong, b {
+  color: var(--ocre-rojo);
+  font-weight: bold;
+}
+
+em, i {
+  color: var(--carbon-suave);
+}
+
+a {
+  color: var(--tierra);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--ocre-amarillo);
+}
+
+a:hover {
+  color: var(--ocre-rojo);
+  border-bottom-color: var(--ocre-rojo);
+}
+
+/* Listas */
+ul, ol {
+  margin: 0 0 14px 0;
+  padding-left: 26px;
+}
+
+ul li::marker {
+  color: var(--ocre-rojo);
+  content: "▸ ";
+}
+
+ol li::marker {
+  color: var(--ocre-rojo);
+  font-weight: bold;
+}
+
+li {
+  margin: 4px 0;
+}
+
+li > p {
+  margin: 4px 0;
+}
+
+/* Citas (blockquote) - como inscripciones */
+blockquote {
+  margin: 16px 0;
+  padding: 14px 22px;
+  background: var(--crema-claro);
+  border-left: 3px solid var(--ocre-rojo);
+  color: var(--carbon-suave);
+  font-style: italic;
+  border-radius: 0;
+  position: relative;
+}
+
+blockquote::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='none' stroke='%23c0a87a' stroke-width='1.2'><line x1='4' y1='6' x2='4' y2='18'/><line x1='8' y1='4' x2='8' y2='20'/><line x1='12' y1='6' x2='12' y2='18'/></g></svg>");
+  background-repeat: no-repeat;
+  opacity: 0.55;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 20px 0;
+  font-size: 10.5pt;
+  background: var(--crema-claro);
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--ocre-amarillo);
+  vertical-align: top;
+}
+
+th {
+  background: var(--crema-oscuro);
+  color: var(--ocre-rojo);
+  font-family: 'Trajan Pro', 'Cinzel', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: normal;
+  font-size: 9.5pt;
+  border-bottom: 2px solid var(--ocre-rojo);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Línea horizontal como trazo de pintura */
+hr {
+  border: none;
+  height: 22px;
+  margin: 30px 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0 10 Q40 4 80 10 T 160 10 T 200 10' fill='none' stroke='%238b2c1a' stroke-width='1' opacity='0.5' stroke-linecap='round'/><circle cx='100' cy='10' r='2' fill='%238b2c1a' opacity='0.6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% 100%;
+}
+
+/* Código (no debería aparecer mucho) */
+code {
+  background: var(--crema-oscuro);
+  padding: 1px 6px;
+  border-radius: 2px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.92em;
+  color: var(--tierra);
+}
+
+pre {
+  background: var(--crema-oscuro);
+  padding: 12px 16px;
+  border-left: 3px solid var(--ocre-amarillo);
+  overflow-x: auto;
+  font-size: 9.5pt;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Pie de página decorativo */
+body::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 30px;
+  margin-top: 40px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 30'><g fill='%238b2c1a' opacity='0.5'><circle cx='180' cy='15' r='2.5'/><circle cx='195' cy='15' r='2.5'/><circle cx='210' cy='15' r='2.5'/></g></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Impresión */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+    max-width: none;
+  }
+
+  body::before {
+    margin-top: 0;
+  }
+
+  h2 { page-break-after: avoid; }
+  h3 { page-break-after: avoid; }
+  table { page-break-inside: avoid; }
+  blockquote { page-break-inside: avoid; }
+}

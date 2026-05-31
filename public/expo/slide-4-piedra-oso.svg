@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" role="img" aria-label="Carrusel slide 4 · Piedra del oso">
+  <title>Slide 4 · Piedra del oso</title>
+  <rect width="100%" height="100%" fill="#FAFAF7"/>
+  <rect x="40" y="40" width="1000" height="1000" fill="none" stroke="#E5E5E0" stroke-width="2"/>
+
+  <text x="540" y="135" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="20" fill="#D4845A" letter-spacing="5">PIEZA #5 · TITO BUSTILLO</text>
+
+  <text x="540" y="225" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="64" fill="#2D6A4F" letter-spacing="-1.5">Piedra</text>
+  <text x="540" y="285" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="44" fill="#1B1B1B" letter-spacing="-0.5">del oso</text>
+
+  <line x1="440" y1="320" x2="640" y2="320" stroke="#D4845A" stroke-width="3"/>
+
+  <!-- Silueta de oso esquemático -->
+  <g transform="translate(310,400)" stroke="#2D6A4F" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cuerpo -->
+    <path d="M 60 100 C 80 60 200 50 320 70 L 370 75 C 390 80 405 100 400 130 L 380 160"/>
+    <!-- Cabeza grande -->
+    <path d="M 60 100 C 30 100 10 120 25 150"/>
+    <!-- Orejas -->
+    <path d="M 38 95 L 32 70"/>
+    <path d="M 55 92 L 60 68"/>
+    <!-- Hocico -->
+    <path d="M 25 150 L 10 155 L 20 165"/>
+    <!-- Patas anchas -->
+    <path d="M 90 150 L 80 220 L 110 220 L 110 150"/>
+    <path d="M 170 152 L 165 222 L 195 222 L 195 152"/>
+    <path d="M 260 155 L 255 222 L 285 222 L 285 155"/>
+    <path d="M 350 152 L 345 218 L 375 218 L 375 152"/>
+  </g>
+
+  <text x="540" y="775" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="22" fill="#3D3D3D">La pieza grabada más grande</text>
+  <text x="540" y="810" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="22" fill="#3D3D3D">de la exposición: 60 × 30 cm.</text>
+
+  <text x="540" y="880" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#2D6A4F">Cueva de Tito Bustillo</text>
+  <text x="540" y="912" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="20" fill="#1B1B1B">Ribadesella · Patrimonio UNESCO</text>
+
+  <text x="540" y="965" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-size="18" fill="#767676">Una de las imágenes más conocidas de la cueva.</text>
+
+  <text x="110" y="995" font-family="Inter, sans-serif" font-size="18" fill="#767676">← 3/7</text>
+  <text x="970" y="995" text-anchor="end" font-family="Inter, sans-serif" font-size="18" fill="#767676">→</text>
+</svg>

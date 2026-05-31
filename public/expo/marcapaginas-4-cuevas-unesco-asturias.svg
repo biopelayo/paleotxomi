@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 200" width="50" height="200" role="img" aria-label="Marcapáginas 4 · 5 cuevas asturianas Patrimonio UNESCO desde 2008">
+  <title>Marcapáginas · Cuevas UNESCO Asturias 2008</title>
+  <desc>Marcapáginas de la exposición: las cinco cuevas asturianas inscritas en la lista del Patrimonio Mundial de la UNESCO en 2008.</desc>
+
+  <rect width="100%" height="100%" fill="#FAFAF7"/>
+  <rect x="2" y="2" width="46" height="196" fill="none" stroke="#E5E5E0" stroke-width="0.5"/>
+
+  <circle cx="25" cy="10" r="2" fill="none" stroke="#999" stroke-width="0.4"/>
+
+  <text x="25" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="2.2" fill="#D4845A" letter-spacing="1.4">PATRIMONIO MUNDIAL</text>
+
+  <!-- Mapa esquemático de Asturias con 5 puntos -->
+  <g transform="translate(6,28)">
+    <!-- Costa cantábrica simplificada -->
+    <path d="M 1 4 Q 10 2 18 4 Q 26 2 34 4 Q 38 3 38 4" stroke="#52B788" stroke-width="0.5" fill="none"/>
+    <text x="19" y="2" text-anchor="middle" font-family="Inter, sans-serif" font-size="1.5" fill="#52B788" letter-spacing="0.4">CANTÁBRICO</text>
+
+    <!-- Borde Asturias esquemático -->
+    <path d="M 1 4 L 1 24 L 38 24 L 38 4" stroke="#aaa" stroke-width="0.3" fill="none" stroke-dasharray="0.8,0.8"/>
+    <text x="19" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="1.4" fill="#aaa" letter-spacing="0.5">ASTURIAS</text>
+
+    <!-- 5 puntos UNESCO -->
+    <!-- Candamo (oeste) -->
+    <circle cx="6" cy="7" r="1.4" fill="#D4845A"/>
+    <text x="6" y="11" text-anchor="middle" font-family="Inter, sans-serif" font-size="1.3" fill="#1B1B1B" font-weight="600">Candamo</text>
+
+    <!-- Tito Bustillo (centro-este) -->
+    <circle cx="22" cy="6" r="1.4" fill="#D4845A"/>
+    <text x="22" y="3.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="1.3" fill="#1B1B1B" font-weight="600">T. Bustillo</text>
+
+    <!-- Pindal (este extremo) -->
+    <circle cx="35" cy="6" r="1.4" fill="#D4845A"/>
+    <text x="35" y="3.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="1.3" fill="#1B1B1B" font-weight="600">Pindal</text>
+
+    <!-- Llonín (este interior) -->
+    <circle cx="33" cy="17" r="1.4" fill="#D4845A"/>
+    <text x="35" y="20" font-family="Inter, sans-serif" font-size="1.3" fill="#1B1B1B" font-weight="600">Llonín</text>
+
+    <!-- Covaciella (centro-este interior) -->
+    <circle cx="28" cy="14" r="1.4" fill="#D4845A"/>
+    <text x="22" y="15" font-family="Inter, sans-serif" font-size="1.3" fill="#1B1B1B" font-weight="600">Covaciella</text>
+  </g>
+
+  <text x="25" y="68" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="3.6" fill="#2D6A4F">5 CUEVAS</text>
+  <text x="25" y="73" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="2.6" fill="#1B1B1B">Patrimonio Mundial</text>
+  <text x="25" y="77" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="2.6" fill="#1B1B1B">UNESCO · 2008</text>
+
+  <line x1="18" y1="83" x2="32" y2="83" stroke="#D4845A" stroke-width="0.5"/>
+
+  <text x="25" y="91" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">En 2008 la UNESCO amplió</text>
+  <text x="25" y="95" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">el sitio «Cueva de Altamira</text>
+  <text x="25" y="99" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">y arte rupestre paleolítico</text>
+  <text x="25" y="103" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">del norte de España»</text>
+  <text x="25" y="107" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">(inscrito en 1985) con</text>
+  <text x="25" y="111" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">17 cuevas más por</text>
+  <text x="25" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">Asturias, Cantabria y</text>
+  <text x="25" y="119" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">País Vasco.</text>
+
+  <line x1="18" y1="125" x2="32" y2="125" stroke="#E5E5E0" stroke-width="0.4"/>
+
+  <text x="25" y="132" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="2.2" fill="#1B1B1B" letter-spacing="0.5">EN ASTURIAS</text>
+
+  <text x="25" y="139" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.1" fill="#3D3D3D">· Tito Bustillo (Ribadesella)</text>
+  <text x="25" y="143" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.1" fill="#3D3D3D">· La Peña de Candamo</text>
+  <text x="25" y="147" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.1" fill="#3D3D3D">· Pindal (Ribadedeva)</text>
+  <text x="25" y="151" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.1" fill="#3D3D3D">· Llonín (Peñamellera A.)</text>
+  <text x="25" y="155" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.1" fill="#3D3D3D">· Covaciella (Cabrales)</text>
+
+  <line x1="18" y1="161" x2="32" y2="161" stroke="#E5E5E0" stroke-width="0.4"/>
+
+  <text x="25" y="169" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.1" fill="#3D3D3D">Cuatro de ellas están</text>
+  <text x="25" y="173" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.1" fill="#3D3D3D">representadas en esta</text>
+  <text x="25" y="177" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="2.1" fill="#2D6A4F">exposición.</text>
+
+  <text x="25" y="186" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-size="1.9" fill="#767676">whc.unesco.org/en/list/310</text>
+
+  <text x="25" y="192" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="2" fill="#2D6A4F">DOMINGO GONZÁLEZ DE LENA</text>
+  <text x="25" y="196" text-anchor="middle" font-family="Inter, sans-serif" font-size="1.7" fill="#999" letter-spacing="0.3">paleotxomi.com · @txomidelena</text>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "actualizado": "2026-05-13",
+  "_nota_estructura": "Cada video en `videos[]` debe tener: id, titulo, fecha_emision (YYYY-MM-DD), url, embed_url (opcional, si está activa abre lightbox), thumbnail (ruta a /public/images/videos/), duracion_min (entero), descripcion. De momento el array está vacío a la espera de que se aporten los enlaces reales del archivo del programa.",
+  "secciones": [
+    {
+      "id": "huerta-de-txomi",
+      "titulo": "La huerta de Txomi",
+      "programa": "De hoy no pasa",
+      "cadena": "TPA · Televisión del Principado de Asturias",
+      "descripcion": "Sección regular de Domingo González de Lena en el programa diario de TPA, dedicada a setas, huerta y cultura rural asturiana.",
+      "videos": []
+    }
+  ]
+}

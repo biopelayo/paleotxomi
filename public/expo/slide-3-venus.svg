@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" role="img" aria-label="Carrusel slide 3 · Venus del cuerno">
+  <title>Slide 3 · Venus del cuerno</title>
+  <rect width="100%" height="100%" fill="#FAFAF7"/>
+  <rect x="40" y="40" width="1000" height="1000" fill="none" stroke="#E5E5E0" stroke-width="2"/>
+
+  <text x="540" y="135" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="20" fill="#D4845A" letter-spacing="5">PIEZA SINGULAR · #24</text>
+
+  <text x="540" y="225" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="64" fill="#2D6A4F" letter-spacing="-1.5">Venus</text>
+  <text x="540" y="285" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="44" fill="#1B1B1B" letter-spacing="-0.5">del cuerno</text>
+
+  <line x1="440" y1="320" x2="640" y2="320" stroke="#D4845A" stroke-width="3"/>
+
+  <g transform="translate(540,395) scale(8)" stroke="#2D6A4F" stroke-width="0.7" fill="#2D6A4F" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="2" r="3.5"/>
+    <ellipse cx="-3.5" cy="11" rx="3" ry="4"/>
+    <ellipse cx="3.5" cy="11" rx="3" ry="4"/>
+    <path d="M -4 16 C -10 22 -10 32 -7 38 C -7 41 7 41 7 38 C 10 32 10 22 4 16 Z"/>
+    <path d="M -4 39 L -5 50 L -3 50 L -2 40" stroke="none"/>
+    <path d="M 4 39 L 5 50 L 3 50 L 2 40" stroke="none"/>
+  </g>
+
+  <text x="540" y="850" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="22" fill="#3D3D3D">Una pieza singular del autor,</text>
+  <text x="540" y="885" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="22" fill="#3D3D3D">no asociada a ninguna cueva.</text>
+
+  <text x="540" y="945" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-size="18" fill="#767676">Inspirada en las Venus gravetienses</text>
+  <text x="540" y="970" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-size="18" fill="#767676">del Paleolítico superior europeo</text>
+
+  <text x="110" y="995" font-family="Inter, sans-serif" font-size="18" fill="#767676">← 2/7</text>
+  <text x="970" y="995" text-anchor="end" font-family="Inter, sans-serif" font-size="18" fill="#767676">→</text>
+</svg>

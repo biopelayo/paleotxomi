@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "title": "Domingo González de Lena Díaz · personal archive",
+    "description": "Public archive of Domingo González de Lena Díaz: countryside and game warden, mushroom grower, author of the exhibition project on Asturian Palaeolithic art (25 stone pieces, 8 caves), television appearances and Asturian song scores."
+  },
+  "nav": {
+    "home": "Home",
+    "biografia": "Biography",
+    "exposicion": "Palaeolithic art",
+    "micologia": "Mycology",
+    "videos": "Videos",
+    "trilineal": "Trilineal project",
+    "gallery": "Gallery",
+    "catalog": "Numbers",
+    "map": "Map",
+    "research": "Research",
+    "resources": "Resources",
+    "commissions": "Commissions",
+    "about": "About",
+    "eventos": "Events",
+    "contact": "Contact"
+  },
+  "hero": {
+    "kicker": "Personal archive",
+    "title": "Domingo González de Lena Díaz",
+    "subtitle": "Countryside and game warden, mushroom grower, reproducer of Asturian Palaeolithic art.",
+    "lead": "Four facets in one archive: 25 stone pieces from Asturian caves, the mycology courses, the television appearances and the biography.",
+    "ctaPrimary": "Meet the author",
+    "ctaSecondary": "See the art corpus"
+  },
+  "stats": {
+    "pieces": "pieces in the exhibition project",
+    "caves": "Asturian caves represented",
+    "courses": "years of mycology courses",
+    "writings": "published writings"
+  },
+  "manifesto": {
+    "title": "Manifesto",
+    "lead": "The site collects four faces of Domingo González de Lena Díaz's personal archive: Palaeolithic art, mycology, videos and biography.",
+    "verbs": "Three verbs guide the archive: preserve, give access, attribute.",
+    "warning": "The stone reproductions are Domingo's contemporary work. The original heritage stays in the Asturian caves, under the management of the Principado. The texts, classes and music are his."
+  },
+  "cierva": {
+    "title": "The trilinear hind",
+    "lead": "Three parallel strokes that delimit the silhouette of the cervid.",
+    "body": "The term names a recurring graphic treatment in the Franco-Cantabrian region: three parallel strokes that delimit the silhouette of the cervid. The project uses the motif as a visual emblem and records the open scientific debate in its catalogue and bibliography."
+  },
+  "biografia": {
+    "titulo": "Biography",
+    "subtitulo": "Domingo was born in {lugar} on 15 June {anho}.",
+    "intro": "Hunter from the Valgrande valley, field naturalist and author of the exhibition project on Asturian Palaeolithic art. The timeline is built from the personal archive: the CV closed in February 2009, the mycology course posters, letters and writings.",
+    "facetas": {
+      "escultor": "Sculptor",
+      "micologo": "Mycologist",
+      "naturalista": "Naturalist"
+    },
+    "timeline_titulo": "Timeline",
+    "para_saber_mas_titulo": "Read more",
+    "para_saber_mas_intro": "The other sections of the archive expand each facet with pieces, prices and contact routes."
+  },
+  "micologia": {
+    "title": "Mycology and teaching",
+    "subtitle": "Introductory mycology courses taught by Domingo in Oviedo between 2013 and 2015.",
+    "libretoTitle": "Booklet «Iniciación a la micología»",
+    "libretoBody": "30 pages written by Domingo in 2013 for his Oviedo courses: classification of fungi, parts of the fruiting body, edible and toxic species, search keys and tasting notes.",
+    "libretoCta": "Download PDF",
+    "cursosTitle": "Courses taught",
+    "setasTitle": "Mushroom gallery",
+    "setasNota": "Selected photographs from the personal archive.",
+    "galeria": {
+      "titulo": "Mushroom gallery",
+      "subtitulo": "150 photographs from Domingo's personal archive, grouped by context.",
+      "filtroAll": "All",
+      "filtroEspecies": "Identified species",
+      "filtroRecolecciones": "Foraging trips",
+      "filtroCatalogo": "Catalogue",
+      "filtroCampo": "Field",
+      "filtroCurso": "Course",
+      "buscar": "Search by species or file name…",
+      "contadorFmt": "{n} of {total}"
+    }
+  },
+  "videos": {
+    "titulo": "Videos",
+    "subtitulo": "Domingo's television appearances and audiovisual material from the family archive.",
+    "placeholder": "The videos in this section are being recovered from the programme archive. They will appear here when available. If you have any and want to share them, write to domingodelena@gmail.com.",
+    "duracion": "Duration",
+    "fechaEmision": "Broadcast",
+    "aportar": "Contribute a video",
+    "cerrar": "Close video"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "120 Fujifilm X-T4 photographs taken by Amanda C. Blanco in April 2026 on work by Domingo González de Lena Díaz.",
+    "filterAll": "All",
+    "filterEsc": "Sculptures",
+    "filterOtr": "Other pieces",
+    "openImage": "Open image",
+    "closeImage": "Close"
+  },
+  "catalog": {
+    "title": "Corpus numbers",
+    "subtitle": "Live figures of the catalogue and project KPIs.",
+    "byCategory": "Distribution by category",
+    "byCertainty": "Certainty level",
+    "byValidation": "Scientific validation status",
+    "kpis": "Main indicators"
+  },
+  "map": {
+    "title": "Map of the Oviedo Nalón",
+    "subtitle": "Sites within the Oviedo concejo and the five Asturian UNESCO caves."
+  },
+  "research": {
+    "title": "Recent publications",
+    "subtitle": "Live data from OpenAlex on Cantabrian Palaeolithic art, the trilinear hind and the Nalón sites.",
+    "queries": "Tracked queries",
+    "publications": "Publications per year",
+    "topAuthors": "Most cited authors",
+    "topInstitutions": "Institutions",
+    "openAccess": "Open access",
+    "viewOnOpenalex": "View on OpenAlex",
+    "loading": "Loading data from OpenAlex…",
+    "error": "OpenAlex did not respond. Try again in a few minutes.",
+    "lastUpdated": "Data updated",
+    "methodNote": "Queries combine title, abstract and concepts. Results may include works not exclusive to the Nalón. Use as a panoramic view, not as a closed bibliography."
+  },
+  "resources": {
+    "title": "Resources",
+    "subtitle": "Links, datasets, regulations and bibliography for research, press, teaching and cultural administration.",
+    "categories": {
+      "primary": "Sites and heritage",
+      "europeanArchives": "European archives and aggregators",
+      "standards": "Technical standards",
+      "ecoc": "European Capital of Culture",
+      "biblio": "Bibliography",
+      "media": "Press and communication",
+      "datasets": "Project datasets"
+    }
+  },
+  "eventos": {
+    "title": "Events",
+    "subtitle": "Exhibitions, talks and activities by Domingo González de Lena. The page updates with every confirmation.",
+    "actualizado": "Last update",
+    "subscribe": "Subscribe to calendar",
+    "contact": "Get in touch about a venue",
+    "proximosTitle": "Upcoming",
+    "pasadosTitle": "Past",
+    "mapaTitle": "Where they took place",
+    "mapaSubtitle": "Venues with confirmed location.",
+    "emptyKicker": "No confirmed dates yet",
+    "emptyTitle": "Domingo is preparing his next exhibition",
+    "emptyBody": "Confirmed dates will appear here. If you would like to host a selection from the corpus at your venue, write to him directly.",
+    "emptyCtaContact": "Write to Domingo",
+    "emptyCtaWhatsapp": "WhatsApp +34 662 58 57 98",
+    "calendarHint": "The «Subscribe to calendar» link opens an iCalendar (.ics) file compatible with Google Calendar, Apple Calendar and Outlook.",
+    "solicitud": {
+      "title": "Request an exhibition or loan",
+      "lead": "If you represent a gallery, a library, a school or a town hall, this form opens an email to Domingo with the data prefilled. There is also a WhatsApp option.",
+      "nombre": "Full name",
+      "sede": "Venue or institution",
+      "ciudad": "City",
+      "fechas": "Proposed dates",
+      "fechasPlaceholder": "e.g. October 2026, or 5 to 25 November",
+      "mensaje": "Message",
+      "submitEmail": "Send via email",
+      "submitWhatsapp": "Send via WhatsApp",
+      "nota": "This form sends nothing to a server: it opens your email client or WhatsApp with the message ready to send."
+    }
+  },
+  "commissions": {
+    "title": "Commissions",
+    "lead": "Domingo carves the stone by hand at his workshop in Lena. Below are the available pieces, real prices, honest lead times and direct contact. No middlemen.",
+    "preciosTitle": "Current price list",
+    "preciosNota": "List written by the author. Prices in euros, VAT not included. Small stones: 5 €.",
+    "encargos": {
+      "kicker": "Order funnel",
+      "phone": "+34 662 58 57 98",
+      "email": "domingodelena@gmail.com",
+      "destacados": {
+        "title": "Pieces available now",
+        "lead": "Fifteen pieces chosen from the catalogue, with photo and price. To reserve one, a WhatsApp message is enough.",
+        "fichasNota": "The descriptions are being written together with Domingo. For now we show reference, photo and price.",
+        "ctaReservar": "Reserve piece",
+        "refLabel": "Reference"
+      },
+      "casos": {
+        "title": "What an order is for",
+        "lead": "Eight situations in which people usually call.",
+        "items": {
+          "regalo": {
+            "title": "Personal gift",
+            "body": "Anniversaries, weddings, retirements. A stone piece with a Palaeolithic motif, signed by Domingo."
+          },
+          "interior": {
+            "title": "Interior decoration",
+            "body": "Living rooms, offices, hallways. Small pieces (15 to 50 €) fit on a shelf."
+          },
+          "exterior": {
+            "title": "Garden and outdoors",
+            "body": "Medium and large pieces for gardens, patios and terraces. They handle the Asturian climate."
+          },
+          "publico": {
+            "title": "Public space and monument",
+            "body": "Squares, parks and roundabouts. Domingo has made monumental pieces on municipal commission."
+          },
+          "coleccion": {
+            "title": "Private collection",
+            "body": "For collectors of cave art, ethnography or contemporary Asturian sculpture."
+          },
+          "personalizado": {
+            "title": "Custom commission",
+            "body": "If you have a specific motif in mind (an animal, an engraving from a particular cave), Domingo carves it to order."
+          },
+          "institucional": {
+            "title": "Institutional work",
+            "body": "Universities, museums, town councils and cultural centres. Domingo invoices as a self-employed artist."
+          },
+          "cuevas": {
+            "title": "Souvenir of Asturian caves",
+            "body": "Faithful reproductions of engravings from Pindal, La Lluera, Tito Bustillo, La Peña de Candamo and others."
+          }
+        }
+      },
+      "plazos": {
+        "title": "Lead times",
+        "lead": "Domingo works by hand at his workshop. Lead times depend on the weather, the available stone and the complexity of the motif. For a specific date, just ask.",
+        "tabla": {
+          "tamano": "Size",
+          "plazo": "Lead time",
+          "filas": {
+            "pequena": {
+              "tamano": "Small piece (S, under 5 kg)",
+              "plazo": "1 to 2 weeks"
+            },
+            "mediana": {
+              "tamano": "Medium piece (P, B, T)",
+              "plazo": "3 to 4 weeks"
+            },
+            "grande": {
+              "tamano": "Large piece or custom commission",
+              "plazo": "6 to 12 weeks"
+            }
+          }
+        }
+      },
+      "pagos": {
+        "title": "Accepted payment methods",
+        "lead": "Domingo invoices as self-employed. The methods available today:",
+        "items": {
+          "bizum": {
+            "title": "Bizum",
+            "body": "Direct payment to 662 58 57 98 (Spain only)."
+          },
+          "transferencia": {
+            "title": "Bank transfer",
+            "body": "Account details sent privately when the order is confirmed."
+          },
+          "efectivo": {
+            "title": "Cash at the workshop",
+            "body": "If you collect the piece in Lena, you can pay in cash."
+          },
+          "paypal": {
+            "title": "PayPal",
+            "body": "Available with an added cost for the platform fee."
+          },
+          "tarjeta": {
+            "title": "Card in person",
+            "body": "Mobile card reader for in-person payments at the workshop or arranged delivery."
+          },
+          "fraccionado": {
+            "title": "Split payment",
+            "body": "Personal arrangement if the piece is over 200 €. Half on order, half on delivery."
+          }
+        }
+      },
+      "envios": {
+        "title": "Shipping costs",
+        "lead": "Indicative rates. Pieces travel in a custom box, which adds 3 to 5 € to the shipping cost.",
+        "tabla": {
+          "zona": "Zone",
+          "peso": "Weight",
+          "coste": "Cost",
+          "filas": {
+            "esp1": {
+              "zona": "Mainland Spain",
+              "peso": "Under 5 kg",
+              "coste": "8 to 15 €"
+            },
+            "esp2": {
+              "zona": "Mainland Spain",
+              "peso": "5 to 15 kg",
+              "coste": "18 to 30 €"
+            },
+            "esp3": {
+              "zona": "Mainland Spain",
+              "peso": "Over 15 kg",
+              "coste": "Custom quote"
+            },
+            "baleares": {
+              "zona": "Balearic Islands",
+              "peso": "Any weight",
+              "coste": "Mainland rate + 5 €"
+            },
+            "canarias": {
+              "zona": "Canary Islands, Ceuta and Melilla",
+              "peso": "Any weight",
+              "coste": "Customs handled separately, custom quote"
+            },
+            "ue": {
+              "zona": "Continental EU",
+              "peso": "Any weight",
+              "coste": "25 to 60 € depending on weight and country"
+            },
+            "taller": {
+              "zona": "Pickup at the workshop (Lena, Asturias)",
+              "peso": "Any weight",
+              "coste": "Free"
+            }
+          }
+        }
+      },
+      "contacto": {
+        "title": "Talk to Domingo",
+        "lead": "The fastest channel is WhatsApp. Email is also available.",
+        "ctaWhatsapp": "Talk to Domingo",
+        "ctaEmail": "Write to domingodelena@gmail.com",
+        "wa": "WhatsApp",
+        "telLabel": "Phone",
+        "horario": "Usual hours: Monday to Saturday, 10:00 to 20:00."
+      },
+      "devoluciones": {
+        "title": "Returns policy",
+        "body": "If the piece arrives broken in transit, Domingo replaces it or refunds the amount without argument. If the piece does not convince you on receipt, you have 14 calendar days to return it in perfect condition; return shipping is paid by the buyer. Custom pieces cannot be returned except for manufacturing defects."
+      }
+    },
+    "form": {
+      "name": "Name and surname",
+      "email": "Email",
+      "organization": "Institution (optional)",
+      "type": "Type of commission",
+      "typeOptions": {
+        "reproduction": "Reproduction of an existing piece",
+        "custom": "Custom piece",
+        "workshop": "Workshop / mediation",
+        "loan": "Loan to an educational centre",
+        "other": "Other"
+      },
+      "message": "Description",
+      "deadline": "Desired date (optional)",
+      "consent": "I agree that the Trilineal team contacts me by email to reply to this request.",
+      "submit": "Send request",
+      "sending": "Sending…",
+      "ok": "Request sent. You will receive a reply within five working days.",
+      "error": "There was a problem sending the form. Please try again or write to domingodelena@gmail.com."
+    }
+  },
+  "about": {
+    "title": "About the project",
+    "team": "Team",
+    "committee": "Scientific committee",
+    "committeeBody": "Seven members in formation, one per area: Cantabrian Palaeolithic art, Nalón archaeology, conservation, museography, accessibility, feminist heritage studies and European cultural management.",
+    "ecoc": "Fit with Oviedo 2031",
+    "standards": "Applied standards"
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "For reservations, commissions, press, institutions and research.",
+    "email": "domingodelena@gmail.com"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "credits": "Work by Domingo González de Lena Díaz · Corpus photography: Amanda C. Blanco.",
+    "license": "Descriptive data under CC BY 4.0. Images under CC BY-NC-SA 4.0 (assignment pending)."
+  }
+}

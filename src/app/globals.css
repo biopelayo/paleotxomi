@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* === Tokens Pelamovic con extensión patrimonial === */
+:root {
+  --pel-green: #2D6A4F;
+  --pel-green-2: #52B788;
+  --pel-green-3: #95D5B2;
+  --pel-green-4: #D8F3DC;
+  --pel-warm: #D4845A;
+  --pel-warm-soft: #F0C7B0;
+  --pel-ink: #1B1B1B;
+  --pel-ink-soft: #3D3D3D;
+  --pel-paper: #FAFAF7;
+  --pel-card: #FFFFFF;
+  --pel-border: #E5E5E0;
+  --pel-muted: #6B6B6B;
+}
+
+[data-theme="dark"] {
+  --pel-green: #95D5B2;
+  --pel-green-2: #52B788;
+  --pel-green-3: #2D6A4F;
+  --pel-green-4: #1B4332;
+  --pel-warm: #E69977;
+  --pel-warm-soft: #6E3C24;
+  --pel-ink: #F5F5F0;
+  --pel-ink-soft: #C8C8C0;
+  --pel-paper: #0F1A14;
+  --pel-card: #18241D;
+  --pel-border: #2A3A30;
+  --pel-muted: #8A8A82;
+}
+
+@theme inline {
+  --color-brand: var(--pel-green);
+  --color-brand-2: var(--pel-green-2);
+  --color-brand-3: var(--pel-green-3);
+  --color-brand-4: var(--pel-green-4);
+  --color-warm: var(--pel-warm);
+  --color-ink: var(--pel-ink);
+  --color-ink-soft: var(--pel-ink-soft);
+  --color-paper: var(--pel-paper);
+  --color-card: var(--pel-card);
+  --color-border: var(--pel-border);
+  --color-muted: var(--pel-muted);
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "DejaVu Sans Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--pel-paper);
+  color: var(--pel-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+a { color: var(--pel-green); text-decoration: none; }
+a:hover { color: var(--pel-warm); }
+
+::selection { background: var(--pel-warm-soft); color: var(--pel-ink); }
+
+/* === Animaciones === */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes draw-line {
+  from { stroke-dashoffset: 600; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes pulse-warm {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+.fade-up { animation: fade-up 0.7s ease-out both; }
+.fade-in { animation: fade-in 0.9s ease-out both; }
+.delay-1 { animation-delay: 80ms; }
+.delay-2 { animation-delay: 160ms; }
+.delay-3 { animation-delay: 240ms; }
+.delay-4 { animation-delay: 320ms; }
+.draw-line path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: draw-line 1.6s ease-out forwards;
+}
+.pulse-warm { animation: pulse-warm 2.6s ease-in-out infinite; }
+
+/* === Componentes utilitarios === */
+.container-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.section { padding: 2.75rem 0; }
+.section-tight { padding: 1.5rem 0; }
+.h-divider {
+  height: 3px;
+  width: 64px;
+  background: var(--pel-warm);
+  border-radius: 2px;
+  margin: 0.4rem 0 1rem;
+}
+
+.card {
+  background: var(--pel-card);
+  border: 1px solid var(--pel-border);
+  border-radius: 14px;
+  padding: 1.1rem;
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -10px rgba(45, 106, 79, 0.18);
+  border-color: var(--pel-green-3);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-primary { background: var(--pel-green); color: #fff; }
+.btn-primary:hover { background: var(--pel-warm); transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: var(--pel-green); border-color: var(--pel-green); }
+.btn-ghost:hover { background: var(--pel-green-4); color: var(--pel-green); }
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: var(--pel-warm);
+  font-weight: 600;
+}
+
+.headline {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  line-height: 1.05;
+  font-weight: 700;
+  color: var(--pel-green);
+  letter-spacing: -0.01em;
+}
+
+.lead {
+  font-size: 1.12rem;
+  line-height: 1.55;
+  color: var(--pel-ink-soft);
+  max-width: 64ch;
+}
+
+/* Skip link accesibilidad */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px; height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  left: 1rem; top: 1rem;
+  width: auto; height: auto;
+  background: var(--pel-warm);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  z-index: 9999;
+}
+
+/* Leaflet (loaded en página) */
+.leaflet-container {
+  background: var(--pel-paper) !important;
+  border-radius: 14px;
+  border: 1px solid var(--pel-border);
+}
+[data-theme="dark"] .leaflet-tile { filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.85); }

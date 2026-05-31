@@ -1,0 +1,93 @@
+{
+  "fuente": "Proyecto para la instalación de una exposición sobre arte paleolítico asturiano (Domingo González de Lena Díaz)",
+  "objeto": "Reproducciones en piedra de grabados y pinturas paleolíticos de cuevas asturianas, cada pieza con su panel de contexto.",
+  "estudios_referencia": [
+    "Henri Breuil",
+    "Conde de la Vega del Sella",
+    "Eduardo Hernández-Pacheco",
+    "Hugo Obermaier",
+    "Francisco Jordá Cerdá",
+    "Javier Fortea Pérez"
+  ],
+  "cuevas": [
+    {
+      "id": "pindal",
+      "nombre": "Cueva del Pindal",
+      "concejo": "Ribadedeva",
+      "unesco": true,
+      "piezas": [
+        { "id": 1, "motivo": "Ictiomorfo y bisonte", "ancho_cm": 35, "alto_cm": 30 },
+        { "id": 2, "motivo": "Bisonte de lomo rojo", "ancho_cm": 35, "alto_cm": 30 },
+        { "id": 3, "motivo": "Caballo de los puntos negros", "ancho_cm": 35, "alto_cm": 30 },
+        { "id": 4, "motivo": "Ictiomorfo", "ancho_cm": 30, "alto_cm": 20 }
+      ]
+    },
+    {
+      "id": "tito-bustillo",
+      "nombre": "Cueva de Tito Bustillo",
+      "concejo": "Ribadesella",
+      "unesco": true,
+      "piezas": [
+        { "id": 5, "motivo": "Piedra del oso", "ancho_cm": 60, "alto_cm": 30 },
+        { "id": 6, "motivo": "Oso", "ancho_cm": 35, "alto_cm": 30 },
+        { "id": 7, "motivo": "Caballo crinera", "ancho_cm": 30, "alto_cm": 40 },
+        { "id": 8, "motivo": "Sin determinar", "ancho_cm": null, "alto_cm": null }
+      ]
+    },
+    {
+      "id": "les-pedroses",
+      "nombre": "Cueva de les Pedroses",
+      "concejo": "Ribadesella",
+      "unesco": false,
+      "piezas": [
+        { "id": 9, "motivo": "Ciervas acéfalas", "ancho_cm": 60, "alto_cm": 30 }
+      ]
+    },
+    {
+      "id": "buxu",
+      "nombre": "Cueva del Buxu",
+      "concejo": "Cangas de Onís",
+      "unesco": false,
+      "piezas": [
+        { "id": 10, "motivo": "Panel central", "ancho_cm": 30, "alto_cm": 40 },
+        { "id": 11, "motivo": "Tectiforme", "ancho_cm": 35, "alto_cm": 30 },
+        { "id": 12, "motivo": "Caballos", "ancho_cm": 30, "alto_cm": 40 }
+      ]
+    },
+    {
+      "id": "llonin",
+      "nombre": "Cueva del Llonín",
+      "concejo": "Peñamellera Alta",
+      "unesco": true,
+      "piezas": [
+        { "id": 13, "motivo": "Panel central", "ancho_cm": 30, "alto_cm": 40 },
+        { "id": 14, "motivo": "Cabra I", "ancho_cm": 35, "alto_cm": 30 },
+        { "id": 15, "motivo": "Cabra II", "ancho_cm": 35, "alto_cm": 30 }
+      ]
+    },
+    {
+      "id": "lluera",
+      "nombre": "Cueva o abrigo de la Lluera",
+      "concejo": "Oviedo (San Juan de Priorio)",
+      "unesco": false,
+      "piezas": [
+        { "id": 16, "motivo": "Panel de la gran hornacina", "ancho_cm": 50, "alto_cm": 40 },
+        { "id": 17, "motivo": "Cierva", "ancho_cm": 35, "alto_cm": 30 },
+        { "id": 18, "motivo": "Uros", "ancho_cm": 40, "alto_cm": 30 },
+        { "id": 19, "motivo": "Bisonte", "ancho_cm": 35, "alto_cm": 30 }
+      ]
+    },
+    {
+      "id": "candamo",
+      "nombre": "Cueva de la Peña de San Román de Candamo",
+      "concejo": "Candamo",
+      "unesco": true,
+      "piezas": [
+        { "id": 20, "motivo": "Ciervo herido", "ancho_cm": 35, "alto_cm": 30 },
+        { "id": 21, "motivo": "Uro", "ancho_cm": 35, "alto_cm": 30 },
+        { "id": 22, "motivo": "Uro y gran ciervo de los venablos", "ancho_cm": 40, "alto_cm": 40 },
+        { "id": 23, "motivo": "Caballo rayado", "ancho_cm": 35, "alto_cm": 30 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 200" width="50" height="200" role="img" aria-label="Marcapáginas 1 · Venus gravetienses">
+  <title>Marcapáginas · Venus gravetienses</title>
+  <desc>Marcapáginas de la exposición: las venus del Paleolítico superior gravetiense.</desc>
+
+  <rect width="100%" height="100%" fill="#FAFAF7"/>
+  <rect x="2" y="2" width="46" height="196" fill="none" stroke="#E5E5E0" stroke-width="0.5"/>
+
+  <circle cx="25" cy="10" r="2" fill="none" stroke="#999" stroke-width="0.4"/>
+
+  <!-- Kicker -->
+  <text x="25" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="2.2" fill="#D4845A" letter-spacing="1.4">PALEOLÍTICO SUPERIOR</text>
+
+  <!-- Silueta de Venus (estilo Willendorf, esquemática) -->
+  <g transform="translate(25,32)" stroke="#2D6A4F" stroke-width="0.9" fill="#2D6A4F" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cabeza pequeña -->
+    <circle cx="0" cy="3" r="2" fill="#2D6A4F"/>
+    <!-- Senos (dos óvalos) -->
+    <ellipse cx="-2.4" cy="9" rx="2" ry="2.6"/>
+    <ellipse cx="2.4" cy="9" rx="2" ry="2.6"/>
+    <!-- Tronco / vientre voluminoso -->
+    <path d="M -3 13 C -7 17 -7 24 -5 28 C -5 30 5 30 5 28 C 7 24 7 17 3 13 Z" fill="#2D6A4F"/>
+    <!-- Piernas reducidas -->
+    <path d="M -3 29 L -3.5 36 L -2.5 36 L -1.5 30" fill="#2D6A4F" stroke="none"/>
+    <path d="M 3 29 L 3.5 36 L 2.5 36 L 1.5 30" fill="#2D6A4F" stroke="none"/>
+  </g>
+
+  <!-- Título -->
+  <text x="25" y="80" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="4" fill="#2D6A4F">VENUS</text>
+  <text x="25" y="86" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="3" fill="#1B1B1B">gravetienses</text>
+
+  <line x1="18" y1="92" x2="32" y2="92" stroke="#D4845A" stroke-width="0.5"/>
+
+  <!-- Descripción -->
+  <text x="25" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.3" fill="#3D3D3D">Figuras femeninas de pequeño</text>
+  <text x="25" y="104" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.3" fill="#3D3D3D">tamaño (5-20 cm) talladas</text>
+  <text x="25" y="108" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.3" fill="#3D3D3D">durante la cultura Gravetiense.</text>
+  <text x="25" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.3" fill="#3D3D3D">Caracteres sexuales acentuados,</text>
+  <text x="25" y="119" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.3" fill="#3D3D3D">extremidades esquemáticas.</text>
+  <text x="25" y="126" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.3" fill="#3D3D3D">Material: caliza, marfil de</text>
+  <text x="25" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.3" fill="#3D3D3D">mamut, hueso o terracota.</text>
+
+  <line x1="18" y1="136" x2="32" y2="136" stroke="#E5E5E0" stroke-width="0.4"/>
+
+  <text x="25" y="144" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="2.4" fill="#2D6A4F">33.000-22.000 años AP</text>
+  <text x="25" y="148" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-size="2" fill="#767676">(antes del presente)</text>
+
+  <line x1="18" y1="154" x2="32" y2="154" stroke="#E5E5E0" stroke-width="0.4"/>
+
+  <!-- Ejemplos -->
+  <text x="25" y="161" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="2.2" fill="#1B1B1B" letter-spacing="0.5">EJEMPLOS</text>
+  <text x="25" y="167" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">Willendorf · Austria</text>
+  <text x="25" y="171" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">Lespugue · Francia</text>
+  <text x="25" y="175" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">Dolní Věstonice · Chequia</text>
+  <text x="25" y="179" text-anchor="middle" font-family="Inter, sans-serif" font-size="2.2" fill="#3D3D3D">Hohle Fels · Alemania</text>
+
+  <!-- Pie -->
+  <text x="25" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="2" fill="#2D6A4F">DOMINGO GONZÁLEZ DE LENA</text>
+  <text x="25" y="194" text-anchor="middle" font-family="Inter, sans-serif" font-size="1.7" fill="#999" letter-spacing="0.3">paleotxomi.com · @txomidelena</text>
+</svg>

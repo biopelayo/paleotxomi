@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" role="img" aria-label="Carrusel slide 6 · sobre Domingo">
+  <title>Slide 6 · sobre Domingo</title>
+  <rect width="100%" height="100%" fill="#FAFAF7"/>
+  <rect x="40" y="40" width="1000" height="1000" fill="none" stroke="#E5E5E0" stroke-width="2"/>
+
+  <text x="540" y="135" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="20" fill="#D4845A" letter-spacing="5">EL AUTOR</text>
+
+  <text x="540" y="240" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="56" fill="#2D6A4F" letter-spacing="-1.3">Domingo</text>
+  <text x="540" y="295" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="36" fill="#1B1B1B" letter-spacing="-0.5">González de Lena Díaz</text>
+
+  <line x1="440" y1="335" x2="640" y2="335" stroke="#D4845A" stroke-width="3"/>
+
+  <!-- Tres facetas con iconos -->
+  <g transform="translate(170,420)">
+    <!-- Faceta 1: Guarda -->
+    <g transform="translate(0,0)">
+      <circle cx="60" cy="50" r="50" fill="#D8F3DC" stroke="#2D6A4F" stroke-width="2"/>
+      <path d="M 50 35 L 50 70 L 70 70 L 70 35 L 60 25 Z" fill="#2D6A4F"/>
+      <text x="60" y="135" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18" fill="#2D6A4F">Guarda</text>
+      <text x="60" y="158" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#767676">de campo</text>
+    </g>
+
+    <!-- Faceta 2: Micología -->
+    <g transform="translate(260,0)">
+      <circle cx="60" cy="50" r="50" fill="#D8F3DC" stroke="#2D6A4F" stroke-width="2"/>
+      <ellipse cx="60" cy="45" rx="28" ry="14" fill="#2D6A4F"/>
+      <rect x="55" y="50" width="10" height="20" fill="#2D6A4F"/>
+      <text x="60" y="135" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18" fill="#2D6A4F">Micología</text>
+      <text x="60" y="158" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#767676">y docencia</text>
+    </g>
+
+    <!-- Faceta 3: Arte paleolítico -->
+    <g transform="translate(520,0)">
+      <circle cx="60" cy="50" r="50" fill="#D8F3DC" stroke="#2D6A4F" stroke-width="2"/>
+      <g transform="translate(25,28) scale(0.18)" stroke="#2D6A4F" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 50 60 C 100 38, 180 35, 240 50 L 256 58 L 262 48"/>
+        <path d="M 50 60 L 35 42 L 26 28 L 22 22"/>
+        <path d="M 24 24 L 18 10"/>
+        <path d="M 58 68 L 58 116"/>
+        <path d="M 215 64 L 218 116"/>
+        <path d="M 240 60 L 246 112"/>
+      </g>
+      <text x="60" y="135" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18" fill="#2D6A4F">Arte</text>
+      <text x="60" y="158" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#767676">paleolítico</text>
+    </g>
+  </g>
+
+  <text x="540" y="720" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="22" fill="#3D3D3D">Pajares, concejo de Lena (Asturias), 1959.</text>
+  <text x="540" y="755" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="22" fill="#3D3D3D">Trabaja la piedra a mano en su taller</text>
+  <text x="540" y="788" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="22" fill="#3D3D3D">de Lena desde 2009.</text>
+
+  <text x="540" y="870" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-size="18" fill="#767676">«Trabajo con cinceles y maza,</text>
+  <text x="540" y="895" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-size="18" fill="#767676">sin máquinas».</text>
+
+  <text x="540" y="960" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="20" fill="#D4845A">@txomidelena</text>
+
+  <text x="110" y="995" font-family="Inter, sans-serif" font-size="18" fill="#767676">← 5/7</text>
+  <text x="970" y="995" text-anchor="end" font-family="Inter, sans-serif" font-size="18" fill="#767676">→</text>
+</svg>

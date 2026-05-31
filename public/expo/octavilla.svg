@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 148" width="105" height="148" role="img" aria-label="Octavilla A6 · Domingo González de Lena">
+  <title>Octavilla A6 · exposición Domingo González de Lena</title>
+  <desc>Flyer A6 (105×148 mm) para repartir en mano y en el local.</desc>
+
+  <rect width="100%" height="100%" fill="#FAFAF7"/>
+  <rect x="3" y="3" width="99" height="142" fill="none" stroke="#E5E5E0" stroke-width="0.3"/>
+
+  <!-- Kicker -->
+  <text x="52.5" y="13" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="2.4" fill="#D4845A" letter-spacing="1.4">EXPOSICIÓN</text>
+
+  <!-- Título -->
+  <text x="52.5" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="7" fill="#2D6A4F">DOMINGO</text>
+  <text x="52.5" y="31" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="5" fill="#2D6A4F">GONZÁLEZ DE LENA</text>
+
+  <!-- Subtítulo -->
+  <text x="52.5" y="38" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="3" fill="#1B1B1B">Arte paleolítico asturiano en piedra</text>
+
+  <!-- Línea -->
+  <line x1="42" y1="42" x2="63" y2="42" stroke="#D4845A" stroke-width="0.4"/>
+
+  <!-- Cierva -->
+  <g transform="translate(18,50) scale(0.25)" stroke="#2D6A4F" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 50 60 C 100 38, 180 35, 240 50 L 256 58 L 262 48"/>
+    <path d="M 50 60 L 35 42 L 26 28 L 22 22"/>
+    <path d="M 24 24 L 18 10"/>
+    <path d="M 22 22 L 13 28"/>
+    <path d="M 58 68 L 58 116"/>
+    <path d="M 76 64 L 76 112"/>
+    <path d="M 215 64 L 218 116"/>
+    <path d="M 240 60 L 246 112"/>
+    <path d="M 76 86 L 215 86"/>
+  </g>
+
+  <!-- Texto descriptivo -->
+  <text x="52.5" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="2.4" fill="#3D3D3D">24 reproducciones en piedra de grabados</text>
+  <text x="52.5" y="102" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="2.4" fill="#3D3D3D">paleolíticos de siete cuevas asturianas</text>
+  <text x="52.5" y="106" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="2.4" fill="#3D3D3D">+ la Venus del cuerno.</text>
+
+  <line x1="35" y1="112" x2="70" y2="112" stroke="#E5E5E0" stroke-width="0.3"/>
+
+  <!-- Lugar -->
+  <text x="52.5" y="120" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="3.2" fill="#1B1B1B">La Esquina del Peso</text>
+  <text x="52.5" y="125" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="2.4" fill="#3D3D3D">Calle del Peso 1 · Oviedo</text>
+
+  <!-- Fechas -->
+  <text x="52.5" y="133" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="2.6" fill="#2D6A4F">Del [fecha inicio] al [fecha fin]</text>
+  <text x="52.5" y="137" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="2.4" fill="#3D3D3D">Inauguración: [día] a las [hora]</text>
+
+  <!-- Pie cuevas -->
+  <text x="52.5" y="143" text-anchor="middle" font-family="Inter, sans-serif" font-size="1.6" fill="#999" letter-spacing="0.5">PINDAL · TITO BUSTILLO · LES PEDROSES · BUXU · LLONÍN · LLUERA · CANDAMO</text>
+</svg>

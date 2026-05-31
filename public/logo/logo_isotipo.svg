@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" role="img" aria-label="Trilineal · isotipo tres líneas">
+  <title>Trilineal · isotipo</title>
+  <desc>Tres trazos curvos derivados de la cierva trilineal del grabado paleolítico del Nalón. Línea media en color cálido para destacar la cierva como emblema visual propuesto.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Línea superior: lomo -->
+    <path d="M 22 60 C 70 28, 130 36, 178 56 C 196 64, 210 70, 220 80"
+          stroke="#2D6A4F" stroke-width="6"/>
+    <!-- Línea media: costado (acento cálido patrimonial) -->
+    <path d="M 22 84 C 72 60, 132 64, 178 82 C 198 90, 212 98, 220 106"
+          stroke="#D4845A" stroke-width="6"/>
+    <!-- Línea inferior: vientre -->
+    <path d="M 22 108 C 76 94, 134 92, 178 108 C 198 116, 212 122, 220 130"
+          stroke="#2D6A4F" stroke-width="6"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+import type { MetadataRoute } from "next";
+
+export const dynamic = "force-static";
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: "Domingo González de Lena · archivo personal",
+    short_name: "Domingo G. de Lena",
+    description:
+      "Archivo personal de Domingo González de Lena Díaz: arte paleolítico asturiano, micología, videos y biografía.",
+    start_url: "/",
+    display: "standalone",
+    background_color: "#FAFAF7",
+    theme_color: "#2D6A4F",
+    icons: [
+      { src: "/logo/favicon.svg", sizes: "any", type: "image/svg+xml" },
+    ],
+  };
+}

@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+.env.*.local
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+
+# Imágenes pesadas: se sirven solo en local
+public/images/master/
+public/images/web/*_1600.*
+
+# Datos privados de runtime (formulario fallback local)
+.data/
+
+# PDFs sueltos en raíz que no son del proyecto
+/*.pdf
