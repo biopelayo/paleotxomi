@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 180" width="260" height="180" role="img" aria-label="Silueta esquemática de cierva paleolítica">
+  <title>Cierva (motivo)</title>
+  <desc>Esquema de cierva inspirado en grabados paleolíticos asturianos. Placeholder hasta cerrar el motivo definitivo.</desc>
+
+  <rect width="100%" height="100%" fill="#FAFAF7"/>
+
+  <g stroke="#2D6A4F" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Lomo, grupa y cola -->
+    <path d="M 50 90 C 90 68, 160 65, 200 80 L 220 88 L 226 78"/>
+    <!-- Cuello y cabeza -->
+    <path d="M 50 90 L 38 72 L 30 56 L 26 50"/>
+    <!-- Oreja -->
+    <path d="M 28 52 L 22 36"/>
+    <!-- Hocico -->
+    <path d="M 26 50 L 18 56"/>
+    <!-- Pata delantera izquierda -->
+    <path d="M 56 96 L 56 142"/>
+    <!-- Pata delantera derecha -->
+    <path d="M 72 92 L 72 138"/>
+    <!-- Pata trasera izquierda -->
+    <path d="M 180 92 L 184 140"/>
+    <!-- Pata trasera derecha -->
+    <path d="M 200 90 L 206 138"/>
+    <!-- Vientre -->
+    <path d="M 72 110 L 180 110"/>
+  </g>
+
+  <text x="130" y="170" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="10" fill="#999" letter-spacing="2">CIERVA · MOTIVO ESQUEMÁTICO</text>
+</svg>

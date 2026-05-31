@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Mockup · cartel en escaparate de La Esquina del Peso">
+  <title>Mockup · cartel en escaparate</title>
+  <desc>Visualización esquemática del cartel A2 montado en el escaparate de La Esquina del Peso.</desc>
+
+  <!-- Fondo de calle (acera + edificio) -->
+  <rect width="100%" height="100%" fill="#E8E5DD"/>
+
+  <!-- Suelo / acera -->
+  <rect x="0" y="800" width="1600" height="200" fill="#C8C2B5"/>
+  <line x1="0" y1="800" x2="1600" y2="800" stroke="#A89F8A" stroke-width="2"/>
+  <line x1="0" y1="870" x2="1600" y2="870" stroke="#A89F8A" stroke-width="0.6" stroke-dasharray="20,15"/>
+
+  <!-- Fachada del edificio (piedra antigua) -->
+  <rect x="0" y="0" width="1600" height="800" fill="#D4CFC0"/>
+  <!-- Líneas de sillería -->
+  <g stroke="#B9B0A0" stroke-width="0.8" opacity="0.5">
+    <line x1="0" y1="120" x2="1600" y2="120"/>
+    <line x1="0" y1="290" x2="1600" y2="290"/>
+    <line x1="0" y1="460" x2="1600" y2="460"/>
+    <line x1="0" y1="630" x2="1600" y2="630"/>
+  </g>
+
+  <!-- Letrero del local (arriba) -->
+  <rect x="380" y="60" width="840" height="80" fill="#1F2D24" stroke="#0F1A14" stroke-width="2"/>
+  <text x="800" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="38" fill="#FAFAF7" letter-spacing="5">LA ESQUINA DEL PESO</text>
+
+  <!-- Escaparate / ventana grande -->
+  <rect x="380" y="180" width="840" height="600" fill="#F5F2EA" stroke="#3D3D3D" stroke-width="4"/>
+  <!-- Marco interior -->
+  <rect x="395" y="195" width="810" height="570" fill="none" stroke="#5A4F3F" stroke-width="2"/>
+
+  <!-- Reflejo sutil del cristal -->
+  <path d="M 400 200 L 700 770 M 500 200 L 800 770" stroke="#FAFAF7" stroke-width="2" opacity="0.25"/>
+
+  <!-- Cartel A2 pegado en el escaparate (interior) -->
+  <g transform="translate(665,290) scale(0.485)">
+    <rect width="594" height="420" fill="#FAFAF7" stroke="#E5E5E0" stroke-width="2"/>
+    <text x="297" y="58" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="11" fill="#D4845A" letter-spacing="3.5">EXPOSICIÓN</text>
+    <text x="297" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="34" fill="#2D6A4F" letter-spacing="-0.8">DOMINGO GONZÁLEZ DE LENA</text>
+    <text x="297" y="128" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="16" fill="#1B1B1B" letter-spacing="-0.2">Arte paleolítico asturiano en piedra</text>
+    <line x1="260" y1="146" x2="334" y2="146" stroke="#D4845A" stroke-width="2"/>
+    <g transform="translate(167,170)" stroke="#2D6A4F" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 50 60 C 100 38, 180 35, 240 50 L 256 58 L 262 48"/>
+      <path d="M 50 60 L 35 42 L 26 28 L 22 22"/>
+      <path d="M 24 24 L 18 10"/>
+      <path d="M 22 22 L 13 28"/>
+      <path d="M 58 68 L 58 116"/>
+      <path d="M 76 64 L 76 112"/>
+      <path d="M 215 64 L 218 116"/>
+      <path d="M 240 60 L 246 112"/>
+      <path d="M 76 86 L 215 86"/>
+    </g>
+    <text x="297" y="318" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="15" fill="#1B1B1B">La Esquina del Peso · Calle del Peso 1 · Oviedo</text>
+    <text x="297" y="344" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="13" fill="#3D3D3D">Del 21 al 30 de junio</text>
+    <text x="297" y="364" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="13" fill="#3D3D3D">Inauguración: sábado 21 a las 19:30</text>
+    <text x="297" y="395" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#999" letter-spacing="1.4">24 PIEZAS · SIETE CUEVAS ASTURIANAS + VENUS DEL CUERNO</text>
+  </g>
+
+  <!-- Puerta de entrada -->
+  <rect x="170" y="350" width="180" height="430" fill="#4A3C2A" stroke="#2A1E10" stroke-width="3"/>
+  <rect x="190" y="370" width="140" height="200" fill="#7A6850" stroke="#2A1E10" stroke-width="1.5"/>
+  <circle cx="320" cy="580" r="6" fill="#D4AC5A"/>
+  <text x="260" y="320" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="14" fill="#3D3D3D" letter-spacing="2">ENTRADA</text>
+
+  <!-- Pizarra de la calle (chalkboard) -->
+  <rect x="80" y="820" width="180" height="140" fill="#1F2D24" stroke="#3D3D3D" stroke-width="3"/>
+  <text x="170" y="860" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="16" fill="#FAFAF7">EXPO</text>
+  <text x="170" y="888" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#FAFAF7">21 - 30 jun</text>
+  <text x="170" y="908" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#D4845A">arte paleolítico</text>
+  <text x="170" y="930" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#95D5B2">Domingo G. de Lena</text>
+
+  <!-- Etiqueta de mockup -->
+  <text x="800" y="970" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-size="14" fill="#767676">Mockup · Visualización esquemática del cartel A2 en el escaparate del local. Las proporciones reales pueden variar.</text>
+</svg>

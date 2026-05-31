@@ -1,0 +1,29 @@
+{
+  "actualizado": "2026-05-09",
+  "eventos": [
+    {
+      "id": "ev-2026-pendiente-1",
+      "titulo": "Exposición individual · pendiente de confirmar",
+      "fecha_inicio": "2026-09-01",
+      "fecha_fin": "2026-09-30",
+      "sede": "Por confirmar",
+      "ciudad": "Oviedo",
+      "tipo": "exposicion",
+      "cartel": null,
+      "descripcion": "Pendiente de fechas y sala.",
+      "pendiente_confirmar": true
+    },
+    {
+      "id": "ev-2026-pendiente-2",
+      "titulo": "Charla · proyecto expositivo de las 8 cuevas",
+      "fecha_inicio": "2026-11-15",
+      "fecha_fin": "2026-11-15",
+      "sede": "Por confirmar",
+      "ciudad": "Oviedo",
+      "tipo": "charla",
+      "cartel": null,
+      "descripcion": "Pendiente de fecha y sede.",
+      "pendiente_confirmar": true
+    }
+  ]
+}

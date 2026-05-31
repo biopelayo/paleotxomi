@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" role="img" aria-label="Carrusel slide 5 · mapa de las 7 cuevas">
+  <title>Slide 5 · recorrido de las 7 cuevas</title>
+  <rect width="100%" height="100%" fill="#FAFAF7"/>
+  <rect x="40" y="40" width="1000" height="1000" fill="none" stroke="#E5E5E0" stroke-width="2"/>
+
+  <text x="540" y="135" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="20" fill="#D4845A" letter-spacing="5">RECORRIDO</text>
+
+  <text x="540" y="225" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="64" fill="#2D6A4F" letter-spacing="-1.5">Las 7 cuevas</text>
+  <text x="540" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="22" fill="#3D3D3D">de oriente a occidente</text>
+
+  <line x1="440" y1="315" x2="640" y2="315" stroke="#D4845A" stroke-width="3"/>
+
+  <!-- Mapa simplificado -->
+  <g transform="translate(140,400)">
+    <!-- Costa -->
+    <path d="M 30 60 Q 200 40 400 55 Q 600 45 760 55" stroke="#52B788" stroke-width="3" fill="none"/>
+    <text x="395" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="14" fill="#52B788" letter-spacing="3">MAR CANTÁBRICO</text>
+
+    <!-- 7 puntos numerados -->
+    <!-- 1 Pindal -->
+    <circle cx="700" cy="155" r="22" fill="#2D6A4F"/>
+    <text x="700" y="161" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#fff">1</text>
+    <text x="700" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="15" fill="#1B1B1B">Pindal</text>
+
+    <!-- 2 Tito Bustillo -->
+    <circle cx="540" cy="100" r="22" fill="#2D6A4F"/>
+    <text x="540" y="106" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#fff">2</text>
+    <text x="540" y="78" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="15" fill="#1B1B1B">Tito Bustillo</text>
+
+    <!-- 3 Les Pedroses -->
+    <circle cx="585" cy="100" r="18" fill="#95D5B2"/>
+    <text x="585" y="106" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="20" fill="#2D6A4F">3</text>
+    <text x="618" y="116" font-family="Inter, sans-serif" font-weight="600" font-size="13" fill="#1B1B1B">Les Pedroses</text>
+
+    <!-- 4 Buxu -->
+    <circle cx="540" cy="220" r="22" fill="#2D6A4F"/>
+    <text x="540" y="226" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#fff">4</text>
+    <text x="540" y="262" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="15" fill="#1B1B1B">Buxu</text>
+
+    <!-- 5 Llonín -->
+    <circle cx="660" cy="240" r="22" fill="#2D6A4F"/>
+    <text x="660" y="246" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#fff">5</text>
+    <text x="660" y="282" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="15" fill="#1B1B1B">Llonín</text>
+
+    <!-- 6 Lluera (destacada) -->
+    <circle cx="290" cy="190" r="28" fill="#D4845A"/>
+    <text x="290" y="198" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="26" fill="#fff">6</text>
+    <text x="290" y="238" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="17" fill="#D4845A" letter-spacing="0.5">LLUERA</text>
+    <text x="290" y="258" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#767676">Oviedo</text>
+
+    <!-- 7 Candamo -->
+    <circle cx="170" cy="110" r="22" fill="#2D6A4F"/>
+    <text x="170" y="116" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#fff">7</text>
+    <text x="170" y="152" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="15" fill="#1B1B1B">Candamo</text>
+  </g>
+
+  <text x="540" y="785" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="18" fill="#3D3D3D">Pindal · Tito Bustillo · Les Pedroses · Buxu</text>
+  <text x="540" y="815" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="18" fill="#3D3D3D">Llonín · Lluera · Candamo</text>
+
+  <text x="540" y="880" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="28" fill="#D4845A">+ Venus del cuerno</text>
+  <text x="540" y="915" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-size="18" fill="#767676">pieza singular del autor</text>
+
+  <text x="540" y="975" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="20" fill="#2D6A4F">23 grabados + 1 Venus = 24 piezas</text>
+
+  <text x="110" y="995" font-family="Inter, sans-serif" font-size="18" fill="#767676">← 4/7</text>
+  <text x="970" y="995" text-anchor="end" font-family="Inter, sans-serif" font-size="18" fill="#767676">→</text>
+</svg>

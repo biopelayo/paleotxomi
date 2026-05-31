@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Trilineal Domingo//Eventos//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Eventos · Domingo González de Lena
+X-WR-TIMEZONE:Europe/Madrid
+X-WR-CALDESC:Calendario público de exposiciones\, charlas y actividades de 
+ Domingo González de Lena.
+END:VCALENDAR

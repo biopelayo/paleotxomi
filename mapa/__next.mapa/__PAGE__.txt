@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[95553,["/paleotxomi/_next/static/chunks/02r04dw.w_1sz.js","/paleotxomi/_next/static/chunks/0d3shmwh5_nmn.js","/paleotxomi/_next/static/chunks/0ww.8382ipo~g.js","/paleotxomi/_next/static/chunks/00s7on75y5u8p.js"],"default"]
+3:I[97367,["/paleotxomi/_next/static/chunks/02r04dw.w_1sz.js","/paleotxomi/_next/static/chunks/0d3shmwh5_nmn.js","/paleotxomi/_next/static/chunks/0ww.8382ipo~g.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+:HL["/paleotxomi/_next/static/chunks/0t48hzs_6fshe.css","style"]
+0:{"rsc":["$","$1","c",{"children":[["$","section",null,{"className":"section","children":["$","div",null,{"className":"container-page","children":[[["$","p",null,{"className":"kicker mb-2","children":"Trilineal"}],["$","h1",null,{"className":"headline","children":"Mapa del Nalón ovetense"}],["$","div",null,{"className":"h-divider"}],["$","p",null,{"className":"lead text-lg mt-4","children":"Yacimientos del concejo de Oviedo y cinco cuevas asturianas del bien UNESCO."}]],["$","div",null,{"className":"mt-8 card p-2","children":["$","$L2",null,{}]}]]}]}],[["$","link","0",{"rel":"stylesheet","href":"/paleotxomi/_next/static/chunks/0t48hzs_6fshe.css","precedence":"next"}],["$","script","script-0",{"src":"/paleotxomi/_next/static/chunks/00s7on75y5u8p.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"I2SMoLqgZJakNYwmCIP_8"}
+5:null

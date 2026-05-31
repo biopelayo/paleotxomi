@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://paleotxomi.com
+Sitemap: https://paleotxomi.com/sitemap.xml

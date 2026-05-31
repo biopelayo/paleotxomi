@@ -1,0 +1,137 @@
+[
+  {
+    "categoria": "Corpus",
+    "indicador": "Piezas catalogadas con ficha completa",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "110",
+    "fuente_dato": "catalog.csv",
+    "frecuencia_revision": "mensual"
+  },
+  {
+    "categoria": "Corpus",
+    "indicador": "Imágenes HD normalizadas (master + derivados)",
+    "unidad": "n",
+    "linea_base": "120",
+    "objetivo_12m": "120",
+    "fuente_dato": "00_corpus/images_*",
+    "frecuencia_revision": "mensual"
+  },
+  {
+    "categoria": "Corpus",
+    "indicador": "Piezas con revisión científica firmada",
+    "unidad": "%",
+    "linea_base": "0",
+    "objetivo_12m": "30",
+    "fuente_dato": "catalog.csv:validacion_cientifica",
+    "frecuencia_revision": "trimestral"
+  },
+  {
+    "categoria": "Archivo",
+    "indicador": "Manifiestos IIIF publicados",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "50",
+    "fuente_dato": "08_archivo_digital/iiif_manifests",
+    "frecuencia_revision": "trimestral"
+  },
+  {
+    "categoria": "Archivo",
+    "indicador": "Registros Dublin Core en Europeana / Hispana",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "30",
+    "fuente_dato": "08_archivo_digital/dublin_core",
+    "frecuencia_revision": "trimestral"
+  },
+  {
+    "categoria": "Archivo",
+    "indicador": "Modelos 3D fotogramétricos publicados",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "8",
+    "fuente_dato": "08_archivo_digital/3d",
+    "frecuencia_revision": "trimestral"
+  },
+  {
+    "categoria": "Educación",
+    "indicador": "Centros educativos participantes",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "6",
+    "fuente_dato": "06_publicos/escolar.md",
+    "frecuencia_revision": "trimestral"
+  },
+  {
+    "categoria": "Inclusión",
+    "indicador": "Piezas táctiles disponibles para préstamo",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "12",
+    "fuente_dato": "06_publicos/accesibilidad_tactil.md",
+    "frecuencia_revision": "trimestral"
+  },
+  {
+    "categoria": "Inclusión",
+    "indicador": "Mediadoras mayores formadas",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "8",
+    "fuente_dato": "06_publicos/manos_que_no_vemos.md",
+    "frecuencia_revision": "trimestral"
+  },
+  {
+    "categoria": "Equidad",
+    "indicador": "% mujeres en equipo y programación",
+    "unidad": "%",
+    "linea_base": "",
+    "objetivo_12m": ">=50",
+    "fuente_dato": "07_audiovisual + 06_publicos",
+    "frecuencia_revision": "semestral"
+  },
+  {
+    "categoria": "Europa",
+    "indicador": "Alianzas con instituciones de la UE",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "2",
+    "fuente_dato": "09_correspondencia/recibidas",
+    "frecuencia_revision": "semestral"
+  },
+  {
+    "categoria": "Comunicación",
+    "indicador": "Apariciones en prensa",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "10",
+    "fuente_dato": "09_correspondencia/prensa",
+    "frecuencia_revision": "mensual"
+  },
+  {
+    "categoria": "Comunicación",
+    "indicador": "Carpetas de prensa enviadas",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "15",
+    "fuente_dato": "09_correspondencia/enviadas",
+    "frecuencia_revision": "mensual"
+  },
+  {
+    "categoria": "Acceso digital",
+    "indicador": "Visitantes únicos archivo digital (cuando esté online)",
+    "unidad": "n/mes",
+    "linea_base": "0",
+    "objetivo_12m": "500",
+    "fuente_dato": "analítica web",
+    "frecuencia_revision": "mensual"
+  },
+  {
+    "categoria": "Acceso digital",
+    "indicador": "Descargas de fichas razonadas (PDF)",
+    "unidad": "n",
+    "linea_base": "0",
+    "objetivo_12m": "200",
+    "fuente_dato": "analítica web",
+    "frecuencia_revision": "mensual"
+  }
+]
