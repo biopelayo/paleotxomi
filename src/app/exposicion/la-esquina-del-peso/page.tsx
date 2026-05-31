@@ -81,16 +81,28 @@ export default async function ExposicionLaEsquinaPage() {
           </div>
         </div>
 
-        {/* Cartel */}
-        <div className="mt-10 card" style={{ padding: "0.5rem", background: "var(--pel-paper)" }}>
-          <Image
-            src={withBasePath("/expo/cartel.svg")}
-            alt="Cartel de la exposición"
-            width={594}
-            height={420}
-            style={{ width: "100%", height: "auto", display: "block" }}
-            unoptimized
-          />
+        {/* Cartel · placeholder (pendiente de imagen definitiva) */}
+        <div
+          className="mt-10 card"
+          style={{
+            padding: "3rem 1rem",
+            background: "var(--pel-paper)",
+            border: "2px dashed var(--pel-muted)",
+            textAlign: "center",
+            color: "var(--pel-muted)",
+            minHeight: 220,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "0.4rem",
+          }}
+        >
+          <p style={{ fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", margin: 0 }}>
+            Cartel de la exposición
+          </p>
+          <p style={{ fontSize: "0.95rem", fontStyle: "italic", margin: 0 }}>
+            Pendiente de imagen definitiva
+          </p>
         </div>
 
         {/* Fotos de la exposición · sesión Amanda Blanco mayo 2026 */}
@@ -135,12 +147,11 @@ export default async function ExposicionLaEsquinaPage() {
           Sobre la exposición
         </h2>
         <p className="lead mt-3">
-          Domingo González de Lena Díaz reúne en esta muestra <strong>24 piezas</strong>{" "}
-          talladas a mano. La exposición combina dos vertientes de su obra: las{" "}
-          <strong>reproducciones en piedra de grabados paleolíticos</strong> de siete cuevas
-          asturianas (Pindal, Tito Bustillo, Les Pedroses, Buxu, Llonín, Lluera y Candamo) y las{" "}
-          <strong>figurillas gravetienses</strong> talladas en bulto redondo, herederas de las
-          Venus paleolíticas de Willendorf, Laussel, Lespugue y Brassempouy.
+          Domingo González de Lena Díaz reúne en esta muestra una selección de piezas talladas a
+          mano. La exposición combina dos vertientes de su obra: las{" "}
+          <strong>reproducciones en piedra de grabados paleolíticos</strong> de las cuevas
+          asturianas y las <strong>figurillas gravetienses</strong> talladas en bulto redondo,
+          herederas de las Venus paleolíticas de Willendorf, Laussel, Lespugue y Brassempouy.
         </p>
         <p className="lead mt-3">
           Cuatro hilos atraviesan la muestra: las <strong>Venus gravetienses</strong>{" "}
@@ -157,90 +168,46 @@ export default async function ExposicionLaEsquinaPage() {
           Hugo Obermaier, Francisco Jordá Cerdá y Javier Fortea Pérez.
         </p>
 
-        {/* Recorrido por las siete cuevas */}
+        {/* Venus gravetienses · selección singular */}
         <h2 className="text-2xl font-bold mt-10" style={{ color: "var(--pel-green)" }}>
-          Recorrido por las siete cuevas
+          Venus gravetienses
         </h2>
         <p className="lead mt-2" style={{ fontSize: "0.95rem" }}>
-          Las cuevas siguen un orden geográfico de oriente a occidente, terminando con la Venus del cuerno como pieza singular del autor.
+          Pequeñas figurillas femeninas talladas en piedra hace entre 30.000 y 22.000 años,
+          durante el periodo Gravetiense del Paleolítico superior europeo. Domingo talla en piedra
+          sus propias versiones en bulto redondo.
         </p>
-        <div
-          className="mt-4 card"
-          style={{ padding: "0.6rem", background: "var(--pel-paper)" }}
-        >
-          <Image
-            src={withBasePath("/expo/mapa-cuevas-asturias.svg")}
-            alt="Mapa esquemático de Asturias con las siete cuevas representadas en la exposición"
-            width={800}
-            height={400}
-            style={{ width: "100%", height: "auto", display: "block" }}
-            unoptimized
-          />
-        </div>
-
-        {/* Galería 24 piezas */}
-        <h2 className="text-2xl font-bold mt-10" style={{ color: "var(--pel-green)" }}>
-          Las 24 piezas
-        </h2>
-        <p className="lead mt-2" style={{ fontSize: "0.95rem" }}>
-          Orden de recorrido: Pindal → Tito Bustillo → Les Pedroses → Buxu → Llonín → Lluera →
-          Candamo → Venus del cuerno.
-        </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mt-6">
-          {grabados.map((p) => (
-            <article
-              key={p.id}
-              className="card"
-              style={{ padding: 0, overflow: "hidden" }}
-            >
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
+          {[
+            { src: "venus-cuerno-01.jpg", titulo: "Venus del cuerno", base: "/personal/piezas/" },
+            { src: "venus-cuerno-02.jpg", titulo: "Venus del cuerno · vista 2", base: "/personal/piezas/" },
+            { src: "venus-cuerno-03.jpg", titulo: "Venus del cuerno · vista 3", base: "/personal/piezas/" },
+            { src: "venus-cuerno-04.jpg", titulo: "Venus del cuerno · vista 4", base: "/personal/piezas/" },
+          ].map((v) => (
+            <article key={v.src} className="card" style={{ padding: 0, overflow: "hidden" }}>
               <div style={{ aspectRatio: "1", background: "var(--pel-paper)" }}>
                 <Image
-                  src={withBasePath(`/personal/piezas/pieza-${String(p.id).padStart(2, "0")}.jpg`)}
-                  alt={`#${p.id} ${p.motivo}`}
+                  src={withBasePath(`${v.base}${v.src}`)}
+                  alt={v.titulo}
                   width={400}
                   height={400}
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  sizes="(max-width: 640px) 50vw, 25vw"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  unoptimized
                 />
               </div>
               <div style={{ padding: "0.55rem 0.7rem" }}>
-                <p style={{ color: "var(--pel-warm)", fontWeight: 700, fontSize: "0.78rem", margin: 0 }}>
-                  #{p.id}
-                </p>
-                <p style={{ color: "var(--pel-ink)", fontWeight: 600, fontSize: "0.85rem", margin: "0.1rem 0" }}>
-                  {p.motivo}
-                </p>
-                <p style={{ color: "var(--pel-muted)", fontSize: "0.72rem", margin: 0 }}>
-                  {nombreCorto(p.cueva)} · {dim(p)}
+                <p style={{ color: "var(--pel-ink)", fontWeight: 600, fontSize: "0.85rem", margin: 0 }}>
+                  {v.titulo}
                 </p>
               </div>
             </article>
           ))}
-          {/* Venus del cuerno como #24 */}
-          <article className="card" style={{ padding: 0, overflow: "hidden" }}>
-            <div style={{ aspectRatio: "1", background: "var(--pel-paper)" }}>
-              <Image
-                src={withBasePath("/personal/piezas/venus-cuerno-01.jpg")}
-                alt="Venus del cuerno"
-                width={400}
-                height={400}
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </div>
-            <div style={{ padding: "0.55rem 0.7rem" }}>
-              <p style={{ color: "var(--pel-warm)", fontWeight: 700, fontSize: "0.78rem", margin: 0 }}>
-                #24 ★
-              </p>
-              <p style={{ color: "var(--pel-ink)", fontWeight: 600, fontSize: "0.85rem", margin: "0.1rem 0" }}>
-                Venus del cuerno
-              </p>
-              <p style={{ color: "var(--pel-muted)", fontSize: "0.72rem", margin: 0 }}>
-                Pieza singular del autor
-              </p>
-            </div>
-          </article>
         </div>
+        <p className="mt-4" style={{ fontSize: "0.85rem", color: "var(--pel-muted)", fontStyle: "italic" }}>
+          Selección de muestras · el catálogo completo de piezas para la exposición se cerrará al
+          montaje, con Domingo y la regencia del local.
+        </p>
 
         {/* Biografía corta */}
         <h2 className="text-2xl font-bold mt-12" style={{ color: "var(--pel-green)" }}>
