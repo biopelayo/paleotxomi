@@ -93,6 +93,43 @@ export default async function ExposicionLaEsquinaPage() {
           />
         </div>
 
+        {/* Fotos de la exposición · sesión Amanda Blanco mayo 2026 */}
+        <h2 className="text-2xl font-bold mt-10" style={{ color: "var(--pel-green)" }}>
+          Fotos de la exposición
+        </h2>
+        <p className="lead mt-2" style={{ fontSize: "0.95rem" }}>
+          Piezas escogidas para La Esquina del Peso. Selección visual.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4">
+          {[
+            { src: "venus-hongo.webp", alt: "Venus con hongo · pieza ritual" },
+            { src: "venus-manos-main.jpeg", alt: "Venus rosada en manos del autor" },
+            { src: "cierva-circular.jpg", alt: "Colgante circular con cierva grabada" },
+            { src: "ciervas.jpeg", alt: "Dos piedras con cierva trilineal" },
+            { src: "mas-ciervas.jpeg", alt: "Más piedras con cierva trilineal" },
+            { src: "mas-mas-ciervas.jpeg", alt: "Otras piedras con cierva trilineal" },
+            { src: "esculturas.jpeg", alt: "Conjunto de Venus y figuras zoomorfas en hierba" },
+            { src: "manos_para_bg-expo-cartel.jpeg", alt: "Manos del autor con propulsor zoomorfo" },
+            { src: "descarga-4.jpeg", alt: "Pieza de la exposición" },
+          ].map((foto) => (
+            <div
+              key={foto.src}
+              className="card"
+              style={{ padding: 0, overflow: "hidden", aspectRatio: "1", background: "var(--pel-paper)" }}
+            >
+              <Image
+                src={withBasePath(`/personal/sesion-amanda-2026/${foto.src}`)}
+                alt={foto.alt}
+                width={600}
+                height={600}
+                sizes="(max-width: 640px) 50vw, 33vw"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                unoptimized
+              />
+            </div>
+          ))}
+        </div>
+
         {/* Sobre la exposición */}
         <h2 className="text-2xl font-bold mt-10" style={{ color: "var(--pel-green)" }}>
           Sobre la exposición
