@@ -1,11 +1,29 @@
-# Handoff · exposición La Esquina del Peso
+# Handoff · exposición La Esquina del Peso · PaleoTxomi
 ## Punto de partida único para la nueva sesión
 
 **Para:** la siguiente sesión de Claude (o quien retome el trabajo).
-**De:** la sesión del 28 may 2026 (Claude Opus 4.7 / 1M context).
+**De:** la sesión del 31 may 2026 · Claude Opus 4.7 (1M context).
 **Foco exclusivo:** la exposición de Domingo en La Esquina del Peso. Nada más.
 
 Lee este documento entero antes de tocar nada. Tiene todo el contexto operativo. El resto del repo es de referencia; **este archivo es la fuente de verdad mínima**.
+
+---
+
+## 0 · Dos repositorios · qué hace cada uno
+
+**Cambio clave de la sesión del 31 may:** se ha desgajado el archivo personal en dos repositorios. La próxima sesión trabaja sobre **paleotxomi**.
+
+| Repositorio | URL pública | Propósito |
+|-------------|-------------|-----------|
+| `biopelayo/paleotxomi` | <https://biopelayo.github.io/paleotxomi/> | **Sede principal de la expo y de la nueva sesión.** Versión reducida y pública dedicada a la obra paleolítica de Domingo. Branding: «PaleoTxomi». basePath `/paleotxomi`. |
+| `biopelayo/domingo-archivo` | <https://biopelayo.github.io/domingo-archivo/> | Archivo personal completo del padre: micología, videos, escritos, música, biografía. Sigue activo pero secundario. basePath `/domingo-archivo`. |
+
+Working directories en disco:
+
+- `D:\Antigravity\paleotxomi\` — repositorio paleotxomi (clon limpio de hoy 31 may).
+- `D:\Antigravity\proyecto-domingo-web\` — repositorio domingo-archivo (el que veníamos usando).
+
+**Próxima sesión: arrancar en `D:\Antigravity\paleotxomi\`.**
 
 ---
 
@@ -172,12 +190,22 @@ El resto (emails, nota prensa, guion inauguración, dossier, calendario) se reto
 
 ## 9 · Pendientes en orden de prioridad
 
-### Esta semana (W-4 · 25-31 may)
+### Entregables que Pelayo va a aportar al inicio de la próxima sesión
 
-1. ⏳ **Recibir de Pelayo la lista de 24 piezas finales** con ID, título, descripción breve, foto, precio. Es el bloqueo principal.
-2. ⏳ **Construir el one-page final para Eden** con las 24 piezas. Reaprovechar `ONE_PAGE_EXPO_VESTIDO.html` como base.
-3. ⏳ **Limpiar galería de setas** (90 fotos × 6 archivos = 540 paths). Contact sheet interactivo en `CONTACT_SHEET_SETAS.html` listo. Pelayo marca y manda lista.
-4. ⏳ **Commit + push de la limpieza del catalog (10 piezas «otras» fuera)**: ya hecho local, pendiente de subir.
+1. ⏳ **Lista de las 24 figuras de la expo** con ID, título, descripción breve, foto, precio.
+2. ⏳ **Firma o icono que Domingo usa como membrete** para marcar sus piezas.
+3. ⏳ **Ideas sobre los 4 marcapáginas** (los temáticos que se imprimen).
+4. ⏳ **Serie de fotografías** que van en el one-shot de presentación de la exposición.
+5. ⏳ **Títulos** (cartel, marcapáginas, octavilla, dossier).
+6. ⏳ **Texto sobre los 4 pilares** de la exposición (Venus gravetienses, arte franco-cantábrico, cierva trilineal, UNESCO 2008).
+
+Con esos 6 inputs se cierra el one-page final para Eden, se actualizan los SVG del cartel/logos/marcapáginas y se cierra el Anexo I del contrato.
+
+### Tareas residuales de la sesión anterior
+
+7. ⏳ **Limpiar galería de setas** (90 fotos × 6 archivos = 540 paths). Contact sheet interactivo en `CONTACT_SHEET_SETAS.html` listo. Pelayo marca y manda lista.
+8. ⏳ **Migrar las correcciones de paleotxomi a domingo-archivo** si Pelayo quiere mantener los dos repos en paralelo. La limpieza del catalog (120→110) ya se aplicó en domingo-archivo pero hay que comprobar que se replicó en paleotxomi.
+9. ⏳ **Workflow `.github/workflows/deploy.yml`** sigue sin subir al remote en ninguno de los dos repos. Pelayo lo sube con sus credenciales para que los push automaticen el deploy.
 
 ### W-3 (1-7 jun)
 
@@ -228,12 +256,12 @@ Notas operativas que aprendí en esta sesión. Léelas antes de responder:
 
 Cuando la nueva sesión arranque:
 
-1. **Saluda corto.** Confirma que has leído este handoff.
-2. **Pregunta a Pelayo:** «¿Empezamos por la lista de 24 piezas o quieres que abra primero los textos del WhatsApp de tu padre?».
-3. Según su respuesta:
-   - **Si lista de piezas:** abre cada foto (cuando te diga la ruta), describe lo que ves, anota motivo + cueva + dimensiones + precio + título sugerido. Cuando estén las 24, construye el one-page maquetado reutilizando `ONE_PAGE_EXPO_VESTIDO.html` como plantilla.
-   - **Si textos WhatsApp:** carga el MCP correspondiente, lee la conversación con el padre, extrae los textos relevantes, propón cómo incorporarlos al dossier y al one-page.
-4. **No tocar:** el deploy de la web ya está hecho y publicado. No re-desplegar a menos que Pelayo lo pida.
+1. **Saluda corto.** Confirma que has leído este handoff entero.
+2. **Verifica que el repo paleotxomi está clonado en `D:\Antigravity\paleotxomi\`.** Si no, clónalo.
+3. **Pregunta a Pelayo cuál de los 6 inputs pendientes tiene listo ya** (lista 24 piezas, firma/membrete, ideas marcapáginas, fotos one-shot, títulos, texto 4 pilares).
+4. **Trabaja sobre el repo `paleotxomi`**, no sobre `domingo-archivo`. La maquetación de la expo, los SVG nuevos, las cartelas y el one-page final van en `paleotxomi`.
+5. **Cuando se cierre cada bloque**, hacer commit y push a `main`. Construir y desplegar a `gh-pages` con el flujo del §7.
+6. **No tocar el deploy actual de `domingo-archivo`** salvo que Pelayo lo pida. Esa web ya está publicada y operativa.
 
 ---
 
