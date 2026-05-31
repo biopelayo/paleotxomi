@@ -20,7 +20,7 @@ export default function ExpoActualBanner() {
         <p style={{ margin: 0, lineHeight: 1.4 }}>
           <strong style={{ letterSpacing: "0.04em", fontWeight: 700 }}>EXPOSICIÓN EN CURSO</strong>
           {" · "}
-          La Esquina del Peso · Oviedo · del 20 al 30 de junio
+          La Esquina del Peso · Oviedo · del 19 al 30 de junio
         </p>
         <Link
           href="/exposicion/la-esquina-del-peso"

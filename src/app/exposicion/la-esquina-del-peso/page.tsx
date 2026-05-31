@@ -44,12 +44,12 @@ export default async function ExposicionLaEsquinaPage() {
       <div className="container-page max-w-5xl relative" style={{ zIndex: 2 }}>
         {/* Cabecera */}
         <p className="kicker mb-2">Exposición en curso · Oviedo</p>
-        <h1 className="headline">Domingo González de Lena</h1>
+        <h1 className="headline">Paleotxomi</h1>
         <p
           className="text-xl mt-1"
           style={{ color: "var(--pel-ink)", fontWeight: 500, fontStyle: "italic" }}
         >
-          Arte Paleolítico parietal y Venus gravetienses
+          Ciervas, Venus y grabados
         </p>
         <p
           className="mt-1"
@@ -73,10 +73,10 @@ export default async function ExposicionLaEsquinaPage() {
           <div className="card">
             <p className="kicker mb-1" style={{ color: "var(--pel-warm)" }}>Fechas</p>
             <p style={{ fontWeight: 700, color: "var(--pel-green)", fontSize: "1.1rem" }}>
-              Del 20 al 30 de junio
+              Del 19 al 30 de junio
             </p>
             <p style={{ color: "var(--pel-ink-soft)", fontSize: "0.95rem" }}>
-              Inauguración: sábado 20 a las 19:30
+              Inauguración: viernes 19 a las 19:30
             </p>
           </div>
         </div>
