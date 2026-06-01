@@ -1,12 +1,15 @@
-# Paleotxomi · relación de obras
-## 41 piezas en piedra · La Esquina del Peso · Oviedo · 19-30 jun 2026
+# Lista de obras para WhatsApp · Eden
 
-Autor: Domingo González de Lena Díaz.
-Numeración: del cuaderno del autor (los huecos corresponden a piezas catalogadas pero no incluidas en esta selección).
+Listo para copiar y pegar en WhatsApp. Conserva los asteriscos y guiones bajos para que WhatsApp aplique negrita y cursiva.
 
 ---
 
-## Venus gravetienses · 12
+```
+*Paleotxomi · relación de obras*
+_41 piezas · La Esquina del Peso · Oviedo · 19-30 jun 2026_
+
+
+*Venus gravetienses · 12*
 
 1. Venus del jabalí
 2. Venus arenisca roja
@@ -21,7 +24,8 @@ Numeración: del cuaderno del autor (los huecos corresponden a piezas catalogada
 11. Venus sentada negra
 12. Venus de Laussel
 
-## Antropomorfos y chamanes · 5
+
+*Antropomorfos y chamanes · 5*
 
 18. Sorcier del arco musical
 19. Brujo bisonte
@@ -29,7 +33,8 @@ Numeración: del cuaderno del autor (los huecos corresponden a piezas catalogada
 24. Ídolo Peñatu proyectado
 36. Dios cornudo pezuñas grabado
 
-## Fauna paleolítica · 11
+
+*Fauna paleolítica · 11*
 
 15. Oso lanceado
 16. Mamut
@@ -43,7 +48,8 @@ Numeración: del cuaderno del autor (los huecos corresponden a piezas catalogada
 37. Uro La Peña cuadrado
 38. Uro La Peña violeta
 
-## Grabados y paneles · 7
+
+*Grabados y paneles · 7*
 
 13. Piedra semicircular siluetas
 25. Panel Buxu
@@ -53,7 +59,8 @@ Numeración: del cuaderno del autor (los huecos corresponden a piezas catalogada
 35. Muro de los grabados
 39. Tectiforme Buxu
 
-## Cierva trilineal asturiana · 5
+
+*Cierva trilineal asturiana · 5*
 
 44. Cierva trilineal mediana I
 45. Cierva trilineal mediana II
@@ -61,12 +68,15 @@ Numeración: del cuaderno del autor (los huecos corresponden a piezas catalogada
 47. Cierva trilineal mediana IV
 48. Cierva trilineal mediana V
 
-## Escena humana · 1
+
+*Escena humana · 1*
 
 40. Coito Los Casares I
 
+
+_Total: 41 obras._
+```
+
 ---
 
-**Total: 41 obras.**
-
-Domingo González de Lena Díaz · 662 58 57 98 · domingodelena@gmail.com.
+**Nota:** los huecos en la numeración (falta la 14, la 22, la 30, la 31, la 41, la 42, la 43, las 49-54) corresponden a piezas catalogadas pero no incluidas en esta selección. Se mantiene el número original del cuaderno del autor como ID de referencia.

@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Paleotxomi · relación de obras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+@page { size: A4 portrait; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --crema:       #f0e5cc;
+  --crema-claro: #fbf5e6;
+  --crema-warm:  #e6d6ad;
+  --carbon:      #1e1408;
+  --carbon-soft: #3a2818;
+  --carbon-mute: #6b5a48;
+  --ocre-rojo:   #8b2c1a;
+  --ocre-vivo:   #c44a2a;
+  --cinabrio:    #b8341e;
+  --tierra:      #6b3d1c;
+  --ocre-amarillo: #c0a87a;
+  --ocre-amarillo-claro: #d9c79b;
+}
+
+html, body {
+  background: var(--crema);
+  color: var(--carbon);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 11pt;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Fondo paleo ===== */
+.bg-photo {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('public/personal/piezas/pieza-04.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(60px) saturate(1.2);
+  opacity: 0.28;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-overlays {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 260mm 200mm at 8% 8%, rgba(139,44,26,0.16) 0%, transparent 55%),
+    radial-gradient(ellipse 240mm 180mm at 92% 92%, rgba(107,61,28,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 200mm 160mm at 50% 50%, rgba(192,168,122,0.18) 0%, transparent 60%);
+  mix-blend-mode: multiply;
+}
+
+.bg-noise {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.30 0 0 0 0 0.18 0 0 0 0.15 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+.bg-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(240,229,204,0.55) 0%, rgba(240,229,204,0.40) 50%, rgba(240,229,204,0.65) 100%);
+}
+
+/* Cierva trilineal marca de agua */
+.wm-deer {
+  position: absolute;
+  top: 60mm; right: -15mm;
+  width: 130mm;
+  opacity: 0.035;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dots-decor {
+  position: absolute;
+  z-index: 2;
+  opacity: 0.55;
+  height: 3mm;
+}
+
+.dots-d1 { top: 35mm; right: 30mm; width: 26mm; transform: rotate(8deg); }
+.dots-d2 { bottom: 95mm; left: 22mm; width: 22mm; transform: rotate(-6deg); }
+.dots-d3 { bottom: 50mm; right: 24mm; width: 18mm; transform: rotate(12deg); }
+
+/* ===== Container ===== */
+.frame {
+  position: relative;
+  z-index: 3;
+  padding: 13mm 15mm 10mm 15mm;
+  min-height: 297mm;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+.header {
+  text-align: center;
+  padding-bottom: 9mm;
+  border-bottom: 1px solid rgba(139,44,26,0.30);
+  position: relative;
+}
+
+.kicker {
+  font-family: 'Cinzel', serif;
+  font-size: 8.5pt;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--ocre-rojo);
+  margin-bottom: 5mm;
+  font-weight: 500;
+}
+
+.kicker::before, .kicker::after {
+  content: "✦";
+  margin: 0 6mm;
+  color: var(--ocre-amarillo);
+  font-size: 10pt;
+  letter-spacing: 0;
+}
+
+.title-main {
+  font-family: 'Cinzel', serif;
+  font-size: 42pt;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--carbon);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 4mm;
+}
+
+.title-main em {
+  font-style: normal;
+  color: var(--ocre-rojo);
+}
+
+.subtitle {
+  font-family: 'EB Garamond', serif;
+  font-size: 17pt;
+  font-style: italic;
+  color: var(--tierra);
+  margin-bottom: 3mm;
+  font-weight: 500;
+}
+
+.meta {
+  font-family: 'Cinzel', serif;
+  font-size: 7.5pt;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--carbon-soft);
+  font-weight: 400;
+}
+
+.meta strong {
+  color: var(--ocre-rojo);
+  font-weight: 600;
+}
+
+/* ===== Columnas de obras ===== */
+.obras {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7mm;
+  padding: 7mm 0 5mm 0;
+  flex: 1;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 5mm;
+}
+
+.familia {
+  break-inside: avoid;
+}
+
+.familia-head {
+  font-family: 'Cinzel', serif;
+  font-size: 9pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ocre-rojo);
+  font-weight: 600;
+  margin-bottom: 2mm;
+  padding-bottom: 1.2mm;
+  border-bottom: 1px dashed rgba(139,44,26,0.35);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.familia-head .conteo {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 8.5pt;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--carbon-mute);
+}
+
+.familia ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  font-size: 9pt;
+  line-height: 1.35;
+}
+
+.familia ol li {
+  display: grid;
+  grid-template-columns: 7mm 1fr;
+  gap: 1.5mm;
+  padding: 0.2mm 0;
+}
+
+.familia ol li .num {
+  font-family: 'Cinzel', serif;
+  font-size: 7.5pt;
+  font-weight: 500;
+  color: var(--ocre-rojo);
+  padding-top: 0.4mm;
+  text-align: right;
+}
+
+.familia ol li .nombre {
+  color: var(--carbon);
+}
+
+/* ===== Pie con firma ===== */
+.firma-block {
+  margin-top: auto;
+  padding-top: 6mm;
+  border-top: 1px solid rgba(139,44,26,0.30);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 8mm;
+  align-items: center;
+}
+
+.firma-total {
+  font-family: 'Cinzel', serif;
+  font-size: 8pt;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: var(--carbon-soft);
+}
+
+.firma-total strong {
+  font-size: 18pt;
+  color: var(--ocre-rojo);
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-top: 0.5mm;
+}
+
+/* Firma SVG (T + X en cinabrio sobre arenisca) */
+.firma-stamp {
+  width: 28mm;
+  height: 38mm;
+}
+
+.firma-autor {
+  text-align: right;
+  font-family: 'EB Garamond', serif;
+  font-size: 8.5pt;
+  color: var(--carbon-soft);
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.firma-autor .nombre {
+  font-family: 'Cinzel', serif;
+  font-style: normal;
+  font-size: 9pt;
+  letter-spacing: 0.06em;
+  color: var(--carbon);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5mm;
+}
+
+.firma-autor .lugar {
+  font-size: 7.5pt;
+  color: var(--carbon-mute);
+}
+
+@media print {
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-photo"></div>
+<div class="bg-overlays"></div>
+<div class="bg-noise"></div>
+<div class="bg-veil"></div>
+
+<!-- Cierva trilineal marca de agua -->
+<svg class="wm-deer" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#1e1408" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Cuerpo cierva -->
+  <path d="M 60 130 Q 80 100 130 95 Q 170 92 200 100 L 250 110 Q 290 120 320 130 Q 340 135 350 145 Q 345 155 335 152 L 320 148 Q 300 150 285 150 L 280 175 L 275 200 M 260 175 L 255 200 M 130 95 L 125 70 Q 120 50 110 45 M 130 95 L 135 70 Q 140 55 130 45 M 200 100 L 205 130 Q 200 160 195 175 L 190 200 M 175 175 L 170 200" />
+  <!-- Tres líneas trilineales en el cuerpo -->
+  <path d="M 170 115 L 170 145 M 195 115 L 195 145 M 220 115 L 220 145" stroke-width="2" />
+  <!-- Ojo -->
+  <circle cx="105" cy="78" r="1.5" fill="#1e1408" stroke="none" />
+</svg>
+
+<!-- Tres puntos paleo decoración -->
+<svg class="dots-decor dots-d1" viewBox="0 0 80 10" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="6" cy="5" r="3.5" fill="#c44a2a"/>
+  <circle cx="22" cy="5" r="3" fill="#c44a2a"/>
+  <circle cx="36" cy="5" r="3.5" fill="#c44a2a"/>
+  <circle cx="52" cy="5" r="2.5" fill="#c44a2a"/>
+  <circle cx="68" cy="5" r="3" fill="#c44a2a"/>
+</svg>
+<svg class="dots-decor dots-d2" viewBox="0 0 80 10" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="6" cy="5" r="3" fill="#c44a2a"/>
+  <circle cx="22" cy="5" r="3.5" fill="#c44a2a"/>
+  <circle cx="38" cy="5" r="2.5" fill="#c44a2a"/>
+  <circle cx="54" cy="5" r="3" fill="#c44a2a"/>
+</svg>
+<svg class="dots-decor dots-d3" viewBox="0 0 80 10" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="6" cy="5" r="3" fill="#c44a2a"/>
+  <circle cx="22" cy="5" r="2.5" fill="#c44a2a"/>
+  <circle cx="38" cy="5" r="3.5" fill="#c44a2a"/>
+</svg>
+
+<div class="frame">
+
+  <!-- ====== HEADER ====== -->
+  <header class="header">
+    <div class="kicker">Exposición · La Esquina del Peso · Oviedo</div>
+    <h1 class="title-main">Paleo<em>txomi</em></h1>
+    <p class="subtitle">Ciervas, Venus y grabados</p>
+    <p class="meta">
+      <strong>41 piezas en piedra</strong> &nbsp;·&nbsp; Del 19 al 30 de junio &nbsp;·&nbsp; Inauguración viernes 19 a las 19:30
+    </p>
+  </header>
+
+  <!-- ====== COLUMNAS ====== -->
+  <div class="obras">
+
+    <!-- ====== COLUMNA IZQUIERDA ====== -->
+    <div class="col">
+
+      <div class="familia">
+        <div class="familia-head"><span>Venus gravetienses</span><span class="conteo">12 piezas</span></div>
+        <ol>
+          <li><span class="num">1</span><span class="nombre">Venus del jabalí</span></li>
+          <li><span class="num">2</span><span class="nombre">Venus arenisca roja</span></li>
+          <li><span class="num">3</span><span class="nombre">Venus arrugas dorsales</span></li>
+          <li><span class="num">4</span><span class="nombre">Venus frontal roto</span></li>
+          <li><span class="num">5</span><span class="nombre">Venus arrodillada acéfala</span></li>
+          <li><span class="num">6</span><span class="nombre">Venus arrodillada acéfala con tocado</span></li>
+          <li><span class="num">7</span><span class="nombre">Venus base yesquero</span></li>
+          <li><span class="num">8</span><span class="nombre">Dios cornudo</span></li>
+          <li><span class="num">9</span><span class="nombre">Venus base cuadrangular</span></li>
+          <li><span class="num">10</span><span class="nombre">Venus roja cabeza pequeña</span></li>
+          <li><span class="num">11</span><span class="nombre">Venus sentada negra</span></li>
+          <li><span class="num">12</span><span class="nombre">Venus de Laussel</span></li>
+        </ol>
+      </div>
+
+      <div class="familia">
+        <div class="familia-head"><span>Antropomorfos y chamanes</span><span class="conteo">5 piezas</span></div>
+        <ol>
+          <li><span class="num">18</span><span class="nombre">Sorcier del arco musical</span></li>
+          <li><span class="num">19</span><span class="nombre">Brujo bisonte</span></li>
+          <li><span class="num">23</span><span class="nombre">Ídolo Peñatu mancha roja</span></li>
+          <li><span class="num">24</span><span class="nombre">Ídolo Peñatu proyectado</span></li>
+          <li><span class="num">36</span><span class="nombre">Dios cornudo pezuñas grabado</span></li>
+        </ol>
+      </div>
+
+      <div class="familia">
+        <div class="familia-head"><span>Cierva trilineal asturiana</span><span class="conteo">5 piezas</span></div>
+        <ol>
+          <li><span class="num">44</span><span class="nombre">Cierva trilineal mediana&nbsp;I</span></li>
+          <li><span class="num">45</span><span class="nombre">Cierva trilineal mediana&nbsp;II</span></li>
+          <li><span class="num">46</span><span class="nombre">Cierva trilineal mediana&nbsp;III</span></li>
+          <li><span class="num">47</span><span class="nombre">Cierva trilineal mediana&nbsp;IV</span></li>
+          <li><span class="num">48</span><span class="nombre">Cierva trilineal mediana&nbsp;V</span></li>
+        </ol>
+      </div>
+
+    </div>
+
+    <!-- ====== COLUMNA DERECHA ====== -->
+    <div class="col">
+
+      <div class="familia">
+        <div class="familia-head"><span>Fauna paleolítica</span><span class="conteo">11 piezas</span></div>
+        <ol>
+          <li><span class="num">15</span><span class="nombre">Oso lanceado</span></li>
+          <li><span class="num">16</span><span class="nombre">Mamut</span></li>
+          <li><span class="num">17</span><span class="nombre">Mamut en trampa</span></li>
+          <li><span class="num">20</span><span class="nombre">Caballito Vogelherd</span></li>
+          <li><span class="num">21</span><span class="nombre">Caballo lunares</span></li>
+          <li><span class="num">29</span><span class="nombre">Yegua rayada</span></li>
+          <li><span class="num">32</span><span class="nombre">Bisonte Covaciella</span></li>
+          <li><span class="num">33</span><span class="nombre">Panel de las cabras</span></li>
+          <li><span class="num">34</span><span class="nombre">Uro La Peña</span></li>
+          <li><span class="num">37</span><span class="nombre">Uro La Peña cuadrado</span></li>
+          <li><span class="num">38</span><span class="nombre">Uro La Peña violeta</span></li>
+        </ol>
+      </div>
+
+      <div class="familia">
+        <div class="familia-head"><span>Grabados y paneles</span><span class="conteo">7 piezas</span></div>
+        <ol>
+          <li><span class="num">13</span><span class="nombre">Piedra semicircular siluetas</span></li>
+          <li><span class="num">25</span><span class="nombre">Panel Buxu</span></li>
+          <li><span class="num">26</span><span class="nombre">Ictiomorfo y bisonte</span></li>
+          <li><span class="num">27</span><span class="nombre">Ictiomorfo</span></li>
+          <li><span class="num">28</span><span class="nombre">Piedra del oso</span></li>
+          <li><span class="num">35</span><span class="nombre">Muro de los grabados</span></li>
+          <li><span class="num">39</span><span class="nombre">Tectiforme Buxu</span></li>
+        </ol>
+      </div>
+
+      <div class="familia">
+        <div class="familia-head"><span>Escena humana</span><span class="conteo">1 pieza</span></div>
+        <ol>
+          <li><span class="num">40</span><span class="nombre">Coito Los Casares I</span></li>
+        </ol>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ====== FIRMA ====== -->
+  <div class="firma-block">
+
+    <div class="firma-total">
+      Total<strong>41</strong>obras
+    </div>
+
+    <!-- SVG firma del autor: placa de arenisca con T+X en cinabrio -->
+    <svg class="firma-stamp" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+      <!-- Definiciones -->
+      <defs>
+        <filter id="rough">
+          <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="3"/>
+          <feDisplacementMap in="SourceGraphic" scale="3"/>
+        </filter>
+        <radialGradient id="sandstone" cx="50%" cy="50%" r="60%">
+          <stop offset="0%" stop-color="#e6d5a8"/>
+          <stop offset="100%" stop-color="#c8b285"/>
+        </radialGradient>
+        <filter id="grain">
+          <feTurbulence type="fractalNoise" baseFrequency="3" numOctaves="2"/>
+          <feColorMatrix values="0 0 0 0 0.6 0 0 0 0 0.5 0 0 0 0 0.35 0 0 0 0.30 0"/>
+          <feComposite in2="SourceGraphic" operator="in"/>
+        </filter>
+      </defs>
+
+      <!-- Placa de arenisca con bordes irregulares -->
+      <path d="M 18 10
+               L 95 8
+               L 102 22 L 108 18 L 110 35 L 105 50 L 113 65 L 108 95 L 112 115 L 105 130 L 110 145 L 95 152 L 70 148 L 50 152 L 30 150 L 12 145 L 18 125 L 8 105 L 14 85 L 8 60 L 15 45 L 10 30 L 18 10 Z"
+            fill="url(#sandstone)"
+            stroke="#9c8b62"
+            stroke-width="0.8"
+            opacity="0.95"/>
+
+      <!-- Textura de grano sobre la placa -->
+      <path d="M 18 10 L 95 8 L 102 22 L 108 18 L 110 35 L 105 50 L 113 65 L 108 95 L 112 115 L 105 130 L 110 145 L 95 152 L 70 148 L 50 152 L 30 150 L 12 145 L 18 125 L 8 105 L 14 85 L 8 60 L 15 45 L 10 30 L 18 10 Z"
+            fill="none"
+            filter="url(#grain)"/>
+
+      <!-- T arriba derecha -->
+      <g stroke="#b8341e" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.92">
+        <line x1="60" y1="38" x2="92" y2="38"/>
+        <line x1="78" y1="38" x2="78" y2="78"/>
+      </g>
+
+      <!-- X abajo izquierda -->
+      <g stroke="#b8341e" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.92">
+        <line x1="28" y1="98" x2="58" y2="128"/>
+        <line x1="58" y1="98" x2="28" y2="128"/>
+      </g>
+    </svg>
+
+    <div class="firma-autor">
+      <span class="nombre">Domingo González de Lena</span>
+      <span class="lugar">Taller de Lena · Asturias · 2026</span>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

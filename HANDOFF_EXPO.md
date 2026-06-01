@@ -1,505 +1,423 @@
-# Handoff · exposición La Esquina del Peso · PaleoTxomi
+# Handoff · Paleotxomi · exposición La Esquina del Peso
 ## Punto de partida único para la nueva sesión
 
-**Para:** la siguiente sesión de Claude (o quien retome el trabajo).
-**De:** la sesión del 31 may 2026 · Claude Opus 4.7 (1M context).
-**Foco exclusivo:** la exposición de Domingo en La Esquina del Peso. Nada más.
+**De:** sesión del 1 jun 2026 · Claude Opus 4.7 (1M context).
+**Para:** la siguiente sesión.
+**Foco exclusivo:** la exposición de Domingo. Nada más.
 
-Lee este documento entero antes de tocar nada. Tiene todo el contexto operativo. El resto del repo es de referencia; **este archivo es la fuente de verdad mínima**.
-
----
-
-## 0 · Dos repositorios · qué hace cada uno
-
-**Cambio clave de la sesión del 31 may:** se ha desgajado el archivo personal en dos repositorios. La próxima sesión trabaja sobre **paleotxomi**.
-
-| Repositorio | URL pública | Propósito |
-|-------------|-------------|-----------|
-| `biopelayo/paleotxomi` | <https://biopelayo.github.io/paleotxomi/> | **Sede principal de la expo y de la nueva sesión.** Versión reducida y pública dedicada a la obra paleolítica de Domingo. Branding: «PaleoTxomi». basePath `/paleotxomi`. |
-| `biopelayo/domingo-archivo` | <https://biopelayo.github.io/domingo-archivo/> | Archivo personal completo del padre: micología, videos, escritos, música, biografía. Sigue activo pero secundario. basePath `/domingo-archivo`. |
-
-Working directories en disco:
-
-- `D:\Antigravity\paleotxomi\` — repositorio paleotxomi (clon limpio de hoy 31 may).
-- `D:\Antigravity\proyecto-domingo-web\` — repositorio domingo-archivo (el que veníamos usando).
-
-**Próxima sesión: arrancar en `D:\Antigravity\paleotxomi\`.**
+> 🟢 **Si arrancas ahora:** lee este documento entero antes de tocar nada. Luego salta al §14 «Próxima acción concreta». El resto está agrupado para consulta puntual.
 
 ---
 
-## 1 · Contexto en 90 segundos
+## 0 · Estado en una línea
 
-Pelayo González de Lena Rodríguez (hijo) prepara la primera exposición pública de su padre Domingo González de Lena Díaz (66 años, Pajares - Lena - Asturias). El local: «La Esquina del Peso», café-restaurante en pleno casco antiguo de Oviedo (calle del Peso 1, 33009). El dueño se llama **Eden**.
-
-La exposición reúne **24 piezas** talladas a mano en piedra: reproducciones de grabados paleolíticos de las cuevas asturianas y figurillas femeninas tipo Venus gravetienses en bulto redondo. El padre lleva más de quince años trabajando estas piezas en su taller de Lena, con cincel y maza, apoyado en la bibliografía clásica (Breuil, Vega del Sella, Hernández-Pacheco, Obermaier, Jordá, Fortea).
-
-**Calendario:**
-
-- Inauguración pública: **sábado 20 jun 2026 · 19:30**.
-- Inauguración privada (opcional): **viernes 19 jun 2026 · 19:30**.
-- Cierre: **martes 30 jun 2026**.
-- Desmontaje: 7 días naturales después.
+**Web pública desplegada y activa** en <https://biopelayo.github.io/paleotxomi/>. Título cerrado **PALEOTXOMI · Ciervas, Venus y grabados**. **Lista de 41 obras** cerrada con OCR del cuaderno del autor. **Lámina A4 firmada** generada con la firma T+X del autor. Falta: cartel definitivo (Pelayo lo dará), foto + precio de cada pieza, y activación de `paleotxomi.com` (esperando verificación Veriff en Porkbun).
 
 ---
 
-## 2 · Quién es quién
+## 1 · Dos repositorios · qué hace cada uno
 
-| Persona | Rol | Datos |
-|---------|-----|-------|
-| **Domingo González de Lena Díaz** | Autor. Padre de Pelayo. | DNI [DNI retirado] · c/ [dirección retirada] · 662 58 57 98 · domingodelena@gmail.com |
-| **Pelayo González de Lena Rodríguez** | Coordinador. Hijo del autor. | bio.pelayo@gmail.com · Bluesky @txomidelena.bsky.social |
-| **Eden** | Regencia de La Esquina del Peso | Le faltan los datos al cierre de esta sesión. Él se encarga del contrato y solo necesita los datos de Domingo. |
-| **Amanda C. Blanco** | Fotógrafa profesional | Hizo el catálogo del corpus el 28 abr 2026 (120 fotos). Derechos pendientes de cesión. |
+| Repo | Working dir | URL pública | Propósito |
+|------|-------------|-------------|-----------|
+| **`biopelayo/paleotxomi`** | `D:\Antigravity\paleotxomi\` | <https://biopelayo.github.io/paleotxomi/> | **Sede principal de la expo. Trabajar aquí.** |
+| `biopelayo/domingo-archivo` | `D:\Antigravity\proyecto-domingo-web\` | <https://biopelayo.github.io/domingo-archivo/> | Archivo personal completo del autor (micología, videos, escritos). Secundario. |
+
+**Worktree de deploy**: `D:\Antigravity\paleotxomi-deploy\` (rama `gh-pages` montada como worktree separado para no romper el `main`).
+
+### Para desplegar cambios (flujo manual probado)
+
+```bash
+cd D:/Antigravity/paleotxomi
+npm run build
+cd D:/Antigravity/paleotxomi-deploy
+# limpiar todo menos .git
+find . -maxdepth 1 -mindepth 1 -not -name ".git" -exec rm -rf {} +
+# copiar el build
+cp -r D:/Antigravity/paleotxomi/out/. .
+touch .nojekyll
+git add -A
+git -c user.email="bio.pelayo@gmail.com" -c user.name="biopelayo" commit -m "deploy: ..."
+git push origin gh-pages
+```
+
+**Ojo:** al hacer commit en `main`, si en el index aparece `.github/workflows/deploy.yml`, hay que quitarlo con `git rm --cached -r .github && git commit --amend --no-edit` antes del push. El token de Claude no tiene scope `workflow`.
 
 ---
 
-## 3 · Datos del padre para Eden (cerrados)
+## 2 · Estado del dominio paleotxomi.com
 
-Esto es lo que Eden necesita para el contrato:
+**Comprado el 31 may 2026 en Porkbun.** Cuenta en verificación Veriff.
 
-- **Nombre completo:** Domingo González de Lena Díaz.
-- **DNI:** [DNI retirado].
-- **Domicilio:** c/ [dirección retirada].
-- **Teléfono:** 662 58 57 98.
-- **Correo:** domingodelena@gmail.com.
+### Lo que está hecho
 
-Detalle escrito en [`PAQUETE_EDEN.md`](./PAQUETE_EDEN.md).
+- ✓ Dominio adquirido (~10 €/año).
+- ✓ Repo preparado en local con `basePath: ""` (sin subpath) cuando se active.
+- ✓ Public/CNAME preparado con `paleotxomi.com` (no subido a gh-pages todavía).
+
+### Lo que falta · orden obligado
+
+1. **Pelayo recibe correo de Veriff aprobando** la cuenta de Porkbun.
+2. **Pelayo configura los DNS** en Porkbun (los 5 records del bloque siguiente).
+3. **Yo deploy** con `basePath: ""` y `CNAME` incluido.
+4. **Pelayo activa custom domain** en <https://github.com/biopelayo/paleotxomi/settings/pages>.
+5. **HTTPS** se emite automáticamente (15-60 min después).
+
+### Records DNS para Porkbun (cuando Pelayo entre)
+
+| Type | Host | Answer | TTL |
+|------|------|--------|-----|
+| A | (vacío) | `185.199.108.153` | 600 |
+| A | (vacío) | `185.199.109.153` | 600 |
+| A | (vacío) | `185.199.110.153` | 600 |
+| A | (vacío) | `185.199.111.153` | 600 |
+| CNAME | `www` | `biopelayo.github.io` | 600 |
+
+**⚠ No tocar el custom domain en GitHub hasta que Pelayo confirme que el DNS está guardado.**
 
 ---
 
-## 4 · Bio del autor (3 versiones)
+## 3 · Datos del autor (cerrados, no preguntar)
 
-Pelayo eligió la versión corta (36 palabras) como canónica. Las otras dos están si Eden o prensa piden más.
+- **Nombre completo:** Domingo González de Lena Díaz
+- **DNI:** [DNI retirado]
+- **Fecha de nacimiento:** 1959 · Pajares, concejo de Lena (Asturias)
+- **Domicilio:** c/ [dirección retirada]
+- **Teléfono:** 662 58 57 98
+- **Correo:** domingodelena@gmail.com
+- **Apodo:** Txomi / Chomi
+- **Firma:** signo paleolítico en cinabrio sobre arenisca: **T** arriba a la derecha + **X** abajo a la izquierda. Reproducido como SVG inline en `RELACION_OBRAS_LAMINA.html` (clase `.firma-stamp`).
 
-### Versión corta · 36 palabras (canónica)
+---
+
+## 4 · Identidad de la exposición (cerrada)
+
+| Campo | Valor |
+|-------|-------|
+| **Título** | **PALEOTXOMI** |
+| **Subtítulo** | **Ciervas, Venus y grabados** |
+| **Tagline secundario** | Grabados y figurillas en piedra de bulto redondo |
+| **Lugar** | La Esquina del Peso · calle del Peso 1 · 33009 Oviedo |
+| **Contacto del local** | 685 660 938 · info@laesquinadelpeso.com · @laesquinadelpeso |
+| **Dueño del local** | Eden (solo nombre, contrato lo lleva él) |
+| **Fechas** | **Del 19 al 30 de junio 2026** |
+| **Inauguración pública** | **viernes 19 jun 2026 · 19:30** |
+| **Inauguración privada** | descartada o opcional (Pelayo decide cerca de fecha) |
+| **Total obras** | **41 piezas** (catalogadas 54, anuladas/retiradas 13) |
+| **Web autor** | <https://biopelayo.github.io/paleotxomi/> |
+| **Web expo** | <https://biopelayo.github.io/paleotxomi/exposicion/la-esquina-del-peso/> |
+
+### Bio canónica (36 palabras)
 
 > **Domingo González de Lena Díaz.** Pajares, concejo de Lena (Asturias), 1959. Trabaja la piedra a mano en su taller de Lena. Reproduce el arte paleolítico parietal de las cuevas asturianas y talla figurillas gravetienses en bulto redondo.
 
-### Versión media · 70 palabras (dossier)
+Las versiones media y larga están en `PAQUETE_EDEN.md`.
 
-> **Domingo González de Lena Díaz.** Pajares, concejo de Lena (Asturias), 1959. Trabaja la piedra a mano en su taller de Lena, con cincel y maza. Reproduce el arte paleolítico parietal de las cuevas asturianas y talla figurillas gravetienses en bulto redondo.
->
-> Su proyecto, iniciado en 2009, se apoya en los estudios de Henri Breuil, el Conde de la Vega del Sella, Eduardo Hernández-Pacheco, Hugo Obermaier, Francisco Jordá y Javier Fortea.
+### Los 4 pilares conceptuales
 
-### Versión larga
+Aunque el subtítulo se condensó en «Ciervas, Venus y grabados», los 4 ejes temáticos de la muestra siguen siendo:
 
-Está en [`DOSSIER_EXPO.md`](./DOSSIER_EXPO.md) y en [`biografia.json`](./public/data/biografia.json). **Importante:** para la expo solo aplica la faceta artística. **No** mencionar guarda de campo ni cultivador de setas, aunque sea cierto y aparezca en el resto del archivo personal.
-
----
-
-## 5 · La expo en 4 ejes (decisión cerrada)
-
-El subtítulo cerrado es:
-
-> **Arte Paleolítico parietal y Venus gravetienses.**
-> Grabados y figurillas en piedra de bulto redondo.
-
-Lo dijo Domingo por WhatsApp el 25 y 26 may 2026.
-
-La narrativa de la muestra se ordena en cuatro hilos. Cuando Pelayo te pase las 24 piezas finales, cada una se ubica en uno o varios de estos hilos:
-
-1. **Venus gravetienses** · 30.000-22.000 AP. Willendorf, Laussel, Lespugue, Brassempouy, Dolní Věstonice.
-2. **Arte franco-cantábrico** · 36.000-11.000 AP. Cuevas francesas (Chauvet, Lascaux, Niaux) + cantábricas (Altamira, El Castillo, La Garma, Tito Bustillo, La Peña de Candamo, El Pindal).
-3. **Cierva trilineal asturiana** · 20.000-15.000 AP. Estilo definido por **Javier Fortea Pérez**. Tres líneas paralelas en el cuerpo de la cierva. Cuevas: Lluera I, La Viña, Les Pedroses.
-4. **Patrimonio Mundial UNESCO · ampliación 2008.** 5 cuevas asturianas inscritas en el sitio 310 («Cueva de Altamira y arte rupestre paleolítico del norte de España»): **Tito Bustillo, La Peña de Candamo, El Pindal, Llonín, Covaciella**.
-
-Estos cuatro hilos van en el cartel, en el dossier, en la nota de prensa, en el one-page para Eden y en las cartelas de sala.
+1. **Venus gravetienses** (30.000-22.000 AP).
+2. **Arte franco-cantábrico** (36.000-11.000 AP).
+3. **Cierva trilineal asturiana** (estilo Fortea Pérez · Solutrense-Magdaleniense).
+4. **5 cuevas asturianas Patrimonio Mundial UNESCO 2008** (Tito Bustillo, La Peña de Candamo, El Pindal, Llonín, Covaciella).
 
 ---
 
-## 6 · Estado del corpus fotográfico
+## 5 · Las 41 obras (cerradas)
 
-### Catalog principal (sesión Amanda Blanco · 28 abr 2026)
+Numeración del cuaderno original del autor (los huecos son piezas catalogadas pero excluidas de esta selección).
 
-- Ubicación: `public/images/web/1_ESCULTURAS/_DSF3xxx_800.jpg`
-- Metadatos en `public/data/catalog.json`
-- **Estado:** 110 entradas tras la limpieza del 28 may. Antes había 120 (10 entradas con `seccion: 2_OTRAS` ya eliminadas del JSON y del disco en la sesión anterior; pendiente de commitear).
-- **Metadatos casi todos vacíos:** falta motivo, yacimiento, cronología, técnica, material, dimensiones, peso, año para casi todas las piezas. Solo están el ID, el archivo master y la fecha de la sesión fotográfica.
+### Venus gravetienses · 12
 
-### Sesión Amanda 2026 (10 fotos rituales · 28 may)
+1. Venus del jabalí
+2. Venus arenisca roja
+3. Venus arrugas dorsales
+4. Venus frontal roto
+5. Venus arrodillada acéfala
+6. Venus arrodillada acéfala con tocado
+7. Venus base yesquero
+8. Dios cornudo
+9. Venus base cuadrangular
+10. Venus roja cabeza pequeña
+11. Venus sentada negra
+12. Venus de Laussel
 
-- Ubicación: `public/personal/sesion-amanda-2026/`
-- Fotos identificadas:
-  - `venus-hongo.webp` — Venus con hongo (Trametes) como tocado, sobre esfera oscura con colmillo. **Pieza clave / ritual.**
-  - `venus-manos-main.jpeg` — Venus rosada en arenisca sostenida por las manos del autor.
-  - `cierva-circular.jpg` — colgante circular en piedra ocre con cierva grabada y diente blanco.
-  - `ciervas.jpeg`, `mas-ciervas.jpeg`, `mas-mas-ciervas.jpeg` — múltiples piedras con cierva trilineal.
-  - `esculturas.jpeg` — conjunto de Venus y figuras zoomorfas en hierba.
-  - `manos_para_bg-expo-cartel.jpeg` — manos del autor con pulseras de ámbar.
-  - `backgr-theme-paleo.jpeg` — textura base de fondo paleo.
+### Antropomorfos y chamanes · 5
 
-### Selección antigua (no fiable)
+18. Sorcier del arco musical
+19. Brujo bisonte
+23. Ídolo Peñatu mancha roja
+24. Ídolo Peñatu proyectado
+36. Dios cornudo pezuñas grabado
 
-- `public/personal/piezas/pieza-NN.jpg` (23 fotos) y `venus-cuerno-NN.jpg` (4 fotos).
-- **Los motivos descritos en `public/data/exposicion.json` NO coinciden con las fotos.** 18 de 23 piezas tienen el motivo mal asignado (la «cierva de Lluera» #17 es en realidad una Venus, las #21-23 no son grabados sino propulsores y arpones).
-- **No usar como fuente.** Solo el catalog de Amanda Blanco + las fotos de la sesión 2026 son fiables.
+### Fauna paleolítica · 11
 
-Detalle completo del audit foto a foto en [`CORPUS_AUDIT_FOTOS.md`](./CORPUS_AUDIT_FOTOS.md) (43 imágenes descritas).
+15. Oso lanceado · 16. Mamut · 17. Mamut en trampa · 20. Caballito Vogelherd · 21. Caballo lunares · 29. Yegua rayada · 32. Bisonte Covaciella · 33. Panel de las cabras · 34. Uro La Peña · 37. Uro La Peña cuadrado · 38. Uro La Peña violeta
 
-### Pendiente · 24 piezas finales
+### Grabados y paneles · 7
 
-Pelayo te las va a pasar **una a una con: ID, título, explicación breve, foto, precio**. Hasta tenerlas no se puede cerrar el anexo del contrato, las cartelas, ni el one-page definitivo para Eden.
+13. Piedra semicircular siluetas · 25. Panel Buxu · 26. Ictiomorfo y bisonte · 27. Ictiomorfo · 28. Piedra del oso · 35. Muro de los grabados · 39. Tectiforme Buxu
+
+### Cierva trilineal asturiana · 5
+
+44. Cierva trilineal mediana I · 45. Cierva trilineal mediana II · 46. Cierva trilineal mediana III · 47. Cierva trilineal mediana IV · 48. Cierva trilineal mediana V
+
+### Escena humana · 1
+
+40. Coito Los Casares I
+
+### Fuera de la selección · 13
+
+| # | Motivo | Razón |
+|---|--------|-------|
+| 14 | Grabado mujer tumbada | Retirada Pelayo |
+| 22 | Ídolo Peñatu mancha roja (1.ª versión) | Retirada Pelayo |
+| 30 | Yegua rayada cuadrada | Retirada Pelayo |
+| 31 | Ciervo herido | Anulada por el autor |
+| 41 | Coito Los Casares II | Retirada Pelayo |
+| 42 | Coito Los Casares III | Retirada Pelayo |
+| 43 | Cierva trilineal pequeña | Retirada Pelayo |
+| 49-53 | Ciervas trilineales medianas VI-X | Retirada Pelayo |
+| 54 | Menina | Retirada Pelayo |
+
+Documentos relacionados:
+- `LISTA_OBRAS_RELACION.md` · tabla técnica completa con filtros.
+- `LISTA_OBRAS_EDEN.md` · lista limpia con formato WhatsApp para copiar/pegar.
+- `RELACION_OBRAS_LAMINA.html` / `.pdf` / `.png` · lámina A4 firmada por el autor.
 
 ---
 
-## 7 · Estado de la web y del deploy
+## 6 · Estado de los archivos clave (mapa)
 
-- Repositorio: <https://github.com/biopelayo/domingo-archivo> (`main` + `gh-pages`).
-- URL pública: **<https://biopelayo.github.io/domingo-archivo/>** (GitHub Pages, sin dominio custom).
-- `paleotxomi.com` se retiró el 31 may 2026: el dominio no estaba registrado y bloqueaba el acceso al subpath. CNAME eliminado, `basePath` configurado a `/domingo-archivo`.
-- Página de la expo: `src/app/exposicion/la-esquina-del-peso/page.tsx` (ya actualizada con subtítulo nuevo, bio corta y 4 ejes).
-- Banner de la home: `src/components/home/ExpoActualBanner.tsx` (ya con fechas 20-30 jun).
-- Local dev: `npm run dev` → http://localhost:3000.
-- Build estático: `npm run build` genera `out/`. El deploy va por la rama `gh-pages` (push manual con `git worktree`), no por GitHub Actions.
-
-**Último despliegue:** commit `7652a34` en main, `a9401db` en gh-pages, 28 may 2026 14:43.
-
-### Importante para el deploy
-
-El workflow `.github/workflows/deploy.yml` **no se ha subido al remoto**. La sesión de Claude no tenía scope `workflow` en el token. Pelayo lo puede subir manualmente cuando quiera, así los próximos push a `main` desplegarán solos. Hasta entonces, el deploy se hace manualmente con:
-
-```bash
-cd D:/Antigravity/proyecto-domingo-web
-npm run build
-git worktree add D:/Antigravity/gh-pages-tmp gh-pages
-# limpiar y copiar out/ al worktree
-cd D:/Antigravity/gh-pages-tmp
-git add -A && git commit -m "deploy: ..." && git push origin gh-pages
+```
+D:\Antigravity\paleotxomi\
+├── HANDOFF_EXPO.md                  ← ESTE archivo
+├── README.md                        ← intro del repo
+├── package.json                     ← name: paleotxomi
+├── next.config.ts                   ← basePath /paleotxomi (cambiar a "" cuando paleotxomi.com)
+├── paleo.css                        ← tema reutilizable
+│
+├── src/app/exposicion/la-esquina-del-peso/page.tsx  ← página principal de la expo
+├── src/components/home/ExpoActualBanner.tsx          ← banner verde de la home
+├── messages/es.json                                  ← textos (brand: «PaleoTxomi»)
+│
+├── public/personal/sesion-amanda-2026/  ← 10 fotos clave (venus-hongo, ciervas, etc.)
+├── public/personal/piezas/              ← 23 piezas-NN.jpg + 4 venus-cuerno (mismatch JSON, no fiable)
+├── public/images/web/1_ESCULTURAS/      ← 110 fotos catalog Amanda Blanco (sin metadatos)
+├── public/data/catalog.json             ← 110 piezas DOM-ESC-* (metadatos vacíos)
+├── public/data/exposicion.json          ← 23 piezas con motivo MAL mapeado a pieza-NN.jpg
+├── public/data/setas.json               ← 65 fotos (sin recolecciones, ya limpio)
+│
+├── MENSAJE_EDEN_WHATSAPP.md         ← texto principal para enviar
+├── LISTA_OBRAS_EDEN.md              ← lista 41 obras formato WhatsApp
+├── LISTA_OBRAS_RELACION.md          ← tabla técnica completa
+├── PAQUETE_EDEN.md                  ← datos del padre + 3 bios
+├── CONTRATO_CESION_OBRAS.md         ← borrador (Eden lo lleva)
+│
+├── RELACION_OBRAS_LAMINA.html       ← lámina A4 firmada (fuente)
+├── RELACION_OBRAS_LAMINA.pdf        ← 3,3 MB · A4 limpio
+├── RELACION_OBRAS_LAMINA.png        ← 1 MB · con canvas blanco al final
+│
+├── ONE_PAGE_EXPO_VESTIDO.html       ← template A3 paleo (Pelayo lo editó)
+│
+└── public/expo/                     ← SVG cartel, marcapaginas, octavilla, slides (varios mal mapeados)
 ```
 
----
-
-## 8 · Documentos clave (mapa corto)
-
-Hay 30+ archivos `.md` en la raíz. Para la expo, los esenciales son estos 8:
-
-| Archivo | Para qué |
-|---------|----------|
-| **`HANDOFF_EXPO.md`** | Este. Punto de entrada. |
-| [`EXPO_INDICE.md`](./EXPO_INDICE.md) | Mapa completo de archivos (v6, denso) |
-| [`PAQUETE_EDEN.md`](./PAQUETE_EDEN.md) | Datos para el contrato + bio |
-| [`ONE_PAGE_EXPO.md`](./ONE_PAGE_EXPO.md) | One-page texto plano · 4 ejes |
-| [`ONE_PAGE_EXPO_VESTIDO.html`](./ONE_PAGE_EXPO_VESTIDO.html) | One-page maquetado con foto, fondo difuminado, decoración paleo (A3 portrait). **Esta es la mejor versión visual que tenemos. Reaprovecharla en lugar de empezar desde cero.** |
-| [`CORPUS_AUDIT_FOTOS.md`](./CORPUS_AUDIT_FOTOS.md) | Audit foto a foto del corpus |
-| [`CONTRATO_CESION_OBRAS.md`](./CONTRATO_CESION_OBRAS.md) | Contrato base (Eden lo lleva, no urgente) |
-| [`paleo.css`](./paleo.css) | Tema CSS reutilizable: paleta, tipografía, motivos decorativos |
-
-El resto (emails, nota prensa, guion inauguración, dossier, calendario) se retoma cuando llegue su momento en el plan W-3 a W+1.
+**No fiable / pendiente de re-curar:**
+- `public/data/exposicion.json` y `public/personal/piezas/pieza-NN.jpg`: motivos mal asignados (la #17 dice cierva pero es Venus, etc.). Documentado en `CORPUS_AUDIT_FOTOS.md` y `CORPUS_REVISION_25MAY.md`.
+- `public/data/catalog.json`: 110 fotos profesionales sin motivo, año, técnica, dimensiones. Falta sesión con Domingo.
+- SVGs de `public/expo/`: cartel, marcapaginas, octavilla, slides usan motivos esquemáticos inventados antes de auditar el corpus real. La página de la expo NO los usa (cartel es placeholder ahora).
 
 ---
 
-## 9 · Pendientes en orden de prioridad
+## 7 · Lo que está cerrado · no volver a abrir
 
-### Entregables que Pelayo va a aportar al inicio de la próxima sesión
+- ✓ Título + subtítulo + fechas + lugar.
+- ✓ Datos del padre + DNI + dirección.
+- ✓ Bio (3 versiones, canónica = 36 palabras).
+- ✓ Identidad visual: paleta paleo + tipografía Cinzel+EB Garamond+Cormorant.
+- ✓ Lista de 41 obras (numeración del cuaderno).
+- ✓ Firma SVG T+X reproducida.
+- ✓ Web pública desplegada y operativa.
+- ✓ Recolecciones (85 fotos) eliminadas de la galería de setas.
+- ✓ Piezas «2_OTRAS» (10) eliminadas del catalog.
+- ✓ Mensaje WhatsApp para Eden redactado.
+- ✓ Lámina A4 firmada con las 41 obras.
 
-1. ⏳ **Lista de las 24 figuras de la expo** con ID, título, descripción breve, foto, precio.
-2. ⏳ **Firma o icono que Domingo usa como membrete** para marcar sus piezas.
-3. ⏳ **Ideas sobre los 4 marcapáginas** (los temáticos que se imprimen).
-4. ⏳ **Serie de fotografías** que van en el one-shot de presentación de la exposición.
-5. ⏳ **Títulos** (cartel, marcapáginas, octavilla, dossier).
-6. ⏳ **Texto sobre los 4 pilares** de la exposición (Venus gravetienses, arte franco-cantábrico, cierva trilineal, UNESCO 2008).
+---
 
-Con esos 6 inputs se cierra el one-page final para Eden, se actualizan los SVG del cartel/logos/marcapáginas y se cierra el Anexo I del contrato.
+## 8 · Lo que está en curso · bloqueado por terceros
 
-### Tareas residuales de la sesión anterior
+| Bloqueo | Quién | Qué hacer cuando se desbloquee |
+|---------|-------|-------------------------------|
+| Veriff Porkbun | Pelayo / Porkbun | Configurar 5 DNS records · yo despliego con CNAME |
+| Cartel definitivo | Pelayo lo dará | Sustituir placeholder en `page.tsx` |
+| Workflow `.github/workflows/deploy.yml` | Pelayo (token con scope workflow) | Push manual para auto-deploy de futuros commits |
 
-7. ⏳ **Limpiar galería de setas** (90 fotos × 6 archivos = 540 paths). Contact sheet interactivo en `CONTACT_SHEET_SETAS.html` listo. Pelayo marca y manda lista.
-8. ⏳ **Migrar las correcciones de paleotxomi a domingo-archivo** si Pelayo quiere mantener los dos repos en paralelo. La limpieza del catalog (120→110) ya se aplicó en domingo-archivo pero hay que comprobar que se replicó en paleotxomi.
-9. ⏳ **Workflow `.github/workflows/deploy.yml`** sigue sin subir al remote en ninguno de los dos repos. Pelayo lo sube con sus credenciales para que los push automaticen el deploy.
+---
 
-### W-3 (1-7 jun)
+## 9 · Lo que queda por hacer · orden sugerido
 
-- Enviar nota de prensa a LNE, El Comercio, Asturies24, RTPA Pieces, Alba Vázquez.
-- Enviar a imprenta (cartel, marcapáginas, octavilla, pasapáginas). Pendiente convertir SVGs a PDF.
-- Post de anuncio en redes propias (Bluesky @txomidelena.bsky.social).
+### Bloque A · cuando Pelayo pase fotos de las 41 piezas
 
-### W-2 (8-14 jun)
+1. Recibir foto + precio + descripción de cada pieza.
+2. Estructurar en `public/data/exposicion-v2.json` (nuevo, no pisar el viejo).
+3. Modificar `src/app/exposicion/la-esquina-del-peso/page.tsx` para leer el JSON nuevo.
+4. Generar **galería real de 41 piezas** en la web (en lugar del placeholder actual).
+5. Re-generar `RELACION_OBRAS_LAMINA.html` con miniaturas de cada pieza.
 
-- Avance de pieza estrella en redes.
-- Cerrar invitados de la inauguración privada.
+### Bloque B · una vez Pelayo confirme cartel definitivo
 
-### W-1 (15-19 jun)
+1. Sustituir el placeholder por la imagen real en `page.tsx`.
+2. Actualizar el cartel en `public/expo/cartel.svg` o `.png`.
 
-- Recordatorio víspera.
-- Actualizar bio y post fijado de Bluesky.
-- Inauguración privada vie 19 · 19:30.
+### Bloque C · imprenta y marcapáginas
 
-### Día D (20 jun) y desmontaje
+1. Verificar 4 marcapáginas temáticos (Venus, F-C, cierva trilineal, UNESCO).
+2. Generar PDFs de cartel + marcapáginas + octavilla con Edge headless (Pelayo no tiene Inkscape).
+3. Email a 3 imprentas con `EMAIL_IMPRENTA.md`.
 
-- Inauguración pública sáb 20 · 19:30.
-- Stories en directo.
-- Domingo 21 · post de agradecimiento.
-- Martes 30 · cierre.
+### Bloque D · comunicación
+
+1. Enviar nota de prensa (`NOTA_PRENSA.md`) a LNE, El Comercio, Asturies24, RTPA Pieces.
+2. DM Alba Vázquez (`EMAIL_ALBA_VAZQUEZ.md`).
+3. Programar posts en Bluesky (W-3 → W+1) con `CALENDARIO_PUBLICACION.md`.
+
+### Bloque E · día D y desmontaje
+
+- Vie 19 jun 19:30 inauguración.
+- Mar 30 jun cierre.
 - 7 días naturales para desmontaje.
 
 ---
 
-## 10 · Estilo y forma de trabajo con Pelayo
+## 10 · Anticipación · errores y trampas que evitar
 
-Notas operativas que aprendí en esta sesión. Léelas antes de responder:
+**Esto es lo que más fácilmente puede salir mal en la próxima sesión.** Léelo despacio.
 
-- **Idioma:** español de España con ortotipografía completa (tildes, ñ, ¿?, ¡!, «», coma decimal, espacio antes de %).
-- **Reglas de escritura vinculantes:** `D:\Antigravity\memory\writing_rules.md`. Auto-invocar el skill `writing-rules` antes de redactar prosa. Sin vocabulario IA (delve, robust, leverage, seamless, unlock, streamline). Sin reframe «no es X. Es Y». Sin analogías por defecto. Específico antes que pulido.
-- **Sin emojis** salvo que él los pida.
-- **Sobrio y directo.** Pelayo lee rápido y odia el adorno.
-- **Pregunta antes de actuar** si la decisión es ambigua. Él lo agradece.
-- **No reproduzcas verdades inventadas.** En esta sesión yo había inventado una cierva esquemática como motivo del cartel y una Venus genérica, sin haber abierto las fotos del corpus. Pelayo me corrigió con razón. Antes de afirmar cómo es una pieza, **abre la foto**.
-- **Estilo de comunicación de Pelayo:** mensajes cortos, a veces con erratas («ds maximo» quería decir «dos máximo», «d ela» quería decir «de la»). Si una instrucción no encaja, pregunta sin asumir.
-- **Foto a foto.** Cuando trabajes con el corpus, no agregues — abre, describe, decide. Las fotos `pieza-NN.jpg` antiguas tienen los motivos cruzados con el JSON; no fíes.
-- **Tipografía y paleta para todo lo gráfico:** Cinzel + EB Garamond + Cormorant Garamond. Paleta: crema papel `#f0e5cc`, carbón `#1e1408`, ocre rojo `#8b2c1a`, tierra `#6b3d1c`, ocre amarillo `#c0a87a`. Está todo en `paleo.css`.
-- **MCPs disponibles ya o entrantes:** acceso a WhatsApp (con textos del padre que hay que incorporar al dossier y al one-page), búsquedas web. Cuando Pelayo te diga el nombre del MCP, úsalo con `Skill` o `Agent` según convenga.
-- **Repositorio de memoria de Pelayo:** `D:\Antigravity\memory\` contiene la constitución, reglas y perfiles. Carga lo necesario al inicio según el directorio.
+### Trampa 1 · Confundir los dos repos
+
+`paleotxomi` ≠ `domingo-archivo`. Si Pelayo dice «sube esto a la web», pregúntale primero CUÁL de las dos. La de la expo es siempre `paleotxomi`.
+
+### Trampa 2 · Tocar el dominio paleotxomi.com prematuramente
+
+El `basePath: "/paleotxomi"` y la ausencia de CNAME son INTENCIONALES hasta que Pelayo confirme:
+1. Veriff Porkbun aprobado.
+2. DNS records guardados.
+
+Si la próxima sesión hace `git push` con CNAME pero sin DNS, la web pública se rompe (GitHub Pages redirige a un dominio que no resuelve).
+
+### Trampa 3 · `pieza-NN.jpg` están mal mapeadas
+
+Las 23 fotos de `public/personal/piezas/` y el JSON `exposicion.json` tienen los motivos cruzados. La «cierva de Lluera» #17 es realmente una Venus. La #21, 22, 23 no son grabados sino propulsores. **No usar como fuente.** Las fotos buenas son `sesion-amanda-2026/` (10 fotos) y `public/images/web/1_ESCULTURAS/` (catalog Amanda Blanco, 110 fotos).
+
+### Trampa 4 · El workflow `.github/workflows/deploy.yml`
+
+El token de Claude no tiene scope `workflow`. **Cualquier commit que incluya `.github/` será rechazado en el push** con error `remote rejected · refusing to allow an OAuth App to create or update workflow`. Patrón estándar para arreglarlo:
+
+```bash
+git rm --cached -r .github
+git commit --amend --no-edit
+git push origin main
+```
+
+Pelayo puede subir el workflow él mismo con sus credenciales completas.
+
+### Trampa 5 · Edge headless con saltos de línea en bash
+
+El comando de Edge para generar PDFs es muy sensible a saltos de línea y al concatenado con `&&`. Si falla, ejecutar Edge en una línea y `ls` en otra después. Patrón probado:
+
+```bash
+"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=15000 --print-to-pdf="ABSOLUTE\PATH.pdf" "file:///ABSOLUTE/PATH.html"
+```
+
+### Trampa 6 · Numeración de las obras
+
+Los huecos en 1→48 son intencionales. La numeración es la del cuaderno del autor. **No renumerar a 1-41** sin pedir permiso. Si lo pides para el contrato, mantener el «#N original» como ID interno.
+
+### Trampa 7 · La firma del autor
+
+La firma es **T+X en cinabrio sobre arenisca**, no una T sola ni un signo aleatorio. Reproducida en SVG inline en `RELACION_OBRAS_LAMINA.html`. Para reutilizarla, copia el bloque `<svg class="firma-stamp">` entero (incluye gradiente y filtros). Pelayo dijo que ese es el sello que su padre usa como membrete.
 
 ---
 
-## 11 · Próxima acción concreta
+## 11 · Estilo y forma de trabajar con Pelayo
 
-Cuando la nueva sesión arranque:
-
-1. **Saluda corto.** Confirma que has leído este handoff entero.
-2. **Verifica que el repo paleotxomi está clonado en `D:\Antigravity\paleotxomi\`.** Si no, clónalo.
-3. **Pregunta a Pelayo cuál de los 6 inputs pendientes tiene listo ya** (lista 24 piezas, firma/membrete, ideas marcapáginas, fotos one-shot, títulos, texto 4 pilares).
-4. **Trabaja sobre el repo `paleotxomi`**, no sobre `domingo-archivo`. La maquetación de la expo, los SVG nuevos, las cartelas y el one-page final van en `paleotxomi`.
-5. **Cuando se cierre cada bloque**, hacer commit y push a `main`. Construir y desplegar a `gh-pages` con el flujo del §7.
-6. **No tocar el deploy actual de `domingo-archivo`** salvo que Pelayo lo pida. Esa web ya está publicada y operativa.
-
----
-
-## 12 · Lo que NO está en este handoff
-
-Para no inflarlo:
-
-- Detalle del audit foto a foto del corpus (43 imágenes). Está en `CORPUS_AUDIT_FOTOS.md`.
-- Detalle del mismatch JSON ↔ fotos. Está en `CORPUS_REVISION_25MAY.md`.
-- Plan semanal completo. Está en `PLAN_W4_25MAY.md` y en `CALENDARIO_PUBLICACION.md`.
-- Borradores de emails (imprenta, prensa, TPA, Alba Vázquez). Cada uno en su archivo `EMAIL_*.md`.
-- Contrato base con Anexo I. Está en `CONTRATO_CESION_OBRAS.md`.
-- Guion de la inauguración. Está en `GUION_INAUGURACION.md`.
-
-Si algo de eso pasa a primera línea, súbelo de §12 a §9.
+- **Idioma:** español de España con ortotipografía completa (tildes, ñ, ¿?, ¡!, «», coma decimal).
+- **Reglas vinculantes:** `D:\Antigravity\memory\writing_rules.md`. Sin vocabulario IA, sin reframe, sin analogías por defecto.
+- **Sin emojis** salvo que pida.
+- **Sobrio, directo.** Pelayo lee rápido y odia el adorno.
+- **Pregunta antes de actuar** si la decisión es ambigua, salvo que diga «paralelize/ejecuta ya».
+- **Foto a foto** cuando hay corpus visual: abre, describe, decide. No asumas.
+- **Mensajes cortos con erratas** son normales («ds maximo» = «dos máximo»). Si no encaja, pregunta.
+- **Cadencia rápida:** Pelayo pide cambios cada pocos mensajes. Aplica lo mínimo necesario, no sobre-implementes.
 
 ---
 
-## 13 · Arsenal de skills, agentes y MCPs
+## 12 · Arsenal · skills y MCPs aplicables
 
-Listado curado de lo que está disponible y aplica a esta exposición. La librería completa de Antigravity tiene cientos de skills; aquí solo las útiles para arte paleolítico, ilustración, maquetación editorial e investigación histórica. Para cada bloque doy: cuándo invocar, comando exacto y aviso de dependencias.
+Versión completa en la sesión anterior. Aplicables ahora mismo:
 
-> **Nota operativa:** las skills se invocan con `Skill skill=<nombre> args=<opcional>`. Los agentes con `Agent subagent_type=<tipo> prompt=<...>`. Los MCPs aparecen como herramientas `mcp__<servidor>__<acción>` y muchos requieren `ToolSearch` para cargar su esquema antes de la primera llamada.
+- **Ilustración paleolítica:** `generate-image`, `scientific-schematics`, `sci-gemini-prompt`, `imagen`, `fal-generate`.
+- **Maquetación editorial:** `anthropic-skills:pdf`, `docx`, `pptx`, `latex-posters`, `landing-page-generator`.
+- **Diseño:** `design:design-system`, `design:design-critique`, `canvas-design`.
+- **Investigación:** `perplexity-search`, `wiki-researcher`, `openalex-database`.
+- **Prosa:** `writing-rules` (obligatoria), `beautiful-prose`, `professional-proofreader`, `avoid-ai-writing`.
+- **MCPs:** `Claude_in_Chrome`, `Claude_Preview`, `pdf-viewer:*`, `agentmail`, `gmail-automation`.
 
-### A · Ilustración paleolítica · trazo, pigmento, grabado
+Recetas de prompt paleo y ejemplos en la versión anterior de este handoff (v1.1 del 28 may, git log si hace falta recuperar).
 
-Para dibujar como los hombres del Gravetiense y del Magdaleniense: cierva trilineal, bisontes Altamira, manos negativas, signos del Castillo, tectiformes, claviformes, ictiomorfos del Pindal, antropomorfos cazadores, propulsores zoomorfos. Salidas: PNG transparente, SVG vectorial, o composición lista para marcapáginas.
+---
 
-| Skill | Para qué | Dependencias |
-|-------|----------|--------------|
-| `generate-image` | Generar imágenes con FLUX. Bueno para texturas de roca, manchas de ocre y siluetas estilo cueva. | Requiere `OPENROUTER_API_KEY`. |
-| `scientific-schematics` | Esquemas con Nano Banana 2 + Gemini review. Para iconos de piezas, mapas de cuevas, paneles compositivos. Umbrales de calidad por tipo de salida (journal 8,5 · poster 7,0). | `OPENROUTER_API_KEY`. |
-| `sci-gemini-prompt` | Genera prompts optimizados para Gemini Flash Image. Tiene tres agentes: **MB molecular**, **ICN-Gen iconos**, **COMPOSITE**. ICN-Gen sirve para iconografía paleo plana sobre crema; COMPOSITE para escenas (cueva + figuras + texto). | Gratis (genera el prompt; lo ejecutas en Gemini). |
-| `imagen` | Google Imagen para imágenes fotográficas/realistas. | Google API. |
-| `stability-ai` | Stable Diffusion. Bueno para texturas de roca y pigmentos. | Stability API. |
-| `fal-generate` | FAL.AI. Generación rápida con muchos modelos. | FAL API. |
-| `nanobanana-ppt-skills` | Nano Banana en formato presentación. | Variable. |
-| `algorithmic-art` | Arte algorítmico generativo. Útil para fondos texturizados tipo roca caliza. | Sin externos. |
-| `sci-diagram` | Diagramas de flujo limpios (no para arte paleo). Para diagramas tipo «recorrido por la exposición». | Sin externos. |
-
-**Receta de prompt paleo (probada):**
+## 13 · Receta de prompt para imagen paleo (probada)
 
 ```
 Trazo blanco grueso sobre piedra rugosa ocre con manchas de óxido,
-estilo grabado paleolítico magdaleniense, motivo: [cierva con tres líneas
-paralelas en el cuerpo / bisonte de Altamira / mano negativa pulverizada
-con ocre / signo tectiforme del Buxu]. Sin texto, sin marco, fondo de
-roca natural con vetas. Iluminación raseante de aceite. Estética Lascaux.
+estilo grabado paleolítico magdaleniense, motivo: [cierva con tres
+líneas paralelas en el cuerpo / bisonte de Altamira / mano negativa
+pulverizada con ocre / signo tectiforme del Buxu]. Sin texto, sin
+marco, fondo de roca natural con vetas. Iluminación raseante de
+aceite. Estética Lascaux.
 ```
 
-Variantes para Venus gravetienses:
+Variante para Venus gravetienses:
 
 ```
-Pequeña figurilla femenina paleolítica tallada en piedra caliza, estilo
-gravetiense, senos voluminosos, vientre prominente, cabeza pequeña sin
-rasgos, base estrecha, fondo neutro crema. Inspirada en Venus de
-[Willendorf / Laussel con cuerno / Lespugue / Brassempouy].
+Pequeña figurilla femenina paleolítica tallada en piedra caliza,
+estilo gravetiense, senos voluminosos, vientre prominente, cabeza
+pequeña sin rasgos, base estrecha, fondo neutro crema. Inspirada
+en Venus de [Willendorf / Laussel con cuerno / Lespugue /
+Brassempouy].
 ```
-
-### B · Maquetación editorial · octavilla, marcapáginas, dossier, contrato
-
-Para producir las piezas que se imprimen o se mandan: octavilla A6, cuatro marcapáginas (50×200 mm), cartel A2, dossier A4, nota de prensa, fichas de sala A5, one-page A3 para Eden.
-
-| Skill | Para qué | Notas |
-|-------|----------|-------|
-| `anthropic-skills:pdf` | PDFs profesionales con plantillas. Para dossier, fichas de sala, nota de prensa. | Bueno como fallback si no hay Inkscape. |
-| `anthropic-skills:docx` | Documentos Word editables. Si Eden pide algo en .docx. | — |
-| `anthropic-skills:pptx` | Presentaciones. Para los 7 slides ya existentes y para la presentación al local. | — |
-| `pdf-official` / `docx-official` / `pptx-official` / `xlsx-official` | Variantes con Office templates oficiales. | Probar la que mejor renderice. |
-| `latex-posters` | Pósters LaTeX científicos. Buen formato para A2 si se quiere rigor académico. | TeX local. |
-| `pptx-posters` | Pósters en PPTX. Más rápido si se quiere editar después. | — |
-| `landing-page-generator` | Páginas web sueltas. Si en algún momento se quiere micrositio dedicado a la expo. | — |
-| `paper-2-web` | Convierte un paper / documento largo a web. Útil si se quiere publicar el dossier extendido. | — |
-| `infographics` | Infografías. Para el panel «cómo se hace una reproducción en piedra» de la exposición, si Eden lo pide. | — |
-| `render-pdf-tesis-nivel-dios` | Render PDF de alta calidad académica. Si se hace un catálogo extenso de las 24 piezas. | — |
-| `markdown-mermaid-writing` | Markdown con diagramas mermaid. Para timelines y diagramas de proceso en el dossier. | — |
-| `scientific-slides` / `scientific-visualization` / `scientific-writing` | Triada científica para textos rigurosos. Si la cartela A5 quiere tono académico, esta es la voz. | — |
-
-**El one-page actual** (`ONE_PAGE_EXPO_VESTIDO.html`) ya está en A3 vertical con paleta paleo y debe reaprovecharse como plantilla principal. El CSS está aislado en `paleo.css`.
-
-### C · Tipografía, SVG, diseño vectorial
-
-| Skill | Para qué |
-|-------|----------|
-| `design:design-system` | Sistema de diseño coherente (paleta, escalas, espaciados). Si se quiere documentar formalmente la identidad visual de la expo. |
-| `design:design-handoff` | Handoff de diseño a impresión. Para asegurar que los SVG salen como espera la imprenta. |
-| `design:design-critique` | Crítica de diseño. Antes de mandar a imprenta, una pasada. |
-| `design:accessibility-review` | Revisión de accesibilidad. Para asegurar que las cartelas de sala tengan contraste y tamaños correctos. |
-| `design:ux-copy` | Copy de UX. Útil para los textos cortos de la web. |
-| `design-html` | Diseño HTML libre. Para reformatear el one-page. |
-| `canvas-design` | Composiciones en canvas. Útil si se quiere generar PNG con composición de varias piezas. |
-| `magic-ui-generator` | Generador de UI con prompt. |
-| `claude-d3js-skill` | Visualizaciones con D3.js. Para el mapa de cuevas si se quiere interactivo. |
-
-**Activos vectoriales ya existentes** en `public/expo/`: cartel, octavilla, marcapáginas (4), pasapáginas, motivo cierva, mapa cuevas, logos (3), mockup escaparate, 7 slides. Todos pendientes de revisar tras el descubrimiento de que la pieza «cierva» #17 era una Venus.
-
-### D · Investigación histórica y paleohistoria
-
-Para fundar afirmaciones cronológicas, estilísticas y de yacimientos. Crítico para no afirmar fechas o estilos sin fuente.
-
-| Skill / MCP | Para qué |
-|-------------|----------|
-| `perplexity-search` | Búsqueda web fundada. Para confirmar fechas, autorías, bibliografía. |
-| `tavily-web` | Búsqueda web alternativa. |
-| `exa-search` | Búsqueda semántica. |
-| `deep-research` | Investigación profunda multi-fuente. Para escribir el dossier extendido. |
-| `browse` | Navegación libre. |
-| `wiki-researcher` | Investigación en Wikipedia y wikis temáticas. |
-| `literature-review` | Revisión sistemática de literatura. |
-| `arxiv-database` | arXiv (poco aplica a paleohistoria, pero sirve para estilometría y cómputo del estilo). |
-| `pubmed-database` | PubMed (útil para arqueometría, datación, conservación). |
-| `openalex-database` | OpenAlex (todas las disciplinas). Mejor opción para citaciones de Fortea, Vega del Sella, Hernández-Pacheco. |
-| `biorxiv-database` | bioRxiv (para arqueogenética y paleoambiente). |
-| `clinicaltrials-database` | No aplica. |
-| `research-lookup` | Atajos de búsqueda académica. |
-| `citation-management` | Gestor de citas. Para el `bibliografia.bib` que ya existe en `public/data/`. |
-| `pyzotero` | Bridge a Zotero si se quiere sincronizar. |
-
-**Referencias canónicas para la expo** (validadas en sesión anterior):
-
-- Fortea Pérez, J. — sobre la cierva trilineal asturiana (años 70-90).
-- Breuil, H. — clásico, primer corpus de cuevas.
-- Vega del Sella, conde de la — pionero asturiano.
-- Hernández-Pacheco, E. — síntesis del arte rupestre.
-- Obermaier, H. — escuela alemana en España.
-- Jordá Cerdá, F. — estudios cantábricos.
-- UNESCO sitio 310 (Altamira + ampliación 2008).
-
-### E · Prosa, voz, redacción
-
-| Skill | Para qué |
-|-------|----------|
-| `writing-rules` | **Obligatoria.** Carga las reglas vinculantes de Pelayo antes de escribir cualquier prosa. Vetos a vocabulario IA, reframe, analogías, frases muertas. ES-ES. |
-| `beautiful-prose` | Prosa cuidada para textos largos (dossier, nota de prensa). |
-| `copywriting` | Copy publicitario corto (octavilla, marcapáginas). |
-| `scientific-writing` | Voz académica para cartelas y panel de entrada. |
-| `seo-content-writer` | Copy con SEO. Para la página web `/exposicion/la-esquina-del-peso`. |
-| `keyword-extractor` | Extracción de palabras clave. |
-| `professional-proofreader` | Corrección de pruebas. Pase final antes de imprimir. |
-| `copy-editing` | Edición de texto. |
-| `avoid-ai-writing` | Detector de patrones IA. Pase obligado tras cualquier texto generado. |
-
-### F · Agentes y MCPs externos
-
-Para mover ficheros, leer WhatsApp, navegar, buscar, abrir Drive, etc.
-
-| MCP / Agente | Uso aplicado |
-|--------------|--------------|
-| `mcp-registry` | Buscar y dar de alta nuevos MCPs. Útil para conectar WhatsApp, Drive, Slack si hace falta. |
-| `Claude_in_Chrome` | Navegación real (no fetch). Para inspeccionar la web pública desplegada, hacer screenshots del escaparate, verificar el contact sheet. |
-| `Claude_Preview` | Previsualización de HTML/CSS sin desplegar. Util para iterar `ONE_PAGE_EXPO_VESTIDO.html` sin abrir navegador externo. |
-| `mcp__plugin_pdf-viewer_pdf__*` | Visualizar y anotar PDFs. Para revisar las pruebas de imprenta cuando lleguen. |
-| `pdf-viewer:open`, `pdf-viewer:annotate`, `pdf-viewer:sign`, `pdf-viewer:fill-form` | Idem, skills wrapper. |
-| `scheduled-tasks` | Tareas programadas. Para automatizar los recordatorios W-3 → W+1 si hace falta. |
-| `agentmail` | Envío de emails. Si se quiere automatizar el envío a prensa. |
-| `claude-mem:do`, `:mem-search`, `:timeline-report` | Memoria persistente entre sesiones. Útil para que la próxima sesión recupere lo decidido. |
-| `gmail-automation`, `outlook-automation` | Automatización de correo (alternativas). |
-| `google-drive-automation`, `dropbox-automation` | Para subir/bajar fotos y PDFs. |
-
-### G · Agentes (Agent tool) específicos
-
-Tipos disponibles en `Agent subagent_type=`:
-
-- `claude` — catch-all general.
-- `general-purpose` — multi-paso, búsquedas complejas.
-- `Explore` — búsqueda read-only en el código (rápido).
-- `Plan` — arquitecto, plan de implementación.
-
-Cuando se vaya a producir cada pieza de imprenta o cada panel de la expo, lanzar un **agente especializado** con `Agent subagent_type=general-purpose` y prompt autocontenido. Ejemplos:
-
-```
-Agent({
-  subagent_type: "general-purpose",
-  description: "Diseñar marcapáginas 3 cierva trilineal",
-  prompt: "Diseña el marcapáginas 3 (50x200mm) sobre la cierva
-  trilineal. Tipografía Cinzel + EB Garamond. Fondo crema #f0e5cc
-  con manchas ocre. Texto basado en ONE_PAGE_EXPO.md §3. Imagen
-  principal: silueta vectorial de cierva con tres líneas paralelas
-  en el cuerpo. Usar paleo.css como base. Output: SVG en
-  public/expo/marcapaginas-3-cierva-trilineal.svg. Revisar contra
-  las versiones anteriores antes de sobreescribir."
-})
-```
-
-### H · Flujos concretos para los próximos hitos
-
-#### Flujo 1 · Cierre de las 24 piezas
-
-1. Pelayo pasa la lista (puede ser por WhatsApp o por texto directo).
-2. Para cada pieza: `Read` la foto del corpus → anota motivo, dimensiones, técnica, precio sugerido.
-3. Sintetizar tabla en `public/data/exposicion.json` y en el Anexo I de `CONTRATO_CESION_OBRAS.md`.
-4. Validar contra los 4 hilos temáticos.
-
-#### Flujo 2 · One-page final para Eden
-
-1. Tomar `ONE_PAGE_EXPO_VESTIDO.html` como plantilla.
-2. Sustituir las fotos de muestra por las 24 piezas finales.
-3. Ajustar textos a la lista real.
-4. Generar PDF con Edge headless (comando ya probado).
-5. Revisión cruzada con `design:design-critique` y `professional-proofreader`.
-6. Entregar a Eden.
-
-#### Flujo 3 · Ilustraciones nuevas (cuando hagan falta)
-
-1. `sci-gemini-prompt` para generar el prompt óptimo según el motivo paleolítico.
-2. Generar con `generate-image` (FLUX) o pegar el prompt en Gemini Flash Image.
-3. Iterar (3-5 vueltas) hasta tener una versión que respete el estilo.
-4. Vectorizar si hace falta (Potrace, Inkscape).
-5. Integrar al marcapáginas o cartel correspondiente.
-
-#### Flujo 4 · Imprenta
-
-1. SVGs ya están en `public/expo/`. Convertir a PDF con rsvg-convert o Inkscape (ver `INSTRUCCIONES_PDFS.md`).
-2. Email a 3 imprentas con `EMAIL_IMPRENTA.md`.
-3. Recibir pruebas → revisar con `pdf-viewer:open`.
-4. Aprobar o iterar.
-
-#### Flujo 5 · Comunicación
-
-1. `EMAIL_TPA.md`, `EMAIL_ALBA_VAZQUEZ.md`, `NOTA_PRENSA.md` están listos.
-2. Personalizar fecha real y enviar en el W-3.
-3. Si se quiere automatizar: `agentmail` o `gmail-automation`.
-
-### I · Dependencias y API keys que conviene tener a mano
-
-| Servicio | Para qué | Variable de entorno |
-|----------|----------|---------------------|
-| OpenRouter | `generate-image`, `scientific-schematics` | `OPENROUTER_API_KEY` |
-| Google AI Studio | `imagen`, Gemini Flash Image | `GOOGLE_API_KEY` |
-| FAL.AI | `fal-generate`, `fal-upscale` | `FAL_KEY` |
-| Stability | `stability-ai` | `STABILITY_API_KEY` |
-| Anthropic | Skills internas que llaman a Claude | `ANTHROPIC_API_KEY` |
-| GitHub | Deploy gh-pages (Pelayo) | Token personal con `repo` y `workflow` |
-
-Cuando arranque la nueva sesión, conviene comprobar cuáles están definidas y avisar a Pelayo de las que falten.
 
 ---
 
-**Cierre de esta sesión:** lunes 28 may 2026, mediodía. Listo para handoff.
+## 14 · Próxima acción concreta
 
-**Versión del handoff:** v1.1 (28 may, tarde) · añade §13 Arsenal completo.
+Cuando arranques:
+
+1. **Saluda corto.** Confirma que has leído este handoff entero.
+2. **Verifica el working dir** (`D:\Antigravity\paleotxomi\`) y el repo remoto (`biopelayo/paleotxomi`).
+3. **Verifica el estado del deploy actual**: `curl -sI https://biopelayo.github.io/paleotxomi/exposicion/la-esquina-del-peso/`. Debe responder `HTTP/2 200`.
+4. **Pregunta a Pelayo** una de estas dos cosas:
+   - **a.** «¿Ya pasó la verificación de Veriff en Porkbun? Si sí, te paso los DNS records y desplegamos en paleotxomi.com.»
+   - **b.** «¿Quieres que avancemos con la galería de fotos de las 41 piezas (pásamelas), con el cartel definitivo, o con los marcapáginas/octavilla para imprenta?»
+5. **Trabaja siempre en `paleotxomi`**, no en `domingo-archivo`.
+6. **Build + deploy gh-pages** al cerrar cada bloque (no acumular cambios sin desplegar).
+
+---
+
+## 15 · Cierre de esta sesión
+
+**Sesión cerrada el 1 jun 2026 mediodía.** Versión del handoff: **v2 · post-paleotxomi**.
+
+Hitos de esta sesión:
+- Repo `paleotxomi` creado, desplegado y operativo.
+- Dominio `paleotxomi.com` comprado en Porkbun (verificación en curso).
+- Título PALEOTXOMI + subtítulo «Ciervas, Venus y grabados» aplicados.
+- Fechas actualizadas a 19-30 jun (inauguración vie 19).
+- Lista de 41 obras OCR del cuaderno cerrada.
+- Lámina A4 firmada generada con T+X del autor.
+- Mensaje WhatsApp para Eden listo.
+
+**El siguiente paso natural es la galería de fotos de las 41 piezas + activar paleotxomi.com cuando Veriff apruebe.**
